@@ -16,10 +16,10 @@ class CreateSprintTasksTable extends Migration
             $table->integer('sprint_id')->unsinged();
             $table->integer('task_id')->unsigned();
             $table->foreign('sprint_id')
-                ->reference('id')
+                ->references('id')
                 ->on('sprints');
             $table->foreign('task_id')
-                ->reference('id')
+                ->references('id')
                 ->on('tasks');
             $table->timestamps();
         });
