@@ -13,7 +13,8 @@ class CreateSprintTasksTable extends Migration
     public function up()
     {
         Schema::create('sprint_tasks', function (Blueprint $table) {
-            $table->integer('sprint_id')->unsinged();
+            $table->increments('id');
+            $table->integer('sprint_id')->unsigned();
             $table->integer('task_id')->unsigned();
             $table->foreign('sprint_id')
                 ->references('id')
