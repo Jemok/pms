@@ -19,7 +19,7 @@ class CreateTaskUsersTable extends Migration
                 ->on('users');
             $table->integer('task_id');
             $table->foreign('task_id')
-                ->reference('id')
+                ->references('id')
                 ->on('tasks');
             
             $table->timestamps();
