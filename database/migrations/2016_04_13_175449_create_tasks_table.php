@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectsTableMigration extends Migration
+class CreateTaskTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,18 +12,23 @@ class CreateProjectsTableMigration extends Migration
      */
     public function up()
     {
-        Schema::create('projects', function (Blueprint $table) {
+        Schema::create('tasks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('project_name');
+            $table->string('task_name');
             $table->integer('user_id')->unsigned();
-            $table->text('project_description');
-            $table->integer('project_status');
-            $table->timestamps();
+            $table->text('task_description');
+            $table->text('deliverable');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
+            $table->integer('sprint_id')->unsigned();
+            $table->foreign('sprint_id')
+                ->references('id')
+                ->on('sprints');
+            $table->text('task_status');
             $table->dateTime('started_at');
             $table->dateTime('ended_at');
+            $table->timestamps();
         });
     }
 
@@ -34,6 +39,6 @@ class CreateProjectsTableMigration extends Migration
      */
     public function down()
     {
-        Schema::drop('projects');
+        Schema::drop('tasks');
     }
 }
