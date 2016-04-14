@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSprintUserTable extends Migration
+class CreateSprintUsersTable extends Migration
 {
     /**
      * Run the migrations.
