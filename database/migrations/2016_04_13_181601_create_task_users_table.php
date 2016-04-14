@@ -12,9 +12,16 @@ class CreateTaskUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('task_user', function (Blueprint $table) {
-            $table->string('user_id');
-            $table->string('task_id');
+        Schema::create('task_users', function (Blueprint $table) {
+            $table->integer('user_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
+            $table->integer('task_id');
+            $table->foreign('task_id')
+                ->reference('id')
+                ->on('tasks');
+            
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ class CreateTaskUserTable extends Migration
      */
     public function down()
     {
-        Schema::drop('task_user');
+        Schema::drop('task_users');
     }
 }
