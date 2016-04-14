@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSprintTaskTable extends Migration
+class CreateSprintTasksTable extends Migration
 {
     /**
      * Run the migrations.
