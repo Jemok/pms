@@ -17,7 +17,7 @@ class CreateProjectsTableMigration extends Migration
             $table->string('project_name');
             $table->integer('team_id')->unsigned();
             $table->foreign('team_id')
-                ->references(id)
+                ->references('id')
                 ->on('teams');
             $table->integer('user_id')->unsigned();
             $table->text('project_description');

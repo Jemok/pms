@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTeamsTables extends Migration
+class CreateTeamUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,16 @@ class CreateTeamsTables extends Migration
      */
     public function up()
     {
-        Schema::create('teams', function (Blueprint $table) {
+        Schema::create('team_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('team_name');
+            $table->integer('team_id')->unsigned();
+            $table->foreign('team_id')
+                ->references('id')
+                ->on('teams');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-            $table->text('description');
             $table->timestamps();
         });
     }
@@ -31,6 +33,6 @@ class CreateTeamsTables extends Migration
      */
     public function down()
     {
-        Schema::drop('teams');
+        Schema::drop('team_users');
     }
 }
