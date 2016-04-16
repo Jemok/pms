@@ -21,3 +21,6 @@ Route::get('/home', 'HomeController@index');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
+
+/*team routes*/
+Route::post('teams/store', 'TeamController@store');

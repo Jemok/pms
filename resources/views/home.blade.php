@@ -9,15 +9,15 @@
 
                     <div class="panel-body">
                         You are logged in Please create a team!
-                        <form class="form-horizontal" method="post" action="">
+                        <form class="form-horizontal" method="post" action="{{ url('teams/store') }}">
                             <div class="form-group">
-                                <label for="team-name" class="col-sm-2 control-label">Team name</label>
+                                <label for="team_name" class="col-sm-2 control-label">Team name</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="Description" class="col-sm-2 control-label">Description</label>
+                                <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-10">
                                    <textarea class="form-control" name="description" rows="10">
 
