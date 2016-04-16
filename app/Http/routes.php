@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    if(Auth::guest()){
+
+        return view('welcome');
+    }
+
+    return view('home');
+
+
 });
 
 Route::auth();
