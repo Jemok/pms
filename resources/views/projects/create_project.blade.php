@@ -30,13 +30,24 @@
                         <label for="project name">Project Status</label>
                     </div>
                     <div class="col-md-5">
-                        <input type="checkbox" class="form-control" placeholder="project name" name="project_name" value="" required autofocus>Started
+                        <input type="checkbox" class="form-control" placeholder="project name" name="project_name" value="" required autofocus>Not Started
                     </div>
                     <div class="col-md-5">
                         <input type="checkbox" class="form-control" placeholder="project name" name="project_name" value="" required autofocus>Ongoing
                     </div>
                     <div class="col-md-5">
                         <input type="checkbox" class="form-control" placeholder="project name" name="project_name" value="" required autofocus>Completed
+                    </div>
+                    <div class="col-md-5">
+                        <input type="checkbox" class="form-control" placeholder="project name" name="project_name" value="" required autofocus>Shelved
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="started at">Started at</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="datetime" name="date_time" class="form-control" placeholder="date and time" value="">
                     </div>
                 </div>
 
