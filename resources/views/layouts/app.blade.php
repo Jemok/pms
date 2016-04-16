@@ -44,6 +44,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     PMS
                 </a>
+
                 @endif
             </div>
 
@@ -53,6 +54,9 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
+                    <a class="navbar-brand" href="{{ url('projects/create') }}">
+                        create project
+                    </a>
                 @endif
 
                 <!-- Right Side Of Navbar -->

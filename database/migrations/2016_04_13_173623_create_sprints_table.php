@@ -20,7 +20,6 @@ class CreateSprintsTable extends Migration
             $table->string('sprint_description');
             $table->text('deliverable');
             $table->text('milestone');
-            $table->text('sprint_task');
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
