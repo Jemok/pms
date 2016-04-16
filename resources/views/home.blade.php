@@ -10,6 +10,7 @@
                     <div class="panel-body">
                         You are logged in Please create a team!
                         <form class="form-horizontal" method="post" action="{{ url('teams/store') }}">
+                            {!! csrf_field() !!}
                             <div class="form-group">
                                 <label for="team_name" class="col-sm-2 control-label">Team name</label>
                                 <div class="col-sm-10">
