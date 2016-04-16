@@ -40,4 +40,13 @@ class Task extends Model
         return $this->belongsTo(User::class);
 
     }
+
+    /**
+     * A task has many backlogs
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function backlog(){
+
+        return $this->hasMany(Backlog::class);
+    }
 }

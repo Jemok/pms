@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="845b6b73-6502-4edc-9598-3ee5dc531835" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/colored_smoke.jpg" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/lg_g3_ink.jpg" />
@@ -22,8 +23,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php" afterPath="$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php" />
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+    <list default="true" id="f09700d2-c541-4b8d-afce-cbc5810d1ee4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Sprint.php" afterPath="$PROJECT_DIR$/app/Sprint.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Task.php" afterPath="$PROJECT_DIR$/app/Task.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Team.php" afterPath="$PROJECT_DIR$/app/Team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/User.php" afterPath="$PROJECT_DIR$/app/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
     </list>
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
     <ignored path="pms.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,8 +55,8 @@
     <favorites_list name="pms" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="Team.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Team.php">
 =======
@@ -86,36 +94,38 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="27" column="1" selection-start="425" selection-end="425" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="594">
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="28" selection-start="1667" selection-end="1667" vertical-scroll-proportion="-46.851852" vertical-offset="193" max-vertical-offset="1710">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
       <file leaf-file-name="Team_user.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Team_user.php">
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="-12.407408" vertical-offset="349" max-vertical-offset="792">
+            <state line="38" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="-23.37037" vertical-offset="53" max-vertical-offset="792">
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
               </folding>
-=======
-      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-              <folding />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
@@ -131,23 +141,25 @@
 =======
       <file leaf-file-name="2016_04_11_205923_create_teams_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_11_205923_create_teams_table.php">
+=======
+      <file leaf-file-name="Team.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Team.php">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+            <state line="45" column="1" selection-start="825" selection-end="825" vertical-scroll-proportion="-19.37037" vertical-offset="287" max-vertical-offset="918">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Sprint_user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Sprint_user.php">
+      <file leaf-file-name="Task_user.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Task_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="7" selection-start="259" selection-end="259" vertical-scroll-proportion="-8.407408" vertical-offset="79" max-vertical-offset="774">
+            <state line="29" column="36" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.851851" vertical-offset="283" max-vertical-offset="774">
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
               </folding>
+<<<<<<< HEAD
 =======
       <file leaf-file-name="2016_04_15_213231_create_backlogs_table.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_15_213231_create_backlogs_table.php">
@@ -174,10 +186,13 @@
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
               <folding />
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file leaf-file-name="create_team.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/teams/create_team.blade.php">
@@ -223,58 +238,42 @@
               <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Backlog.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Backlog.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="437" selection-end="437" vertical-scroll-proportion="0.900277" vertical-offset="161" max-vertical-offset="594">
 =======
-      <file leaf-file-name="2016_04_13_173623_create_sprints_table.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php">
+      <file leaf-file-name="Task.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Task.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+            <state line="48" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="-11.518518" vertical-offset="553" max-vertical-offset="1044">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="2016_04_15_213231_create_backlogs_tables.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_15_213231_create_backlogs_tables.php">
+      <file leaf-file-name="Sprint_user.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Sprint_user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="204" selection-end="204" vertical-scroll-proportion="-1.7037038" vertical-offset="116" max-vertical-offset="720">
-=======
-      <file leaf-file-name="2016_04_12_173955_create_projects_table_migration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task_user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Task_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="29" column="36" selection-start="502" selection-end="502" vertical-scroll-proportion="-9.740741" vertical-offset="259" max-vertical-offset="774">
+            <state line="17" column="7" selection-start="259" selection-end="259" vertical-scroll-proportion="-6.4074073" vertical-offset="133" max-vertical-offset="774">
               <folding>
                 <element signature="e#23#62#0" expanded="true" />
               </folding>
-=======
-            <state relative-caret-position="351">
-              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sprint_task.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Sprint_task.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="18" selection-start="464" selection-end="464" vertical-scroll-proportion="-12.037037" vertical-offset="143" max-vertical-offset="720">
               <folding />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sprint.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Sprint.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="30" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.601108" vertical-offset="845" max-vertical-offset="1314">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -292,6 +291,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <option value="$PROJECT_DIR$/public/css/bootstrap_css/carousel.css" />
         <option value="$PROJECT_DIR$/resources/views/teams/create_team.blade.php" />
@@ -316,36 +316,19 @@
   </component>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
         <option value="$PROJECT_DIR$/.idea/.idea/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/app/Team.php" />
         <option value="$PROJECT_DIR$/app/Project.php" />
-        <option value="$PROJECT_DIR$/app/Sprint.php" />
-        <option value="$PROJECT_DIR$/app/Task.php" />
         <option value="$PROJECT_DIR$/app/Sprint_task.php" />
         <option value="$PROJECT_DIR$/app/Task_user.php" />
         <option value="$PROJECT_DIR$/app/Team_user.php" />
         <option value="$PROJECT_DIR$/app/Sprint_user.php" />
         <option value="$PROJECT_DIR$/app/Backlog.php" />
-=======
-        <option value="$PROJECT_DIR$/.idea/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprint_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_175449_create_task_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_181601_create_task_user_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_182055_create_sprint_user_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_175449_create_tasks_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_181601_create_task_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_182055_create_sprint_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_181247_create_sprint_tasks_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_15_205923_create_teams_tables.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_15_205923_create_teams_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_15_211934_create_team_users_tables.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_15_211934_create_team_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_15_213231_create_backlogs_tables.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+        <option value="$PROJECT_DIR$/app/Task.php" />
+        <option value="$PROJECT_DIR$/app/Sprint.php" />
+        <option value="$PROJECT_DIR$/app/Team.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
       </list>
     </option>
   </component>
@@ -481,7 +464,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
             </PATH_ELEMENT>
@@ -497,6 +484,7 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -505,10 +493,45 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
 =======
               <option name="myItemId" value="database" />
+=======
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pms" />
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -530,6 +553,7 @@
         </subPane>
       </pane>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -537,6 +561,8 @@
       <pane id="Scratches" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,6 +582,19 @@
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
 <<<<<<< HEAD
@@ -577,13 +616,13 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
       <changelist id="f09700d2-c541-4b8d-afce-cbc5810d1ee4" name="Default" comment="" />
       <created>1460756859543</created>
       <updated>1460756859543</updated>
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
 =======
       <changelist id="3fb87eae-a5b7-4f90-82bb-b692e91ffc0b" name="Default" comment="" />
       <created>1460652429435</created>
@@ -616,10 +655,13 @@
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
   </component>
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23505977" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -628,15 +670,17 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36060366" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40190628" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.330781" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.330781" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -646,6 +690,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
 =======
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36733067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -670,6 +715,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -695,6 +742,7 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,6 +796,9 @@
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+    <entry file="file://$PROJECT_DIR$/.idea/.idea/workspace.xml">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="366">
           <folding />
@@ -766,6 +817,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -779,6 +831,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="7" selection-start="220" selection-end="220" vertical-scroll-proportion="-0.7037037" vertical-offset="161" max-vertical-offset="792">
@@ -824,30 +878,21 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="26" selection-start="611" selection-end="620" vertical-scroll-proportion="-5.3333335" vertical-offset="216" max-vertical-offset="900">
-=======
-        <state relative-caret-position="468">
-          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_175449_create_tasks_table.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.740741" vertical-offset="263" max-vertical-offset="882">
-=======
-        <state relative-caret-position="234">
-          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_181247_create_sprint_tasks_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.0" vertical-offset="216" max-vertical-offset="774">
+<<<<<<< HEAD
 =======
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
@@ -855,32 +900,38 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_181601_create_task_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.0" vertical-offset="216" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20" selection-start="219" selection-end="219" vertical-scroll-proportion="0.34054053" vertical-offset="0" max-vertical-offset="1584">
           <folding />
         </state>
       </provider>
     </entry>
 <<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_181601_create_task_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="8.0" vertical-offset="216" max-vertical-offset="774">
-=======
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
+=======
+    <entry file="file://$PROJECT_DIR$/app/Backlog.php">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+        <state line="13" column="0" selection-start="206" selection-end="206" vertical-scroll-proportion="-0.8518519" vertical-offset="211" max-vertical-offset="594">
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -904,10 +955,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="7" selection-start="619" selection-end="619" vertical-scroll-proportion="-9.37037" vertical-offset="359" max-vertical-offset="828">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_173623_create_sprints_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -915,16 +972,18 @@
 =======
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_181601_create_task_users_table.php">
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+=======
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="5" selection-start="558" selection-end="558" vertical-scroll-proportion="-8.0" vertical-offset="162" max-vertical-offset="702">
+        <state line="81" column="28" selection-start="1667" selection-end="1667" vertical-scroll-proportion="-46.851852" vertical-offset="193" max-vertical-offset="1710">
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Team_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="-12.407408" vertical-offset="349" max-vertical-offset="792">
+        <state line="38" column="0" selection-start="686" selection-end="686" vertical-scroll-proportion="-23.37037" vertical-offset="53" max-vertical-offset="792">
           <folding>
             <element signature="e#23#62#0" expanded="true" />
           </folding>
@@ -933,29 +992,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Team.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="1" selection-start="425" selection-end="425" vertical-scroll-proportion="-18.0" vertical-offset="0" max-vertical-offset="594">
-=======
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_182055_create_sprint_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        <state line="45" column="1" selection-start="825" selection-end="825" vertical-scroll-proportion="-19.37037" vertical-offset="287" max-vertical-offset="918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_11_205923_create_teams_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
->>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/Task_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="36" selection-start="502" selection-end="502" vertical-scroll-proportion="-9.740741" vertical-offset="259" max-vertical-offset="774">
+        <state line="29" column="36" selection-start="502" selection-end="502" vertical-scroll-proportion="-8.851851" vertical-offset="283" max-vertical-offset="774">
           <folding>
             <element signature="e#23#62#0" expanded="true" />
           </folding>
@@ -964,6 +1008,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Task.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state line="30" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="-11.074074" vertical-offset="241" max-vertical-offset="882">
 =======
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_15_211934_create_team_users_table.php">
@@ -971,10 +1016,14 @@
         <state relative-caret-position="25">
           <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+        <state line="48" column="0" selection-start="879" selection-end="879" vertical-scroll-proportion="-11.518518" vertical-offset="553" max-vertical-offset="1044">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_13_175449_create_tasks_table.php">
 =======
@@ -1003,12 +1052,15 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
     <entry file="file://$PROJECT_DIR$/app/Sprint_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="7" selection-start="259" selection-end="259" vertical-scroll-proportion="-8.407408" vertical-offset="79" max-vertical-offset="774">
+        <state line="17" column="7" selection-start="259" selection-end="259" vertical-scroll-proportion="-6.4074073" vertical-offset="133" max-vertical-offset="774">
           <folding>
             <element signature="e#23#62#0" expanded="true" />
           </folding>
+<<<<<<< HEAD
 =======
     <entry file="file://$PROJECT_DIR$/database/migrations/2016_04_12_173955_create_projects_table_migration.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1017,6 +1069,8 @@
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
           <folding />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
+=======
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
         </state>
       </provider>
     </entry>
@@ -1029,16 +1083,21 @@
     <entry file="file://$PROJECT_DIR$/app/Sprint_task.php">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state line="17" column="40" selection-start="278" selection-end="278" vertical-scroll-proportion="-0.9259259" vertical-offset="281" max-vertical-offset="720">
 =======
         <state relative-caret-position="184">
           <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+        <state line="26" column="18" selection-start="464" selection-end="464" vertical-scroll-proportion="-12.037037" vertical-offset="143" max-vertical-offset="720">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/resources/views/teams/create_team.blade.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1104,6 +1163,11 @@
           <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
 >>>>>>> 27649c946b846059398978d1ce9854cdab7b2788
 >>>>>>> 32d4b90c6ff3c4f2549a60406163d0e86545956e
+=======
+    <entry file="file://$PROJECT_DIR$/app/Sprint.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="30" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.601108" vertical-offset="845" max-vertical-offset="1314">
+>>>>>>> a33a01b96a537239a78325fd1ae4bac1eed89ea1
           <folding />
         </state>
       </provider>

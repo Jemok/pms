@@ -23,4 +23,67 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * A user has many teams
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function teams(){
+
+        return $this->hasMany(Team::class);
+    }
+
+    /**
+     * A user has many projects
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function project(){
+
+        return $this->hasMany(Project::class);
+    }
+
+    /**
+     * A user has many sprints
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sprints(){
+
+        return $this->hasMany(Sprint::class);
+    }
+
+    /**
+     * A user has many sprint_users
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function sprint_user(){
+
+        return $this->hasMany(Sprint_user::class);
+    }
+
+    /**
+     * A user has many tasks
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tasks(){
+
+        return $this->hasMany(Task::class);
+    }
+
+    /**
+     * A user has many task_users
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function tasks_user(){
+
+        return $this->hasMany(Task_user::class);
+    }
+
+    /**
+     * A user has many team users
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function team_user(){
+
+        return $this->hasMany(Team_user::class);
+    }
 }
