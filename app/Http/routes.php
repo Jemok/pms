@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    if(Auth::guest()){
+
+        return view('welcome');
+    }
+
+    return view('home');
+
+
 });
 
 Route::auth();
@@ -21,3 +29,6 @@ Route::get('/home', 'HomeController@index');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
+
+/*team routes*/
+Route::post('teams/store', 'TeamController@store');
