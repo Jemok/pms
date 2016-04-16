@@ -47,7 +47,16 @@
                         <label for="started at">Started at</label>
                     </div>
                     <div class="col-md-5">
-                        <input type="datetime" name="date_time" class="form-control" placeholder="date and time" value="">
+                        <input type="datetime" name="started_at" class="form-control" placeholder="Started at" value="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <label for="started at">Ended at</label>
+                    </div>
+                    <div class="col-md-5">
+                        <input type="datetime" name="ended_at" class="form-control" placeholder="Ended at" value="">
                     </div>
                 </div>
 
