@@ -8,11 +8,12 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/bootstrap_fonts') }}" type="text/css" rel="stylesheet">
+
 
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{asset('css/bootstrap_css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap_css/carousel.css')}}" type="text/css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -39,16 +40,24 @@
                 </button>
 
                 <!-- Branding Image -->
+                @if(Auth::guest())
                 <a class="navbar-brand" href="{{ url('/') }}">
                     PMS
                 </a>
+
+                @endif
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
+                @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
+                    <a class="navbar-brand" href="{{ url('projects/create') }}">
+                        create project
+                    </a>
+                @endif
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -75,8 +84,9 @@
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="{{asset('js/jquery/jquery.js')}}"></script>
+    <script src="{{asset('js/bootstrap_js/bootstrap.min.js')}}"></script>
+
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
