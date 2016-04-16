@@ -19,7 +19,9 @@
                             <div class="form-group">
                                 <label for="Description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="description" name= "description" placeholder="Team description">
+                                   <textarea class="form-control" name="description" rows="10">
+
+                                   </textarea>
                                 </div>
                             </div>
 
