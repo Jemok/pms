@@ -14,6 +14,7 @@
     <!-- Styles -->
         <link href="{{asset('css/bootstrap_css/bootstrap.min.css')}}" type="text/css" rel="stylesheet">
     <link href="{{asset('css/bootstrap_css/carousel.css')}}" type="text/css" rel="stylesheet">
+    <link href="{{asset('css/navbar_css/navbar.css')}}" type="text/css" rel="stylesheet ">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
     <style>
@@ -52,11 +53,14 @@
                 <!-- Left Side Of Navbar -->
                 @if(!Auth::guest())
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li id="li-a"><a href="{{ url('/home') }}">Home</a></li>
+                    <li id="li-a"><a href="{{ url('/projects/create') }}">Create Project</a></li>
+                    <li id="li-a"><a href="{{ url('/sprints/create') }}">Create Sprint</a></li>
+                    <li id="li-a"><a href="{{ url('/tasks/create') }}">Create Task</a></li>
                 </ul>
-                    <a class="navbar-brand" href="{{ url('projects/create') }}">
+                    <!--<a class="navbar-brand" href="{{ url('projects/create') }}">
                         create project
-                    </a>
+                    </a>-->
                 @endif
 
                 <!-- Right Side Of Navbar -->

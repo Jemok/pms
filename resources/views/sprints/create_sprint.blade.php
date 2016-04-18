@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-md-offset-3">
-                <h4>Create a project to enable you work!!</h4>
+                <h4>Divide your project into sprints.</h4>
             </div>
 
         </div>
@@ -14,16 +14,16 @@
             <div class="col-md-5 col-md-offset-1">
                 <form class="form-horizontal" method="post" action="{{ url('/') }}">
                     {!! csrf_field() !!}
-                    <div class="form-group {{ $errors->has('project_name') ? ' has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('sprint_name') ? ' has-error' : '' }}">
                         <div class="col-md-3">
-                            <label for="project_name">Project Name</label>
+                            <label for="sprint_name">Sprint Name</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="project name" name="project_name" value="">
+                            <input type="text" class="form-control" placeholder="sprint name" name="sprint_name" value="">
 
-                            @if ($errors->has('project_name'))
+                            @if ($errors->has('sprint_name'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('project_name') }}</strong>
+                                        <strong>{{ $errors->first('sprint_name') }}</strong>
                                     </span>
                             @endif
                         </div>
@@ -31,10 +31,10 @@
 
                     <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                         <div class="col-md-3">
-                            <label for="description">Project Description</label>
+                            <label for="description">Sprint Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="description" rows="10">
+                        <textarea class="form-control" name="description" rows="10" >
 
                         </textarea>
 
@@ -45,44 +45,31 @@
                             @endif
                         </div>
                     </div>
-                    <div class="form-group {{ $errors->has('project_status') ? ' has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('deliverable') ? ' has-error' : '' }}">
+                            <div class="col-md-3">
+                                <label for="deliverable">Deliverable</label>
+                            </div>
+                            <div class="col-md-9 ">
+                                <input type="text" class="form-control" placeholder="deliverable" name="deliverable" value="" >
+
+                                @if ($errors->has('deliverable'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('deliverable') }}</strong>
+                                        </span>
+                                @endif
+                            </div>
+                       </div>
+                    <div class="form-group {{ $errors->has('milestone') ? ' has-error' : '' }}">
                         <div class="col-md-3">
-                            <label for="project_status">Project Status</label>
+                            <label for="milestone">Milestone</label>
                         </div>
-                        <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="project_status" value="" >Not Started
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="milestone" name="milestone" value="" >
 
-                            @if ($errors->has('project_status'))
+                            @if ($errors->has('milestone'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('project_status') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="project_status" value="" >Ongoing
-
-                            @if ($errors->has('project_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('project_status') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="project_status" >Completed
-
-                            @if ($errors->has('project_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('project_status') }}</strong>
-                                    </span>
-                            @endif
-                        </div>
-                        <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control"  name="project_status" >Shelved
-
-                            @if ($errors->has('project_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('project_status') }}</strong>
-                                    </span>
+                                            <strong>{{ $errors->first('milestone') }}</strong>
+                                        </span>
                             @endif
                         </div>
                     </div>
@@ -116,5 +103,6 @@
 
         </div>
     </div>
+
 
 @endsection
