@@ -11,8 +11,7 @@ class TeamController extends Controller
 
     public function store(CreateTeamRequest $createTeamRequest)
     {
-        Team::create($createTeamRequest->all());
-
+        Auth()->user()->teams()->create($createTeamRequest->all());
         Session::flash('flash_message', 'Team was created successfully');
         return redirect()->back();
     }
