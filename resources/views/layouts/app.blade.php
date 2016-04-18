@@ -48,6 +48,12 @@
                 <a class="navbar-brand" href="{{ url('projects/create') }}">
                     create project
                 </a>
+                <a class="navbar-brand" href="{{ url('sprints/create') }}">
+                    create sprint
+                </a>
+                <a class="navbar-brand" href="{{ url('tasks/create') }}">
+                    create task
+                </a>
                 @endif
                         <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -76,4 +82,3 @@
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>
-Status
