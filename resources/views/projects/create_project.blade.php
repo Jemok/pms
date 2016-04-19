@@ -14,6 +14,21 @@
             <div class="col-md-5 col-md-offset-1">
                 <form class="form-horizontal" method="post" action="{{ url('/') }}">
                     {!! csrf_field() !!}
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label for="team-list">Allocate to team</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control" name="team_list">
+                                <option>POS</option>
+                                <option>mafisi</option>
+                                <option>malion</option>
+                                <option>Pizza</option>
+                                <option>execution</option>
+                            </select>
+                        </div>
+
+                    </div>
                     <div class="form-group {{ $errors->has('project_name') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="project_name">Project Name</label>
@@ -90,9 +105,14 @@
                         <div class="col-md-3">
                             <label for="started_at">Started at</label>
                         </div>
-                        <div class="col-md-9">
-                            <input type="datetime" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
+                        <div class="col-md-9 input-group date" data-provide="datepicker">
+                            <input type="text"  name="started_at" class="form-control" placeholder="Started at">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </div>
+
                         </div>
+
                     </div>
 
                     <div class="form-group">

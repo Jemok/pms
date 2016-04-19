@@ -15,6 +15,21 @@
             <div class="col-md-5 col-md-offset-1">
                 <form class="form-horizontal" method="post" action="{{ url('/') }}">
                     {!! csrf_field() !!}
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label for="spring-list">Select from Spring</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control" name="spring_list">
+                                <option>POS</option>
+                                <option>mafisi</option>
+                                <option>malion</option>
+                                <option>Pizza</option>
+                                <option>execution</option>
+                            </select>
+                        </div>
+
+                    </div>
                     <div class="form-group {{ $errors->has('task_name') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="task_name">Task Name</label>

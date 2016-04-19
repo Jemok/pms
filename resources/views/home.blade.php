@@ -70,8 +70,19 @@
                         </div>
                     </form>
                 </div>
-
+                <!--display teams created-->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Teams that you created
+                    </div>
+                    <div class="panel-body">
+                        display here
+                    </div>
+                </div>
             </div>
+
+
+
         </div>
     </div>
 

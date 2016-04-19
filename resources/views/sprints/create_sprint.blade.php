@@ -7,13 +7,27 @@
             <div class="col-md-5 col-md-offset-3">
                 <h4>Divide your project into sprints.</h4>
             </div>
-
         </div>
 
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
                 <form class="form-horizontal" method="post" action="{{ url('/') }}">
                     {!! csrf_field() !!}
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label for="project-list">Select from Project</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control" name="project_list">
+                                <option>POS</option>
+                                <option>Exe</option>
+                                <option>PMS</option>
+                                <option>Pizza</option>
+                                <option>execution</option>
+                            </select>
+                        </div>
+
+                    </div>
                     <div class="form-group {{ $errors->has('sprint_name') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="sprint_name">Sprint Name</label>
