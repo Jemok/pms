@@ -45,13 +45,13 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                 </ul>
-                <a class="navbar-brand" href="{{ url('projects/create') }}">
+                <a id="link" class="navbar-brand"  href="{{ url('projects/create') }}">
                     create project
                 </a>
-                <a class="navbar-brand" href="{{ url('sprints/create') }}">
+                <a id="link"  class="navbar-brand" href="{{ url('sprints/create') }}">
                     create sprint
                 </a>
-                <a class="navbar-brand" href="{{ url('tasks/create') }}">
+                <a id="link" class="navbar-brand" href="{{ url('tasks/create') }}">
                     create task
                 </a>
                 @endif
