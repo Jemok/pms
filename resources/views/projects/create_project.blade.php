@@ -105,12 +105,8 @@
                         <div class="col-md-3">
                             <label for="started_at">Started at</label>
                         </div>
-                        <div class="col-md-9 input-group date" data-provide="datepicker">
-                            <input type="text"  name="started_at" class="form-control" placeholder="Started at">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                            </div>
-
+                        <div class="col-md-9">
+                            <input type="date"  name="started_at" class="form-control" placeholder="Started at">
                         </div>
 
                     </div>
@@ -120,7 +116,7 @@
                             <label for="ended_at">Ended at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime" name="ended_at" class="form-control" placeholder="Ended at" value="">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="">
                         </div>
                     </div>
 
