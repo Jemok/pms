@@ -23,8 +23,10 @@ Route::get('/', function () {
 
 });
 
+/*Authentication route*/
 Route::auth();
 
+/*home page route*/
 Route::get('/home', 'HomeController@index');
 
 /*Project routes*/

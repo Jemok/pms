@@ -136,6 +136,23 @@
 
                 </form>
             </div>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="row">
+                    <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Display registered sprints here</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Edit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Delete</button>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

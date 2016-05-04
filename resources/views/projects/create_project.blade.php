@@ -124,10 +124,13 @@
                         <div class="col-md-3 col-md-offset-5">
                             <input type="submit" class="btn btn-lg btn-default" name="save" value="Save">
                         </div>
-
                     </div>
 
                 </form>
+            </div>
+            <div class="col-md-6">
+                <p>display registered projects here</p>
+                <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
             </div>
 
         </div>
