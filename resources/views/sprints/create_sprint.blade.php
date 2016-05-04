@@ -3,15 +3,27 @@
 @section('content')
 
     <div class="container">
+        <!--header row-->
         <div class="row">
             <div class="col-md-5 col-md-offset-3">
                 <h4>Divide your project into sprints.</h4>
             </div>
         </div>
-
+        <!--if session for flash message-->
+        @if(Session::has("flash_message"))
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>{{session("flash_message")}}</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+        <!--form row-->
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
-                <form class="form-horizontal" method="post" action="{{ url('/') }}">
+                <form class="form-horizontal" method="post" action="{{ url('sprints/store') }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="col-md-3">

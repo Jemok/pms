@@ -9,6 +9,16 @@
 
                     <div class="panel-body">
                         You are logged in Please create a team!
+                        @if(Session::has("flash_message"))
+                        <div class="row">
+                            <div class="col-md-10 col-md-offset-1">
+                                <div class="alert alert-success alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <strong>{{session("flash_message")}}</strong>
+                                </div>
+                            </div>
+                        </div>
+                        @endif
                         <form class="form-horizontal" method="post" action="{{ url('teams/store') }}">
                             {!! csrf_field() !!}
                             <div class="form-group {{ $errors->has('team_name') ? ' has-error' : '' }}">
@@ -77,26 +87,30 @@
                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                Teams that you created
+                                <strong>Teams that you created</strong>
                             </div>
                             <div class="panel-body">
-                                <button class="btn  btn-default btn-block" name="view_teams" >Click to view present teams</button>
+
                                 <br>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <strong>Team name</strong>
-                                    </div>
-                                    <div class="col-md-2">
-                                        POS
-                                    </div>
-                                    <div class="col-md-4">
-                                        Description
-                                    </div>
-                                    <div class="col-md-2">
-                                        <button class="btn btn-default" name="action">edit</button>
-                                        <button class="btn btn-default" name="action">delete</button>
-                                    </div>
-                                </div>
+
+                                @if($teams->count())
+                                    @foreach($teams as $team)
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a href="#">{{$team->team_name}}</a>
+                                            </div>
+                                            <div class="col-md-5">
+                                               {{$team->description}}
+                                            </div>
+                                            <div class="col-md-1">
+                                                <button class="btn btn-default" name="view_teams">View Project</button>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <h4>No teams found</h4>
+                                @endif
+
                             </div>
                         </div>
                     </div>

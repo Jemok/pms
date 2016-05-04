@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Repositories\TeamRepository;
 
 class HomeController extends Controller
 {
@@ -22,8 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(TeamRepository $teamRepository)
     {
-        return view('home');
+        $teams=$teamRepository->index();
+        return view('home',compact('teams'));
     }
 }

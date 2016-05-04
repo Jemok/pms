@@ -83,31 +83,18 @@
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" value="" >Not Started
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('task_status') }}</strong>
-                                    </span>
-                            @endif
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" value="" >Ongoing
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('task_status') }}</strong>
-                                    </span>
-                            @endif
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" >Completed
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
+                        </div>
+                        @if ($errors->has('task_status'))
+                            <span class="help-block">
                                         <strong>{{ $errors->first('task_status') }}</strong>
                                     </span>
-                            @endif
-                        </div>
+                        @endif
                     </div>
                     <div class="form-group">
                         <div class="col-md-3">

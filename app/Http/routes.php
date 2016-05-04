@@ -31,12 +31,14 @@ Route::get('/home', 'HomeController@index');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
+Route::post('projects/store', 'ProjectController@store');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
+Route::post('sprints/store', 'SprintController@store');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');

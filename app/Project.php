@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
@@ -17,6 +18,7 @@ class Project extends Model
         'project_status',
         'started_at',
         'ended_at'
+        
     ];
 
 
@@ -28,13 +30,17 @@ class Project extends Model
 
         return $this->belongsTo(User::class);
     }
-
-    /**
-     * A team owns a project
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function team(){
-
-        return $this->belongsTo(Team::class);
+    
+    public function team()
+    {
+        return $this->hasOne(ProjectTeam::class);
     }
+    public function creator()
+    {
+        return $this->hasOne(ProjectCreator::class);
+    }
+    /*public function setStartedAtAttribute($started_at)
+    {
+        $this->attributes['started_at']=Carbon::parse($started_at)->addHours(3);
+    }*/
 }
