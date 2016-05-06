@@ -32,15 +32,11 @@ class User extends Authenticatable
 
         return $this->hasMany(Team::class);
     }
-
-    /**
-     * A user has many projects
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function project(){
-
-        return $this->hasMany(Project::class);
+    public function creator()
+    {
+        return $this->hasMany(ProjectCreator::class);
     }
+        
 
     /**
      * A user has many sprints

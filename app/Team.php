@@ -26,13 +26,9 @@ class Team extends Model
         return $this->belongsTo(User::class);
     }
 
-    /**
-     * A Team has many projects
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function project(){
-
-        return $this->hasMany(Project::class);
+    public function  projects()
+    {
+        return $this->hasMany(ProjectCreator::class);
     }
 
     /**

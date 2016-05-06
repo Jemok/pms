@@ -44,16 +44,13 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a id="link" class="navbar-brand"  href="{{ url('projects/create') }}">create project</a></li>
+                    <li><a id="link"  class="navbar-brand" href="{{ url('sprints/create') }}">create sprint</a></li>
+                    <li><a id="link" class="navbar-brand" href="{{ url('tasks/create') }}">create task</a></li>
                 </ul>
-                <a id="link" class="navbar-brand"  href="{{ url('projects/create') }}">
-                    create project
-                </a>
-                <a id="link"  class="navbar-brand" href="{{ url('sprints/create') }}">
-                    create sprint
-                </a>
-                <a id="link" class="navbar-brand" href="{{ url('tasks/create') }}">
-                    create task
-                </a>
+
+
+
                 @endif
                         <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">

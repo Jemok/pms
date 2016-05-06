@@ -83,38 +83,25 @@
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" value="" >Not Started
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('task_status') }}</strong>
-                                    </span>
-                            @endif
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" value="" >Ongoing
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
-                                        <strong>{{ $errors->first('task_status') }}</strong>
-                                    </span>
-                            @endif
                         </div>
                         <div class="col-md-2 col-sm-2">
                             <input type="radio" class="form-control" name="task_status" >Completed
-
-                            @if ($errors->has('task_status'))
-                                <span class="help-block">
+                        </div>
+                        @if ($errors->has('task_status'))
+                            <span class="help-block">
                                         <strong>{{ $errors->first('task_status') }}</strong>
                                     </span>
-                            @endif
-                        </div>
+                        @endif
                     </div>
                     <div class="form-group">
                         <div class="col-md-3">
                             <label for="started_at">Started at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
+                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
                         </div>
                     </div>
 
@@ -123,7 +110,7 @@
                             <label for="ended_at">Ended at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime" name="ended_at" class="form-control" placeholder="Ended at" value="">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="">
                         </div>
                     </div>
 
@@ -135,6 +122,23 @@
                     </div>
 
                 </form>
+            </div>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="row">
+                    <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Display registered sprints here</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Edit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Delete</button>
+                    </div>
+                </div>
             </div>
 
         </div>

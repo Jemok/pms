@@ -3,15 +3,27 @@
 @section('content')
 
     <div class="container">
+        <!--header row-->
         <div class="row">
             <div class="col-md-5 col-md-offset-3">
                 <h4>Divide your project into sprints.</h4>
             </div>
         </div>
-
+        <!--if session for flash message-->
+        @if(Session::has("flash_message"))
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="alert alert-success alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>{{session("flash_message")}}</strong>
+                    </div>
+                </div>
+            </div>
+        @endif
+        <!--form row-->
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
-                <form class="form-horizontal" method="post" action="{{ url('/') }}">
+                <form class="form-horizontal" method="post" action="{{ url('sprints/store') }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="col-md-3">
@@ -92,7 +104,7 @@
                             <label for="started_at">Started at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
+                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
                         </div>
                     </div>
 
@@ -101,7 +113,7 @@
                             <label for="ended_at">Ended at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="datetime" name="ended_at" class="form-control" placeholder="Ended at" value="">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="">
                         </div>
                     </div>
 
@@ -109,12 +121,26 @@
                         <div class="col-md-3 col-md-offset-5">
                             <input type="submit" class="btn btn-lg btn-default" name="save" value="Save">
                         </div>
-
                     </div>
-
                 </form>
             </div>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="row">
+                    <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
+                </div>
 
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Display registered sprints here</p>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Edit</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-default" name="edit">Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
