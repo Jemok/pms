@@ -15,5 +15,24 @@ class TeamController extends Controller
         Session::flash('flash_message', 'Team was created successfully');
         return redirect()->back();
     }
+<<<<<<< HEAD
+/*
+   public function create()
+    {
+        $teams = DB::table('teams')->get();
+
+        return view('team.show',['teams=>$teams']);
+
+        foreach ($teams as $team){
+
+        echo $team->name;
+    }
+    }
+    */
+ public function create(){
+     return view('teams.create_team');
+ }
+=======
     
+>>>>>>> 0d8f1725feb00639d93322b75258f87fcf68edcf
 }
