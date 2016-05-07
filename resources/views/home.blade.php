@@ -90,8 +90,14 @@
                                 <strong>Teams that you created</strong>
                             </div>
                             <div class="panel-body">
-
-                                <br>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <strong>Team name</strong>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <strong>Description</strong>
+                                    </div>
+                                </div>
 
                                 @if($teams->count())
                                     @foreach($teams as $team)
@@ -103,7 +109,7 @@
                                                {{$team->description}}
                                             </div>
                                             <div class="col-md-1">
-                                                <button class="btn btn-default" name="view_teams">View Project</button>
+                                                <a href="projects/view_project.blade.php"><button class="btn btn-default" name="view_teams">View Project</button></a>
                                             </div>
                                         </div>
                                     @endforeach

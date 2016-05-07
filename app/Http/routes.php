@@ -19,9 +19,13 @@ Route::auth();
 /*home page route*/
 Route::get('/home', 'HomeController@index');
 
+/*profile page route*/
+Route::get('profile/edit','ProfileController@index');
+
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
+//Route::get('projects/create', 'ProjectController@projectPage');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');

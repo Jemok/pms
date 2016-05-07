@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Requests\CreateProjectRequest;
 use App\Repositories\TeamRepository;
+use App\Repositories\ProjectRepository;
 
 class ProjectController extends Controller
 {
@@ -22,20 +23,37 @@ class ProjectController extends Controller
     }
     public function store(CreateProjectRequest $createProjectRequest)
     {
-        $project= Project::create([
-            'project_name'=>$createProjectRequest->get('project_name'),
-            'project_description'=>$createProjectRequest->get('project_description'),
-            'project_status'=>$createProjectRequest->get('project_status'),
-            'started_at'=>$createProjectRequest->get('started_at'),
-            'ended_at'=>$createProjectRequest->get('ended_at')
+        $project = Project::create([
+            'project_name' => $createProjectRequest->get('project_name'),
+            'project_description' => $createProjectRequest->get('project_description'),
+            'project_status' => $createProjectRequest->get('project_status'),
+            'started_at' => $createProjectRequest->get('started_at'),
+            'ended_at' => $createProjectRequest->get('ended_at')
         ]);
         $project->creator()->create([
-            'user_id'=>Auth::user()->id
+            'user_id' => Auth::user()->id
         ]);
         $project->team()->create([
-            'team_id'=>$createProjectRequest->get('team_id')
+            'team_id' => $createProjectRequest->get('team_id')
         ]);
         Session::flash('flash_message', 'Projects was created successfully');
         return redirect()->back();
     }
+    public function index(ProjectRepository $projectRepository)
+    {
+        $projects=$projectRepository->index();
+        return view('projects.create_project',compact('projects'));
+    }
+    public function projectPage()
+    {
+        if(Auth::guest())
+        {
+            return view('Welcome');
+        }
+        return $this->index(new TeamRepository(new Team()));
+
+    }
+    
+    
+    
 }

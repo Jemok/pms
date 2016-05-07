@@ -125,7 +125,6 @@
             </div>
             <div class="col-md-6">
                 <p>display registered projects here</p>
-                <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
             </div>
 
         </div>
