@@ -131,9 +131,6 @@
                         {{$project->project_name}}
                     </div>
                     @endforeach
-
-
-
             </div>
 
         </div>

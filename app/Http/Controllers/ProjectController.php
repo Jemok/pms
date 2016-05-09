@@ -17,12 +17,12 @@ class ProjectController extends Controller
 {
 
     public function create(TeamRepository $teamRepository)
-        {
+    {
             $teams=$teamRepository->index();
             return view('projects.create_project', compact('teams'));
-        }
+    }
     public function store(CreateProjectRequest $createProjectRequest)
-        {
+    {
             $project = Project::create([
                 'project_name' => $createProjectRequest->get('project_name'),
                 'project_description' => $createProjectRequest->get('project_description'),
@@ -39,12 +39,10 @@ class ProjectController extends Controller
             Session::flash('flash_message', 'Projects was created successfully');
             return redirect()->back();
         }
-    public function index()
-    {
-        $projects = Project::all();
-        return view('projects.create_project', compact('projects'));
-    }
 
-    
-    
+        public function index()
+        {
+            $projects = Project::all();
+            return view('projects.create_project', compact('projects'));
+        }
 }
