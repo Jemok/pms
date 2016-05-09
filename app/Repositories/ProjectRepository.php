@@ -6,18 +6,18 @@ namespace App\Repositories;
  * Date: 5/4/16
  * Time: 5:02 PM
  */
-use App\Team;
-class TeamRepository
+use App\Project;
+class ProjectRepository
 {
     protected $model;
-    public function __construct(Team $team)
+    public function __construct(Project $project)
     {
-        $this->model=$team;
-        
+        $this->model=$project;
+
     }
     public function index()
     {
-        return Team::all();
+        return Project::all();
 
     }
 
