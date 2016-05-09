@@ -16,10 +16,11 @@ use App\Repositories\ProjectRepository;
 class ProjectController extends Controller
 {
 
-    public function create(TeamRepository $teamRepository)
+    public function create(TeamRepository $teamRepository, ProjectRepository $projectRepository)
         {
             $teams=$teamRepository->index();
-            return view('projects.create_project', compact('teams'));
+            $projects=$projectRepository->index();
+            return view('projects.create_project', compact('teams','projects'));
         }
     public function store(CreateProjectRequest $createProjectRequest)
         {
@@ -39,11 +40,6 @@ class ProjectController extends Controller
             Session::flash('flash_message', 'Projects was created successfully');
             return redirect()->back();
         }
-    public function index()
-    {
-        $projects = Project::all();
-        return view('projects.create_project', compact('projects'));
-    }
 
     
     
