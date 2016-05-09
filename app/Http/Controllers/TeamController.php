@@ -15,6 +15,7 @@ class TeamController extends Controller
         Session::flash('flash_message', 'Team was created successfully');
         return redirect()->back();
     }
+    
 <<<<<<< HEAD
 /*
    public function create()
