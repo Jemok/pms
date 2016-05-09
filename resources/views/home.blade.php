@@ -84,7 +84,7 @@
                 </div>
                 <!--display teams created-->
                 <div class="row">
-                    <div class="col-md-12">
+                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <strong>Teams that you created</strong>
@@ -103,13 +103,13 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="#">{{$team->team_name}}</a>
+                                                <a href="{{'teams/index'}}">{{$team->team_name}}</a>
                                             </div>
                                             <div class="col-md-5">
                                                {{$team->description}}
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="projects/view_project.blade.php"><button class="btn btn-default" name="view_teams">View Project</button></a>
+                                                <a href="teams/view_project.blade.php"><button class="btn btn-default" name="view_teams">View Project</button></a>
                                             </div>
                                         </div>
                                     @endforeach

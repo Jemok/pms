@@ -125,6 +125,15 @@
             </div>
             <div class="col-md-6">
                 <p>display registered projects here</p>
+                <a href="{{'projects/index'}}"><button class="btn btn-default btn-block" value="View Projects">View projects</button></a>
+                    @foreach($projects as $project)
+                    <div class="col-md-1">
+                        {{$project->project_name}}
+                    </div>
+                    @endforeach
+
+
+
             </div>
 
         </div>

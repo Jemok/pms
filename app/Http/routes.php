@@ -25,10 +25,11 @@ Route::get('profile/edit','ProfileController@index');
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
-//Route::get('projects/create', 'ProjectController@projectPage');
+Route::get('projects/index', 'ProjectController@index');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
+Route::get('teams/index', 'TeamDetailsController@index');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
