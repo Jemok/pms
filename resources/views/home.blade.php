@@ -59,6 +59,12 @@
 
             <!--search-->
             <div class="col-md-offset-1 col-md-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href={{'teams/allTeams'}}><h5><strong>View all available teams...</strong></h5></a>
+                    </div>
+                </div>
+
                 <!--display teams created-->
                 <div class="row">
                      <div class="col-md-12">
@@ -93,6 +99,11 @@
                                 @else
                                     <h4>No teams found</h4>
                                 @endif
+                                <div class="row">
+                                    <div class="col-md-offset-3 col-md-3">
+                                        <button class="btn btn-default btn-group">View more of your teams</button>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>
