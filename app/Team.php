@@ -39,4 +39,14 @@ class Team extends Model
 
         return $this->hasMany(Team_user::class);
     }
+
+    /**
+     * Team TeamAdmin Relationship
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function admin(){
+
+        return $this->hasOne(TeamAdmin::class);
+
+    }
 }

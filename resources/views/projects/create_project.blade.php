@@ -119,26 +119,25 @@
                             <input type="submit" class="btn btn-lg btn-default" value="Save">
                         </div>
                     </div>
-
                 </form>
             </div>
             <div class="col-md-6">
                 <h4><strong>Registered Projects</strong></h4>
                 <div class="row" id="project_heading">
                     <div class="col-md-2">
-                        <strong>Name</strong>
+                        <h5><strong>Name</strong></h5>
                     </div>
                     <div class="col-md-4">
-                        <strong>Description</strong>
+                        <h5><strong>Description</strong></h5>
                     </div>
                     <div class="col-md-1">
-                        <strong>Status</strong>
+                        <h5><strong>Status</strong></h5>
                     </div>
                     <div class="col-md-2 col-md-offset-1">
-                        <strong>Started_at</strong>
+                        <h5><strong>Started_at</strong></h5>
                     </div>
                     <div class="col-md-2">
-                        <strong>End</strong>
+                        <h5><strong>End</strong></h5>
                     </div>
                 </div>
 
