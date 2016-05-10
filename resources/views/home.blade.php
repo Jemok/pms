@@ -92,7 +92,7 @@
                                                {{$team->description}}
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="#"><button class="btn btn-default" name="view_teams">View Project</button></a>
+                                                <a href="{{'teams/teamDetails'}}"><button class="btn btn-default" name="view_teams">View Project</button></a>
                                             </div>
                                         </div>
                                     @endforeach
