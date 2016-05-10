@@ -33,6 +33,19 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group {{ $errors->has('short_description') ? ' has-error' : '' }}">
+                                <label for="short_description" class="col-sm-2 control-label">Short Description</label>
+                                <div class="col-sm-10">
+                                   <textarea class="form-control" name="short_description" rows="5">
+
+                                   </textarea>
+                                    @if ($errors->has('short_description'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('short_description') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-10">
@@ -117,7 +130,6 @@
                                         <button class="btn btn-default btn-group">View more of your teams</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
