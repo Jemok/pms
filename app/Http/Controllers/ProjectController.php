@@ -16,10 +16,11 @@ use App\Repositories\ProjectRepository;
 class ProjectController extends Controller
 {
 
-    public function create(TeamRepository $teamRepository)
+    public function create(TeamRepository $teamRepository, ProjectRepository $projectRepository)
     {
             $teams=$teamRepository->index();
-            return view('projects.create_project', compact('teams'));
+            $projects=$projectRepository->index();
+            return view('projects.create_project', compact('teams','projects'));
     }
     public function store(CreateProjectRequest $createProjectRequest)
     {

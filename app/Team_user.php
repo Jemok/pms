@@ -14,8 +14,8 @@ class Team_user extends Model
     protected $fillable = [
 
         'team_id',
-        'user_id'
-
+        'user_id',
+        'user_category'
     ];
 
     /**

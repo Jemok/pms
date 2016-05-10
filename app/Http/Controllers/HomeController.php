@@ -22,12 +22,13 @@ class HomeController extends Controller
 
     /**
      * Show the application dashboard.
-     *
-     * @return \Illuminate\Http\Response
+     * @param TeamRepository $teamRepository
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(TeamRepository $teamRepository)
     {
-        $teams=$teamRepository->index();
+        $teams = $teamRepository->index();
+
         return view('home',compact('teams'));
     }
     public function homePage()

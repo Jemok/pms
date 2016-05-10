@@ -24,14 +24,6 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    /**
-     * A user has many teams
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function teams(){
-
-        return $this->hasMany(Team::class);
-    }
     public function creator()
     {
         return $this->hasMany(ProjectCreator::class);
@@ -78,7 +70,7 @@ class User extends Authenticatable
      * A user has many team users
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function team_user(){
+    public function teams(){
 
         return $this->hasMany(Team_user::class);
     }
