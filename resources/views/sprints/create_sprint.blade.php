@@ -150,11 +150,40 @@
                         <strong>End</strong>
                     </div>
                 </div>
-
-
-            <!--output of sprints -->
-
             </div>
+
+            <!-- output for sprints-->
+            {{--@if($sprints->count())--}}
+            {{--@foreach($sprints as $sprint)--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--{{$sprints->sprint_name}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->description}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->deliverable}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->milestone}}--}}
+                    {{--</div>--}}
+
+                    {{--<div class="col-md-2 col-md-offset-1">--}}
+                        {{--{{$project->started_at->diffForHumans()}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--{{$project->ended_at->diffForHumans()}}--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            {{--@endforeach--}}
+            {{--@else--}}
+                {{--<div class="alert alert-info alert-dismissible" role="alert">--}}
+                    {{--<button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>--}}
+                    {{--<p><strong>There are no registered sprints</strong></p>--}}
+                {{--</div>--}}
+            {{--@endif--}}
         </div>
     </div>
 

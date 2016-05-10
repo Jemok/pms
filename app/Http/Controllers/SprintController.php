@@ -12,6 +12,8 @@ class SprintController extends Controller
     public function create(ProjectRepository $projectRepository)
     {
         $projects=$projectRepository->index();
+        
+        
         return view('sprints.create_sprint',compact('projects'));
     }
     
