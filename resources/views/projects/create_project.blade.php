@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-<!--output projects-->
+                <!--output projects-->
                 <!--start for each-->
                 @if($projects->count())
                 @foreach($projects as $project)
@@ -153,7 +153,18 @@
                             {{$project->project_description}}
                         </div>
                         <div class="col-md-1">
-                            {{$project->project_status}}
+                                @if($project->project_status == 0)
+                                    Not Started
+                                @endif
+                                @if($project->project_status == 1)
+                                    Ongoing
+                                @endif
+                                @if($project->project_status == 2)
+                                    Completed
+                                @endif
+                                    @if($project->project_status == 3)
+                                        Shelved
+                                    @endif
                         </div>
                         <div class="col-md-2 col-md-offset-1">
                             {{$project->started_at->diffForHumans()}}

@@ -126,7 +126,78 @@
                     </div>
                 </form>
             </div>
+
+            {{--<div class="col-md-6">--}}
+                {{--<div class="row">--}}
+                    {{--<h4><strong>Registered Sprints</strong></h4>--}}
+                {{--</div>--}}
+                {{--<div class="row" id="sprint_heading">--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--<strong>Name</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-3">--}}
+                        {{--<strong>Description</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1">--}}
+                        {{--<strong>Deliverable</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1  col-md-offset-1">--}}
+                        {{--<strong>Milestone</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1  col-md-offset-1">--}}
+                        {{--<strong>Started_at</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1  col-md-offset-1">--}}
+                        {{--<strong>End</strong>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+
+            <!-- output for sprints-->
+            {{--@if($sprints->count())--}}
+            {{--@foreach($sprints as $sprint)--}}
+                {{--<div class="row">--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--{{$sprints->sprint_name}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->description}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->deliverable}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-4">--}}
+                        {{--{{$sprints->milestone}}--}}
+                    {{--</div>--}}
+
+                    {{--<div class="col-md-2 col-md-offset-1">--}}
+                        {{--{{$project->started_at->diffForHumans()}}--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--{{$project->ended_at->diffForHumans()}}--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+            {{--@endforeach--}}
+            {{--@else--}}
+                {{--<div class="alert alert-info alert-dismissible" role="alert">--}}
+                    {{--<button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>--}}
+                    {{--<p><strong>There are no registered sprints</strong></p>--}}
+                {{--</div>--}}
+            {{--@endif--}}
+
         </div>
+            <!--flash message if statement-->
+            @if(Session::has("flash_message"))
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>{{session("flash_message")}}</strong>
+                        </div>
+                    </div>
+                </div>
+            @endif
     </div>
 
 

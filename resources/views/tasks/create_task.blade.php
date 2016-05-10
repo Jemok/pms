@@ -13,7 +13,7 @@
 
         <div class="row">
             <div class="col-md-5">
-                <form class="form-horizontal" method="post" action="{{ url('/') }}">
+                <form class="form-horizontal" method="post" action="{{ url('tasks/store') }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="col-md-3">
@@ -123,32 +123,42 @@
 
                 </form>
             </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <h4><strong>Registered Tasks</strong></h4>
-                </div>
-                <div class="row" id="sprint_heading">
-                    <div class="col-md-2">
-                        <strong>Name</strong>
-                    </div>
-                    <div class="col-md-3">
-                        <strong>Description</strong>
-                    </div>
-                    <div class="col-md-1">
-                        <strong>Deliverable</strong>
-                    </div>
-                    <div class="col-md-1 col-md-offset-1">
-                        <strong>Task status</strong>
-                    </div>
-                    <div class="col-md-1  col-md-offset-1">
-                        <strong>Started_at</strong>
-                    </div>
-                    <div class="col-md-1  col-md-offset-1">
-                        <strong>End</strong>
-                    </div>
-                </div>
-            </div>
+            {{--<div class="col-md-6">--}}
+                {{--<div class="row">--}}
+                    {{--<h4><strong>Registered Tasks</strong></h4>--}}
+                {{--</div>--}}
+                {{--<div class="row" id="sprint_heading">--}}
+                    {{--<div class="col-md-2">--}}
+                        {{--<strong>Name</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-3">--}}
+                        {{--<strong>Description</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1">--}}
+                        {{--<strong>Deliverable</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1 col-md-offset-1">--}}
+                        {{--<strong>Task status</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1  col-md-offset-1">--}}
+                        {{--<strong>Started_at</strong>--}}
+                    {{--</div>--}}
+                    {{--<div class="col-md-1  col-md-offset-1">--}}
+                        {{--<strong>End</strong>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
 
+            @if(Session::has("flash_message"))
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="alert alert-success alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>{{session("flash_message")}}</strong>
+                        </div>
+                    </div>
+                </div>
+            @endif
         </div>
     </div>
 

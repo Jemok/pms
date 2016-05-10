@@ -38,6 +38,7 @@ Route::post('sprints/store', 'SprintController@store');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
+Route::post('tasks/store','TaskController@store');
 
 /*team routes*/
 Route::post('teams/create','TeamController@create');
