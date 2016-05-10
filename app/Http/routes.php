@@ -20,12 +20,12 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 /*profile page route*/
-Route::get('profile/edit','ProfileController@index');
+Route::get('profile/edit','ProfileController@show');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
-Route::get('projects/index', 'ProjectController@index');
+
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');

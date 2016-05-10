@@ -44,9 +44,9 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a id="link" href="{{ url('/home') }}">Home</a></li>
-                    <li><a id="link" href="{{ url('projects/create') }}">create project</a></li>
-                    <li><a id="link" href="{{ url('sprints/create') }}">create sprint</a></li>
-                    <li><a id="link" href="{{ url('tasks/create') }}">create task</a></li>
+                    <li><a id="link" href="{{ url('projects/create') }}">Create project</a></li>
+                    <li><a id="link" href="{{ url('sprints/create') }}">Create sprint</a></li>
+                    <li><a id="link" href="{{ url('tasks/create') }}">Create task</a></li>
                 </ul>
 
 
