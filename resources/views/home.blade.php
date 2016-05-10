@@ -59,35 +59,12 @@
 
             <!--search-->
             <div class="col-md-offset-1 col-md-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <form class="form-horizontal" method="post" action="{{ url('/') }}">
-                            {!! csrf_field() !!}
-                            <div class="form-group  {{ $errors->has('search') ? ' has-error' : '' }}">
-                                <div class="col-md-4">
-                                    <label for="search">Search for a team</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input type="text" class="form-control" id="search" name="search" placeholder="search for a team">
-                                    @if ($errors->has('search'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('search') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> search</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
                 <!--display teams created-->
                 <div class="row">
                      <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <strong>Teams that you created</strong>
+                                <strong>Teams that you are a member of</strong>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -109,7 +86,7 @@
                                                {{$team->description}}
                                             </div>
                                             <div class="col-md-1">
-                                                <a href={{"teams/view_project.blade.php"}}><button class="btn btn-default" name="view_teams">View Project</button></a>
+                                                <a href="#"><button class="btn btn-default" name="view_teams">View Project</button></a>
                                             </div>
                                         </div>
                                     @endforeach

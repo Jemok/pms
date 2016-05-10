@@ -27,9 +27,9 @@ class CreateSprintRequest extends Request
             'sprint_name' => 'required|min:3',
             'sprint_description' => 'required|min:5',
             'deliverable' => 'required|min:5',
-            'milestone' => 'required|min:5',
-            'started_at' => 'required|min:6',
-            'ended_at' => 'required|min:6'
+            'milestone' => 'required||min:5',
+            'started_at' => 'required',
+            'ended_at' => 'required'
         ];
     }
 }
