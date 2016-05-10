@@ -80,6 +80,10 @@
                                     <div class="col-md-5">
                                         <strong>Description</strong>
                                     </div>
+
+                                     <div class="col-md-4">
+                                        <strong>Level</strong>
+                                     </div>
                                 </div>
 
                                 @if($teams->count())
@@ -89,15 +93,11 @@
                                                 <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
                                             <div class="col-md-5">
-<<<<<<< HEAD
                                                {{$team->team->description}}
-=======
+
                                                {{$team->description}}
                                             </div>
-                                            <div class="col-md-1">
-                                                <a href="#"><button class="btn btn-default" name="view_teams">View Project</button></a>
->>>>>>> d57a6a81578ff59c44461dac138c496025ccea7d
-                                            </div>
+
                                              @if($team->user_category == 0)
                                                <button class="btn btn-small btn-info">.</button>
                                              @endif
