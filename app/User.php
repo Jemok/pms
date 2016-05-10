@@ -74,4 +74,13 @@ class User extends Authenticatable
 
         return $this->hasMany(Team_user::class);
     }
+
+    /**
+     * User TeamAdmin Relationship
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function admins(){
+
+        return $this->hasMany(TeamAdmin::class);
+    }
 }

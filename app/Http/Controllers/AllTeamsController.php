@@ -2,15 +2,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use Illuminate\Http\Request;
-
+use App\Repositories\TeamRepository;
 
 
 class AllTeamsController extends Controller
 {
-    public function allTeams()
+    public function allTeams(TeamRepository $teamRepository)
     {
-        return view('teams.all_teams');
+
+        $teams = $teamRepository->index();
+
+        return view('teams.all_teams', compact('teams'));
     }
 
 }

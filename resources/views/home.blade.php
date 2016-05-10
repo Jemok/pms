@@ -100,9 +100,9 @@
 
                                             </div>
                                             <div class="col-md-2">
-                                                @if($team->user_category == 0)
+                                               @if($team->team->admin->user_id == \Auth::user()->id)
                                                     <button class="btn btn-small btn-info">.</button>
-                                                @endif
+                                               @endif
                                             </div>
                                             <div class="col-md-2">
                                                 <a href="{{}}"><button class="btn btn-default btn-sm">View projects</button></a>
