@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="container">
         <!-- heading-->
         <div class="row">
-            <div class="col-md-5 col-md-offset-3">
+            <div class="col-md-5 col-md-offset-1">
                 <h4>Create a project to enable you work!!</h4>
             </div>
         </div>
@@ -23,7 +22,7 @@
         @endif
         <!--project creation form-->
         <div class="row">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5">
                 <form class="form-horizontal" method="post" action="{{ url('projects/store') }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
@@ -124,36 +123,54 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <p>display registered projects here</p>
-                <a href="{{'projects/index'}}"><button class="btn btn-default btn-block" value="View Projects">View projects</button></a>
+                <h4><strong>Registered Projects</strong></h4>
+                <div class="row" id="project_heading">
+                    <div class="col-md-2">
+                        <strong>Name</strong>
+                    </div>
+                    <div class="col-md-4">
+                        <strong>Description</strong>
+                    </div>
+                    <div class="col-md-1">
+                        <strong>Status</strong>
+                    </div>
+                    <div class="col-md-2 col-md-offset-1">
+                        <strong>Started_at</strong>
+                    </div>
+                    <div class="col-md-2">
+                        <strong>Ended_at</strong>
+                    </div>
+                </div>
 
-                       @foreach($projects as $project)
+<!--output projects-->
+                <!--start for each-->
+                @if($projects->count())
+                @foreach($projects as $project)
                     <div class="row">
-                           <div class="col-md-2">
-                               {{$project->project_name}}
-                           </div>
-                           <div class="col-md-4">
-                               {{$project->project_description}}
-                           </div>
+                        <div class="col-md-2">
+                            {{$project->project_name}}
+                        </div>
+                        <div class="col-md-4">
+                            {{$project->project_description}}
+                        </div>
                         <div class="col-md-1">
                             {{$project->project_status}}
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2 col-md-offset-1">
                             {{$project->started_at}}
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             {{$project->ended_at}}
                         </div>
                     </div>
-                       @endforeach
-
-
-
-
-
+                @endforeach
+                    @else
+                <div class="alert alert-info alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                    <p><strong>There are no registered projects</strong></p>
+                </div>
+                    @endif
             </div>
-
         </div>
     </div>
-
 @endsection

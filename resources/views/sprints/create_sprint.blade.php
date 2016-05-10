@@ -31,11 +31,13 @@
                         </div>
                         <div class="col-md-9">
                             <select class="form-control" name="project_list">
-                                <option>POS</option>
-                                <option>Exe</option>
-                                <option>PMS</option>
-                                <option>Pizza</option>
-                                <option>execution</option>
+                                @if($projects->count())
+                                    @foreach($projects as $project)
+                                        <option value="{{$project->id}}" >{{$project->project_name}}</option>
+                                    @endforeach
+                                @else
+                                    <option>No projects found</option>
+                                @endif
                             </select>
                         </div>
 
@@ -126,19 +128,7 @@
             </div>
             <div class="col-md-5 col-md-offset-1">
                 <div class="row">
-                    <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Display registered sprints here</p>
-                    </div>
-                    <div class="col-md-3">
-                        <button class="btn btn-default" name="edit">Edit</button>
-                    </div>
-                    <div class="col-md-3">
-                        <button class="btn btn-default" name="edit">Delete</button>
-                    </div>
+                    <h4><strong>Registered Sprints</strong></h4>
                 </div>
             </div>
         </div>
