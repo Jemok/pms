@@ -142,7 +142,7 @@
                     </div>
                 </div>
 
-<!--output projects-->
+                <!--output projects-->
                 <!--start for each-->
                 @if($projects->count())
                 @foreach($projects as $project)
