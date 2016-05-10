@@ -29,7 +29,7 @@ Route::post('projects/store', 'ProjectController@store');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
-Route::get('teams/index', 'TeamDetailsController@index');
+Route::get('teams/teamDetails', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 
 /*sprint routes*/

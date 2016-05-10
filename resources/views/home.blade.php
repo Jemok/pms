@@ -77,13 +77,16 @@
                                     <div class="col-md-3">
                                         <strong>Team name</strong>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <strong>Description</strong>
                                     </div>
 
-                                     <div class="col-md-4">
+                                     <div class="col-md-2">
                                         <strong>Level</strong>
                                      </div>
+                                    <div class="col-md-3">
+                                        <strong>View Projects</strong>
+                                    </div>
                                 </div>
 
                                 @if($teams->count())
@@ -92,15 +95,18 @@
                                             <div class="col-md-3">
                                                 <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
-                                            <div class="col-md-5">
+                                            <div class="col-md-4">
                                                {{$team->team->description}}
 
-                                               {{$team->description}}
                                             </div>
-
-                                             @if($team->user_category == 0)
-                                               <button class="btn btn-small btn-info">.</button>
-                                             @endif
+                                            <div class="col-md-2">
+                                                @if($team->user_category == 0)
+                                                    <button class="btn btn-small btn-info">.</button>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="{{}}"><button class="btn btn-default btn-sm">View projects</button></a>
+                                            </div>
                                         </div>
                                     @endforeach
                                 @else

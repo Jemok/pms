@@ -11,10 +11,9 @@ use Illuminate\Support\Facades\Auth;
 class TeamDetailsController extends Controller
 {
 
-    public function index(TeamRepository $teamRepository)
+    public function teamDetails()
     {
-        $teams=$teamRepository->index();
-        return view('teams.team_details',compact('teams'));
+        return view('teams.team_details');
     }
 
 }

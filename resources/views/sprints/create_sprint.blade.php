@@ -126,6 +126,7 @@
                     </div>
                 </form>
             </div>
+<<<<<<< HEAD
             <div class="col-md-6">
                 <div class="row">
                     <h4><strong>Registered Sprints</strong></h4>
@@ -184,6 +185,8 @@
                     {{--<p><strong>There are no registered sprints</strong></p>--}}
                 {{--</div>--}}
             {{--@endif--}}
+=======
+>>>>>>> ba0b887b83d637b0f25b45226e4899edcc0e1a19
         </div>
     </div>
 
