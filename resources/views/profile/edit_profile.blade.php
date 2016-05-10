@@ -9,8 +9,6 @@
                     <strong><p style="text-align: center;">My Profile</p></strong>
                 </div>
                     <div class="panel-body">
-                        @if($users->count())
-                            @foreach($users as $user)
                         <form class="form-horizontal" method="post" action="">
                             <div class="form-group">
                                 <div class="col-md-3">
@@ -20,7 +18,7 @@
                                 </div>
 
                                 <div class="col-md-9">
-                                    <strong><input type="text" name="username" value="{{$user->name}}" class="form-control"></strong>
+                                    <strong><input type="text" name="username" value="{{\Auth::user()->name}}" class="form-control"></strong>
                                 </div>
                             </div>
 
@@ -32,7 +30,7 @@
                                     </div>
 
                                     <div class="col-md-9">
-                                        <strong><input type="email" name="email" value="{{$user->email}}" class="form-control"></strong>
+                                        <strong><input type="email" name="email" value="{{\Auth::user()->email}}" class="form-control"></strong>
                                     </div>
                             </div>
                             <div class="form-group">
@@ -53,14 +51,10 @@
                                 </div>
                             </div>
                         </form>
-                            @endforeach
-                        @else
-                        @endif
                     </div>
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

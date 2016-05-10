@@ -4,7 +4,7 @@
     <div class="container">
         <!-- heading-->
         <div class="row">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5 col-md-offset-2">
                 <h4>Create a project to enable you work!!</h4>
             </div>
         </div>
