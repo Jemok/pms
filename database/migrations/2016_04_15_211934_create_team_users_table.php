@@ -18,6 +18,7 @@ class CreateTeamUsersTable extends Migration
             $table->foreign('team_id')
                 ->references('id')
                 ->on('teams');
+            $table->integer('user_category')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')

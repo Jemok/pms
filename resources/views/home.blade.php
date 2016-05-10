@@ -59,6 +59,12 @@
 
             <!--search-->
             <div class="col-md-offset-1 col-md-5">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href={{'teams/allTeams'}}><h5><strong>View all available teams...</strong></h5></a>
+                    </div>
+                </div>
+
                 <!--display teams created-->
                 <div class="row">
                      <div class="col-md-12">
@@ -74,25 +80,37 @@
                                     <div class="col-md-5">
                                         <strong>Description</strong>
                                     </div>
+
+                                     <div class="col-md-4">
+                                        <strong>Level</strong>
+                                     </div>
                                 </div>
 
                                 @if($teams->count())
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}">{{$team->team_name}}</a>
+                                                <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
                                             <div class="col-md-5">
+                                               {{$team->team->description}}
+
                                                {{$team->description}}
                                             </div>
-                                            <div class="col-md-1">
-                                                <a href="#"><button class="btn btn-default" name="view_teams">View Project</button></a>
-                                            </div>
+
+                                             @if($team->user_category == 0)
+                                               <button class="btn btn-small btn-info">.</button>
+                                             @endif
                                         </div>
                                     @endforeach
                                 @else
                                     <h4>No teams found</h4>
                                 @endif
+                                <div class="row">
+                                    <div class="col-md-offset-3 col-md-3">
+                                        <button class="btn btn-default btn-group">View more of your teams</button>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>

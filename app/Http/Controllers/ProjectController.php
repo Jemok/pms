@@ -17,13 +17,13 @@ class ProjectController extends Controller
 {
 
     public function create(TeamRepository $teamRepository, ProjectRepository $projectRepository)
-        {
+    {
             $teams=$teamRepository->index();
             $projects=$projectRepository->index();
             return view('projects.create_project', compact('teams','projects'));
-        }
+    }
     public function store(CreateProjectRequest $createProjectRequest)
-        {
+    {
             $project = Project::create([
                 'project_name' => $createProjectRequest->get('project_name'),
                 'project_description' => $createProjectRequest->get('project_description'),
@@ -41,6 +41,9 @@ class ProjectController extends Controller
             return redirect()->back();
         }
 
-    
-    
+        public function index()
+        {
+            $projects = Project::all();
+            return view('projects.create_project', compact('projects'));
+        }
 }
