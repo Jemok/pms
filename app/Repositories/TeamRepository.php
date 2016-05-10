@@ -27,7 +27,7 @@ class TeamRepository
      */
     public function index()
     {
-        return Team::with('team_user')->get();
+        return Team::with('admin.user')->get();
 
     }
 
