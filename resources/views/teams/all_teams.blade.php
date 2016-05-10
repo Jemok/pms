@@ -39,15 +39,29 @@
                     <div class="col-md-2">
                         <h5><strong>Team name</strong></h5>
                     </div>
-                    <div class="col-md-3">
-                        <h5><strong>Team Description</strong></h5>
+                    <div class="col-md-4">
+                        <h5><strong>Team full Description</strong></h5>
                     </div>
                     <div class="col-md-3">
                         <h5><strong>Created at</strong></h5>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <h5><strong>Team Admin</strong></h5>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <p>Team 1</p>
+                </div>
+                <div class="col-md-4">
+                    <p>blah blah blah</p>
+                </div>
+                <div class="col-md-3">
+                    <p>3 weeks ago</p>
+                </div>
+                <div class="col-md-3">
+                    <p>Renn</p>
                 </div>
             </div>
         </div>

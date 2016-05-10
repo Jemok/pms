@@ -33,6 +33,19 @@
                                     @endif
                                 </div>
                             </div>
+                            <div class="form-group {{ $errors->has('short_description') ? ' has-error' : '' }}">
+                                <label for="short_description" class="col-sm-2 control-label">Short Description</label>
+                                <div class="col-sm-10">
+                                   <textarea class="form-control" name="short_description" rows="5">
+
+                                   </textarea>
+                                    @if ($errors->has('short_description'))
+                                        <span class="help-block">
+                                        <strong>{{ $errors->first('short_description') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="description" class="col-sm-2 control-label">Description</label>
                                 <div class="col-sm-10">
@@ -75,17 +88,17 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <strong>Team name</strong>
+                                        <h5><strong>Team name</strong></h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <strong>Description</strong>
+                                        <h5><strong>Short Description</strong></h5>
                                     </div>
 
                                      <div class="col-md-2">
-                                        <strong>Level</strong>
+                                        <h5><strong>User Level</strong></h5>
                                      </div>
                                     <div class="col-md-3">
-                                        <strong>View Projects</strong>
+                                        <h5><strong>View Projects</strong></h5>
                                     </div>
                                 </div>
 
@@ -93,11 +106,10 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
+                                                <a href="{{'teams/index'}}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
-                                               {{$team->team->description}}
-
+                                               <p>{{$team->team->description}}</p>
                                             </div>
                                             <div class="col-md-2">
                                                @if($team->team->admin->user_id == \Auth::user()->id)
@@ -117,7 +129,6 @@
                                         <button class="btn btn-default btn-group">View more of your teams</button>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
