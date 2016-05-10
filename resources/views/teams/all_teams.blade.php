@@ -68,16 +68,11 @@
                 </div>
             </div>
                 @endforeach
-
                 {!! $teams->links() !!}
-
             @else
                 No teams found
             @endif
         </div>
     </div>
 </div>
-
-
-
 @endsection
