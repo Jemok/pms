@@ -122,7 +122,10 @@
                                         </div>
                                     @endforeach
                                 @else
-                                    <h4>No teams found</h4>
+                                    <div class="alert alert-info alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                                        <p><strong>You currently have no teams..</strong></p>
+                                    </div>
                                 @endif
                                 <div class="row">
                                     <div class="col-md-offset-3 col-md-3">

@@ -31,25 +31,28 @@
                 <!--end of search-->
             </div>
             <!--display all teams panel-->
-            <div class="row">
+            <div class="row"><!--heading-->
                 <div class="col-md-12">
                    <h4><strong>All available teams!!</strong></h4>
                 </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <h5><strong>Team name</strong></h5>
-                    </div>
-                    <div class="col-md-4">
-                        <h5><strong>Team full Description</strong></h5>
-                    </div>
-                    <div class="col-md-3">
-                        <h5><strong>Created at</strong></h5>
-                    </div>
-                    <div class="col-md-3">
-                        <h5><strong>Team Admin</strong></h5>
-                    </div>
+            </div> <!--end of heading-->
+            <!--more teams headers-->
+            <div class="row">
+                <div class="col-md-2">
+                    <h5><strong>Team name</strong></h5>
+                </div>
+                <div class="col-md-4">
+                    <h5><strong>Team short Description</strong></h5>
+                </div>
+                <div class="col-md-3">
+                    <h5><strong>Created at</strong></h5>
+                </div>
+                <div class="col-md-3">
+                    <h5><strong>Team Admin</strong></h5>
                 </div>
             </div>
+            <!--end of header row-->
+            <!--teams data loop-->
             <div class="row">
                 <div class="col-md-2">
                     <p>Team 1</p>
@@ -63,7 +66,7 @@
                 <div class="col-md-3">
                     <p>Renn</p>
                 </div>
-            </div>
+            </div><!--end of teams data-->
         </div>
     </div>
 </div>
