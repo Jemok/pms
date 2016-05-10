@@ -157,10 +157,10 @@
                             {{$project->project_status}}
                         </div>
                         <div class="col-md-2 col-md-offset-1">
-                            {{$project->started_at}}
+                            {{$project->started_at->diffForHumans()}}
                         </div>
                         <div class="col-md-2">
-                            {{$project->ended_at}}
+                            {{$project->ended_at->diffForHumans()}}
                         </div>
                     </div>
                 @endforeach

@@ -31,6 +31,17 @@ class Project extends Model
         return $this->belongsTo(User::class);
     }
     
+    
+    public function getStartedAtAttribute($started_at){
+        
+        return $this->attributes['started_at'] = Carbon::parse($started_at);
+    }
+
+    public function getEndedAtAttribute($ended_at){
+
+        return $this->attributes['ended_at'] = Carbon::parse($ended_at);
+    }
+    
     public function team()
     {
         return $this->hasOne(ProjectTeam::class);
