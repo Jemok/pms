@@ -88,17 +88,17 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-3">
-                                        <strong>Team name</strong>
+                                        <h5><strong>Team name</strong></h5>
                                     </div>
                                     <div class="col-md-4">
-                                        <strong>Description</strong>
+                                        <h5><strong>Short Description</strong></h5>
                                     </div>
 
                                      <div class="col-md-2">
-                                        <strong>Level</strong>
+                                        <h5><strong>User Level</strong></h5>
                                      </div>
                                     <div class="col-md-3">
-                                        <strong>View Projects</strong>
+                                        <h5><strong>View Projects</strong></h5>
                                     </div>
                                 </div>
 
@@ -106,11 +106,10 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
+                                                <a href="{{'teams/index'}}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
-                                               {{$team->team->description}}
-
+                                               <p>{{$team->team->description}}</p>
                                             </div>
                                             <div class="col-md-2">
                                                 @if($team->user_category == 0)

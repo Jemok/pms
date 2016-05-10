@@ -11,6 +11,15 @@
                         <div class="col-md-2">
                             <h5><strong>Team name</strong></h5>
                         </div>
+                        <div class="col-md-2">
+                            <h5><strong>Team full description</strong></h5>
+                        </div>
+                        <div class="col-md-2">
+                            <h5><strong>USer level</strong></h5>
+                        </div>
+                        <div class="col-md-2">
+                            <h5><strong>View Projects</strong></h5>
+                        </div>
                     </div>
                 </div>
             </div>
