@@ -50,20 +50,30 @@
                     </div>
                 </div>
             </div>
+
+            @if($teams->count())
+                @foreach($teams as $team)
             <div class="row">
                 <div class="col-md-2">
-                    <p>Team 1</p>
+                    <p>{{$team->team_name}}</p>
                 </div>
                 <div class="col-md-4">
-                    <p>blah blah blah</p>
+                    <p>{{$team->description}}</p>
                 </div>
                 <div class="col-md-3">
-                    <p>3 weeks ago</p>
+                    <p>{{$team->created_at->diffForHumans()}}</p>
                 </div>
                 <div class="col-md-3">
-                    <p>Renn</p>
+                    <p>{{$team->admin->user->name}}</p>
                 </div>
             </div>
+                @endforeach
+
+                {!! $teams->links() !!}
+
+            @else
+                No teams found
+            @endif
         </div>
     </div>
 </div>

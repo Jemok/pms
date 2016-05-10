@@ -27,8 +27,7 @@ class TeamRepository
      */
     public function index()
     {
-        return Team::with('admin.user')->get();
-
+        return Team::with('admin.user')->paginate(5);
     }
 
     /**
