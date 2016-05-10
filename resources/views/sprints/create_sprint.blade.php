@@ -126,31 +126,6 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
-                <div class="row">
-                    <h4><strong>Registered Sprints</strong></h4>
-                </div>
-                <div class="row" id="sprint_heading">
-                    <div class="col-md-2">
-                        <strong>Name</strong>
-                    </div>
-                    <div class="col-md-3">
-                        <strong>Description</strong>
-                    </div>
-                    <div class="col-md-1">
-                        <strong>Deliverable</strong>
-                    </div>
-                    <div class="col-md-1  col-md-offset-1">
-                        <strong>Milestone</strong>
-                    </div>
-                    <div class="col-md-1  col-md-offset-1">
-                        <strong>Started_at</strong>
-                    </div>
-                    <div class="col-md-1  col-md-offset-1">
-                        <strong>End</strong>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 

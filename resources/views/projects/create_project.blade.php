@@ -163,6 +163,7 @@
                             {{$project->ended_at->diffForHumans()}}
                         </div>
                     </div>
+
                 @endforeach
                     @else
                 <div class="alert alert-info alert-dismissible" role="alert">
@@ -170,6 +171,7 @@
                     <p><strong>There are no registered projects</strong></p>
                 </div>
                     @endif
+
             </div>
         </div>
     </div>

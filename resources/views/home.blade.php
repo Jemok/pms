@@ -77,8 +77,15 @@
                                     <div class="col-md-3">
                                         <strong>Team name</strong>
                                     </div>
-                                    <div class="col-md-5">
+                                    <div class="col-md-4">
                                         <strong>Description</strong>
+                                    </div>
+
+                                     <div class="col-md-2">
+                                        <strong>Level</strong>
+                                     </div>
+                                    <div class="col-md-3">
+                                        <strong>View Projects</strong>
                                     </div>
                                 </div>
 
@@ -86,13 +93,19 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}">{{$team->team_name}}</a>
+                                                <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
-                                            <div class="col-md-5">
-                                               {{$team->description}}
+                                            <div class="col-md-4">
+                                               {{$team->team->description}}
+
                                             </div>
-                                            <div class="col-md-1">
-                                                <a href="{{'teams/teamDetails'}}"><button class="btn btn-default" name="view_teams">View Project</button></a>
+                                            <div class="col-md-2">
+                                                @if($team->user_category == 0)
+                                                    <button class="btn btn-small btn-info">.</button>
+                                                @endif
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="{{}}"><button class="btn btn-default btn-sm">View projects</button></a>
                                             </div>
                                         </div>
                                     @endforeach
