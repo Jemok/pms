@@ -107,7 +107,7 @@
 
                     <div class="form-group">
                         <div class="col-md-3">
-                            <label for="ended_at">Ended at</label>
+                            <label for="ended_at">Ending at</label>
                         </div>
                         <div class="col-md-9">
                             <input type="date" name="ended_at" class="form-control" placeholder="Ended at">
@@ -138,7 +138,7 @@
                         <strong>Started_at</strong>
                     </div>
                     <div class="col-md-2">
-                        <strong>Ended_at</strong>
+                        <strong>End</strong>
                     </div>
                 </div>
 
