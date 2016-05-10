@@ -103,14 +103,14 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}">{{$team->team_name}}</a>
+                                                <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
                                             <div class="col-md-5">
-                                               {{$team->description}}
+                                               {{$team->team->description}}
                                             </div>
-                                            <div class="col-md-1">
-                                                <a href="teams/view_project.blade.php"><button class="btn btn-default" name="view_teams">View Project</button></a>
-                                            </div>
+                                             @if($team->user_category == 0)
+                                               <button class="btn btn-small btn-info">.</button>
+                                             @endif
                                         </div>
                                     @endforeach
                                 @else

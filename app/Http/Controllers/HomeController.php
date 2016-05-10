@@ -27,10 +27,15 @@ class HomeController extends Controller
      */
     public function index(TeamRepository $teamRepository)
     {
-        $teams = $teamRepository->index();
+        $teams = $teamRepository->userTeams();
 
         return view('home',compact('teams'));
     }
+
+    /**
+     * Handle how home pages are displayed
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function homePage()
     {
         if(Auth::guest())
