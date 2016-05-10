@@ -109,7 +109,7 @@
                                                {{$team->description}}
                                             </div>
                                             <div class="col-md-1">
-                                                <a href="teams/view_project.blade.php"><button class="btn btn-default" name="view_teams">View Project</button></a>
+                                                <a href={{"teams/view_project.blade.php"}}><button class="btn btn-default" name="view_teams">View Project</button></a>
                                             </div>
                                         </div>
                                     @endforeach
