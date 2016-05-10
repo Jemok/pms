@@ -15,7 +15,6 @@ class Team_user extends Model
 
         'team_id',
         'user_id',
-        'user_category'
     ];
 
     /**

@@ -7,7 +7,6 @@ namespace App\Repositories;
  * Time: 5:02 PM
  */
 use App\Team;
-use App\Team_user;
 
 class TeamRepository
 {
@@ -28,7 +27,7 @@ class TeamRepository
      */
     public function index()
     {
-        return Team::all();
+        return Team::with('team_user')->get();
 
     }
 
@@ -38,7 +37,7 @@ class TeamRepository
      */
     public function userTeams(){
 
-        return \Auth::user()->teams()->with('team')->take(5)->get();
+        return \Auth::user()->teams()->with('team.admin')->take(5)->get();
     }
 
 }
