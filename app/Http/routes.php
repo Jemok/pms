@@ -20,7 +20,7 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 
 /*profile page route*/
-Route::get('profile/edit','ProfileController@index');
+Route::get('profile/edit','ProfileController@show');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
@@ -30,6 +30,7 @@ Route::post('projects/store', 'ProjectController@store');
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
 Route::get('teams/index', 'TeamDetailsController@index');
+Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');

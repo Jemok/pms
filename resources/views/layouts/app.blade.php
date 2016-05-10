@@ -44,9 +44,9 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a id="link" href="{{ url('/home') }}">Home</a></li>
-                    <li><a id="link" href="{{ url('projects/create') }}">create project</a></li>
-                    <li><a id="link" href="{{ url('sprints/create') }}">create sprint</a></li>
-                    <li><a id="link" href="{{ url('tasks/create') }}">create task</a></li>
+                    <li><a id="link" href="{{ url('projects/create') }}">Create project</a></li>
+                    <li><a id="link" href="{{ url('sprints/create') }}">Create sprint</a></li>
+                    <li><a id="link" href="{{ url('tasks/create') }}">Create task</a></li>
                 </ul>
 
 
@@ -64,8 +64,8 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                                 <li><a href="{{url('profile/edit')}}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
+                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
                     @endif

@@ -18,7 +18,7 @@
                                 </div>
 
                                 <div class="col-md-9">
-                                    <input type="text" name="username" value="username" class="form-control">
+                                    <strong><input type="text" name="username" value="{{\Auth::user()->name}}" class="form-control"></strong>
                                 </div>
                             </div>
 
@@ -30,7 +30,7 @@
                                     </div>
 
                                     <div class="col-md-9">
-                                        <input type="email" name="email" value="email" class="form-control">
+                                        <strong><input type="email" name="email" value="{{\Auth::user()->email}}" class="form-control"></strong>
                                     </div>
                             </div>
                             <div class="form-group">
@@ -55,7 +55,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>

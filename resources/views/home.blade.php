@@ -61,33 +61,16 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="row">
                     <div class="col-md-12">
-                        <form class="form-horizontal" method="post" action="{{ url('/') }}">
-                            {!! csrf_field() !!}
-                            <div class="form-group  {{ $errors->has('search') ? ' has-error' : '' }}">
-                                <div class="col-md-4">
-                                    <label for="search">Search for a team</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input type="text" class="form-control" id="search" name="search" placeholder="search for a team">
-                                    @if ($errors->has('search'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('search') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                                <div class="col-md-1">
-                                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> search</button>
-                                </div>
-                            </div>
-                        </form>
+                        <a href={{'teams/allTeams'}}><h5><strong>View all available teams...</strong></h5></a>
                     </div>
                 </div>
+
                 <!--display teams created-->
                 <div class="row">
                      <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <strong>Teams that you created</strong>
+                                <strong>Teams that you are a member of</strong>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -106,7 +89,14 @@
                                                 <a href="{{'teams/index'}}">{{$team->team->team_name}}</a>
                                             </div>
                                             <div class="col-md-5">
+<<<<<<< HEAD
                                                {{$team->team->description}}
+=======
+                                               {{$team->description}}
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a href="#"><button class="btn btn-default" name="view_teams">View Project</button></a>
+>>>>>>> d57a6a81578ff59c44461dac138c496025ccea7d
                                             </div>
                                              @if($team->user_category == 0)
                                                <button class="btn btn-small btn-info">.</button>
@@ -116,6 +106,11 @@
                                 @else
                                     <h4>No teams found</h4>
                                 @endif
+                                <div class="row">
+                                    <div class="col-md-offset-3 col-md-3">
+                                        <button class="btn btn-default btn-group">View more of your teams</button>
+                                    </div>
+                                </div>
 
                             </div>
                         </div>

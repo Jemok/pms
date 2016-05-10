@@ -5,14 +5,14 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-5 col-md-offset-3">
+            <div class="col-md-5 col-md-offset-2">
                 <h4>Divide your sprint into tasks.</h4>
             </div>
 
         </div>
 
         <div class="row">
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-5">
                 <form class="form-horizontal" method="post" action="{{ url('/') }}">
                     {!! csrf_field() !!}
                     <div class="form-group">
@@ -123,20 +123,28 @@
 
                 </form>
             </div>
-            <div class="col-md-5 col-md-offset-1">
+            <div class="col-md-6">
                 <div class="row">
-                    <button class="btn  btn-default btn-block" name="view_teams">Click to view present teams</button>
+                    <h4><strong>Registered Tasks</strong></h4>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Display registered sprints here</p>
+                <div class="row" id="sprint_heading">
+                    <div class="col-md-2">
+                        <strong>Name</strong>
                     </div>
                     <div class="col-md-3">
-                        <button class="btn btn-default" name="edit">Edit</button>
+                        <strong>Description</strong>
                     </div>
-                    <div class="col-md-3">
-                        <button class="btn btn-default" name="edit">Delete</button>
+                    <div class="col-md-1">
+                        <strong>Deliverable</strong>
+                    </div>
+                    <div class="col-md-1 col-md-offset-1">
+                        <strong>Task status</strong>
+                    </div>
+                    <div class="col-md-1  col-md-offset-1">
+                        <strong>Started_at</strong>
+                    </div>
+                    <div class="col-md-1  col-md-offset-1">
+                        <strong>End</strong>
                     </div>
                 </div>
             </div>
