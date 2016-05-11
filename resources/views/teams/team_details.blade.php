@@ -49,7 +49,7 @@
                 <p>{{$team->admin->user->name}}</p>
             </div>
             <div class="col-md-2">
-                <p><a href="{{ url('teams/editTeam') }}" class="btn btn-default">edit this team</a></p>
+                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
             </div>
         </div>
 

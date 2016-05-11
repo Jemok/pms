@@ -8,7 +8,7 @@
                         <h5><strong>Edit this team</strong></h5>
                     </div>
                     <div class="panel-body">
-                            <form class="form-horizontal" method="post" action="">
+                            <form class="form-horizontal" method="post" action="{{url('teams/update/'.$team->id)}}">
                                 <div class="form-group">
                                     <div class="col-md-4">
                                         <label for="edit_team_name">
@@ -16,7 +16,7 @@
                                         </label>
                                     </div>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" name="edit_team_name">
+                                        <input type="text" class="form-control" name="edit_team_name" value={{$team->team_name}}>
                                     </div>
                                 </div>
 
@@ -28,7 +28,7 @@
                                     </div>
                                     <div class="col-md-8">
                                 <textarea class="form-control" name="edit_team_short_description" rows="5">
-
+                                        {{$team->short_description}}
                                 </textarea>
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="col-md-8">
                                 <textarea class="form-control" name="edit_team_full_description" rows="10">
-
+                                         {{$team->description}}
                                 </textarea>
                                     </div>
                                 </div>
