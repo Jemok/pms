@@ -21,12 +21,13 @@
                         </div>
                         <div class="col-md-9">
                             <select class="form-control" name="spring_list">
-                                <option>POS</option>
-                                <option>mafisi</option>
-                                <option>malion</option>
-                                <option>Pizza</option>
-                                <option>execution</option>
-                            </select>
+                            @if($sprints->count())
+                                @foreach($sprints as $sprint)
+                                    <option value="{{$sprint->id}}" >{{$sprint->sprint_name}}</option>
+                                @endforeach
+                            @else
+                                <option> No Sprint found</option>
+                            @endif
                         </div>
 
                     </div>

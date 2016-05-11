@@ -5,7 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Task_creator extends Model
-{
+{   
+    
+    protected  $table = "task_creators";
+    
     protected $fillable =[
         'user_id'
     ];
@@ -22,4 +25,6 @@ class Task_creator extends Model
 
         return $this->belongsTo(Task::class);
     }
+     
+   
 }
