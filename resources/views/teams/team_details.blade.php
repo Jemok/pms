@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-2">
-                <h4><strong>({{$team->team_name}}) Details.</strong></h4>
+                <h4><strong>{{$team->team_name}} details.</strong></h4>
             </div>
         </div>
 
@@ -46,7 +46,7 @@
                 @endif
             </div>
             <div class="col-md-2">
-                <p>User</p>
+                <a href="{{ url('profile/userProfile') }}"><p>User</p></a>
             </div>
             <div class="col-md-2">
                 <p><a href="{{ url('teams/editTeam') }}" class="btn btn-default">edit this team</a></p>
@@ -55,7 +55,7 @@
 
         <div class="row">
             <div class="col-md-5 col-md-offset-2">
-                <h4><strong>Projects belonging to ({{$team->team_name}}).</strong></h4>
+                <h4><strong>Projects belonging to {{$team->team_name}}.</strong></h4>
             </div>
         </div>
 
