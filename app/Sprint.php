@@ -11,7 +11,7 @@ class Sprint extends Model
      * @var array
      */
     protected $fillable = [
-
+         'user_id',
         'sprint_name',
         'sprint_description',
         'deliverable',

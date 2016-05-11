@@ -31,6 +31,10 @@ class Project extends Model
         return $this->belongsTo(User::class);
     }
     
+    public function sprints(){
+        
+        return $this->hasMany(Sprint::class);
+    }
     
     public function getStartedAtAttribute($started_at){
         
