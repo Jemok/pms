@@ -103,7 +103,7 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
+                                                <a href="{{ url('teams/teamDetails/'.$team->team->id) }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
                                                <p>{{$team->team->short_description}}</p>
