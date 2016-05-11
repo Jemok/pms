@@ -83,7 +83,7 @@
                      <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <strong>Teams that you are a member of</strong>
+                                <h5 style="text-align: center"><strong>Teams that you are a member of</strong></h5>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
