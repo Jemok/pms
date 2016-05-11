@@ -25,7 +25,7 @@ class CreateSprintRequest extends Request
     {
         return [
             'sprint_name' => 'required|min:3',
-            'sprint_description' => 'required|min:5',
+            'description' => 'required|min:5',
             'deliverable' => 'required|min:5',
             'milestone' => 'required||min:5',
             'started_at' => 'required',
