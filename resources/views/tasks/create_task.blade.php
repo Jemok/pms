@@ -17,7 +17,7 @@
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="col-md-3">
-                            <label for="spring-list">Select from Spring</label>
+                            <label for="spring-list">Select from Sprint</label>
                         </div>
                         <div class="col-md-9">
                             <select class="form-control" name="spring_list">
@@ -51,9 +51,7 @@
                             <label for="description">Task Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="description" rows="10" >
-
-                        </textarea>
+                        <textarea class="form-control" name="description" rows="10" ></textarea>
 
                             @if ($errors->has('description'))
                                 <span class="help-block">
@@ -124,32 +122,6 @@
 
                 </form>
             </div>
-            {{--<div class="col-md-6">--}}
-                {{--<div class="row">--}}
-                    {{--<h4><strong>Registered Tasks</strong></h4>--}}
-                {{--</div>--}}
-                {{--<div class="row" id="sprint_heading">--}}
-                    {{--<div class="col-md-2">--}}
-                        {{--<strong>Name</strong>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-3">--}}
-                        {{--<strong>Description</strong>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1">--}}
-                        {{--<strong>Deliverable</strong>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1 col-md-offset-1">--}}
-                        {{--<strong>Task status</strong>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1  col-md-offset-1">--}}
-                        {{--<strong>Started_at</strong>--}}
-                    {{--</div>--}}
-                    {{--<div class="col-md-1  col-md-offset-1">--}}
-                        {{--<strong>End</strong>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
-
             @if(Session::has("flash_message"))
                 <div class="row">
                     <div class="col-md-5 col-md-offset-1">

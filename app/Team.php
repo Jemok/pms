@@ -25,14 +25,6 @@ class Team extends Model
         });
     }
 
-    /**
-     * A user owns a team
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user(){
-
-        return $this->belongsTo(User::class);
-    }
 
     public function projects()
     {
