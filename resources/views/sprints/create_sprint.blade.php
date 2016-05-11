@@ -30,7 +30,7 @@
                             <label for="project-list">Select from Project</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-control" name="project_list">
+                            <select class="form-control" name="project_id">
                                 @if($projects->count())
                                     @foreach($projects as $project)
                                         <option value="{{$project->id}}" >{{$project->project_name}}</option>
