@@ -30,8 +30,10 @@ class ProjectController extends Controller
                 'user_id' => Auth::user()->id
             ]);
 
-
-
+            $project->user()->create([
+                'user_id' => Auth::user()->id
+            ]);
+        
             $project->team()->create([
                 'team_id' => $createProjectRequest->get('team_id')
             ]);

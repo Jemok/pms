@@ -28,7 +28,7 @@ class Project extends Model
      */
     public function user(){
 
-        return $this->belongsTo(User::class);
+        return $this->hasMany(Project_user::class);
     }
     
     public function sprints(){
@@ -38,12 +38,12 @@ class Project extends Model
     
     public function getStartedAtAttribute($started_at){
         
-        return $this->attributes['started_at'] = Carbon::parse($started_at);
+        return $this->attributes['started_at'] = Carbon::parse($started_at)->addHours(3);
     }
 
     public function getEndedAtAttribute($ended_at){
 
-        return $this->attributes['ended_at'] = Carbon::parse($ended_at);
+        return $this->attributes['ended_at'] = Carbon::parse($ended_at)->addHour(3);
     }
     
     public function team()
@@ -54,8 +54,5 @@ class Project extends Model
     {
         return $this->hasOne(ProjectCreator::class);
     }
-    /*public function setStartedAtAttribute($started_at)
-    {
-        $this->attributes['started_at']=Carbon::parse($started_at)->addHours(3);
-    }*/
+    
 }
