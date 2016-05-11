@@ -44,12 +44,36 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a id="link" href="{{ url('/home') }}">Home</a></li>
-                    <li><a id="link" href="{{ url('projects/create') }}">Create project</a></li>
-                    <li><a id="link" href="{{ url('sprints/create') }}">Create sprint</a></li>
-                    <li><a id="link" href="{{ url('tasks/create') }}">Create task</a></li>
+                    <li class="dropdown">
+                        <a href="#" id="link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Project<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="link-1" href="{{ url('projects/create') }}">Create project</a></li>
+                            <li><a id="link-1" href="{{ url('projects/allProjects') }}">View project</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" id="link" class="dropdown-toogle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Sprint<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="link-1" href="{{ url('sprints/create') }}">Create sprint</a></li>
+                            <li><a id="link-1" href="#">View sprint</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" id="link" class="dropdown-toogle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Task<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="link-1" href="{{ url('tasks/create') }}">Create task</a></li>
+                            <li><a id="link-1" href="#">View task</a></li>
+                        </ul>
+                    </li>
                 </ul>
-
-
 
                 @endif
                         <!-- Right Side Of Navbar -->

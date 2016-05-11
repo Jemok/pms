@@ -26,7 +26,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name">
 
-                                    @if ($errors->has('team_name'))
+                                    @if($errors->has('team_name'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('team_name') }}</strong>
                                     </span>
@@ -74,7 +74,7 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href={{'teams/allTeams'}}><h5><strong>View all available teams...</strong></h5></a>
+                        <a href={{ url('teams/allTeams') }}><h5><strong>View all available teams...</strong></h5></a>
                     </div>
                 </div>
 
@@ -90,43 +90,41 @@
                                     <div class="col-md-3">
                                         <h5><strong>Team name</strong></h5>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-md-offset-1">
                                         <h5><strong>Short Description</strong></h5>
                                     </div>
 
-                                     <div class="col-md-2">
+                                     <div class="col-md-3">
                                         <h5><strong>User Level</strong></h5>
                                      </div>
-                                    <div class="col-md-3">
-                                        <h5><strong>View Projects</strong></h5>
-                                    </div>
                                 </div>
 
                                 @if($teams->count())
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}"><p>{{$team->team->team_name}}</p></a>
+                                                <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
                                                <p>{{$team->team->short_description}}</p>
                                             </div>
-                                            <div class="col-md-2">
-                                               @if($team->team->admin->user_id == \Auth::user()->id)
-                                                    <button class="btn btn-small btn-info">.</button>
-                                               @endif
-                                            </div>
-                                            <div class="col-md-2">
-                                                <a href="{{}}"><button class="btn btn-default btn-sm">View projects</button></a>
+                                            <div class="col-md-3">
+                                                @if($team->team->admin->user_id == \Auth::user()->id)
+                                                        <p><button class="btn btn-sm btn-info">admin</button></p>
+                                                    @endif
+
                                             </div>
                                         </div>
                                     @endforeach
                                 @else
-                                    <h4>No teams found</h4>
+                                    <div class="alert alert-info alert-dismissible" role="alert">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                                        <p><strong>You currently have no teams..</strong></p>
+                                    </div>
                                 @endif
                                 <div class="row">
-                                    <div class="col-md-offset-3 col-md-3">
-                                        <button class="btn btn-default btn-group">View more of your teams</button>
+                                    <div class="col-md-offset-1 col-md-10">
+                                        <a href="{{ url('teams/userTeams') }}" class="btn btn-default btn-block">View more of your teams</a>
                                     </div>
                                 </div>
                             </div>

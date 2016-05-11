@@ -121,68 +121,6 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
-                <h4><strong>Registered Projects</strong></h4>
-                <div class="row" id="project_heading">
-                    <div class="col-md-2">
-                        <h5><strong>Name</strong></h5>
-                    </div>
-                    <div class="col-md-4">
-                        <h5><strong>Description</strong></h5>
-                    </div>
-                    <div class="col-md-1">
-                        <h5><strong>Status</strong></h5>
-                    </div>
-                    <div class="col-md-2 col-md-offset-1">
-                        <h5><strong>Started_at</strong></h5>
-                    </div>
-                    <div class="col-md-2">
-                        <h5><strong>End</strong></h5>
-                    </div>
-                </div>
-
-                <!--output projects-->
-                <!--start for each-->
-                @if($projects->count())
-                @foreach($projects as $project)
-                    <div class="row">
-                        <div class="col-md-2">
-                            {{$project->project_name}}
-                        </div>
-                        <div class="col-md-4">
-                            {{$project->project_description}}
-                        </div>
-                        <div class="col-md-1">
-                                @if($project->project_status == 0)
-                                    Not Started
-                                @endif
-                                @if($project->project_status == 1)
-                                    Ongoing
-                                @endif
-                                @if($project->project_status == 2)
-                                    Completed
-                                @endif
-                                    @if($project->project_status == 3)
-                                        Shelved
-                                    @endif
-                        </div>
-                        <div class="col-md-2 col-md-offset-1">
-                            {{$project->started_at->diffForHumans()}}
-                        </div>
-                        <div class="col-md-2">
-                            {{$project->ended_at->diffForHumans()}}
-                        </div>
-                    </div>
-
-                @endforeach
-                    @else
-                <div class="alert alert-info alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
-                    <p><strong>There are no registered projects</strong></p>
-                </div>
-                    @endif
-
-            </div>
         </div>
     </div>
 @endsection
