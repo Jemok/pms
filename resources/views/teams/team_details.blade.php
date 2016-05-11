@@ -46,10 +46,10 @@
                 @endif
             </div>
             <div class="col-md-2">
-                <a href="{{ url('profile/userProfile') }}"><p>User</p></a>
+                <a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}></a>
             </div>
             <div class="col-md-2">
-                <p><a href="{{ url('teams/editTeam') }}" class="btn btn-default">edit this team</a></p>
+                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
             </div>
         </div>
 

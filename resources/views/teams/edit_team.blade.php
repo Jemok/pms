@@ -8,7 +8,8 @@
                         <h5 style="text-align: center;"><strong>Edit this team</strong></h5>
                     </div>
                     <div class="panel-body">
-                            <form class="form-horizontal" method="post" action="">
+                            <form class="form-horizontal" method="post" action="{{url('teams/update/'.$team->id)}}">
+                                <div class="form-group">
                                 {!! csrf_field() !!}
                                 <div class="form-group {{ $errors->has('edit_team_name') ? ' has-error' : '' }}">
                                     <div class="col-md-4">
@@ -17,8 +18,7 @@
                                         </label>
                                     </div>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" name="edit_team_name">
-
+                                        <input type="text" class="form-control" name="edit_team_name" value={{$team->team_name}}>
                                         @if($errors->has('edit_team_name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('edit_team_name') }}</strong>
@@ -35,7 +35,7 @@
                                     </div>
                                     <div class="col-md-8">
                                 <textarea class="form-control" name="edit_team_short_description" rows="5">
-
+                                        {{$team->short_description}}
                                 </textarea>
                                         @if($errors->has('edit_team_short_description'))
                                             <span class="help-block">
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="col-md-8">
                                 <textarea class="form-control" name="edit_team_full_description" rows="10">
-
+                                         {{$team->description}}
                                 </textarea>
                                         @if($errors->has('edit_team_full_description'))
                                             <span class="help-block">
