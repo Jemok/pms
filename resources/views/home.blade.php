@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
-                                <label for="description" class="col-sm-2 control-label">Description</label>
+                                <label for="description" class="col-sm-2 control-label"> Full Description</label>
                                 <div class="col-sm-10">
                                    <textarea class="form-control" name="description" rows="10">
 
@@ -105,7 +105,7 @@
                                             <div class="col-md-3">
                                                 <a href="{{ url('teams/teamDetails/'.$team->team->id) }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 col-md-offset-1">
                                                <p>{{$team->team->short_description}}</p>
                                             </div>
                                             <div class="col-md-3">

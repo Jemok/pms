@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProjectUsersTable extends Migration
+class CreateTaskCreatorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,16 @@ class CreateProjectUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('project_users', function (Blueprint $table) {
+        Schema::create('task_creators', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
+            $table->integer('task_id')->unsigned();
             $table->foreign('user_id')
                 ->references('id')
                 ->on('users');
-            $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')
+            $table->foreign('task_id')
                 ->references('id')
-                ->on('projects');
+                ->on('tasks');
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateProjectUsersTable extends Migration
      */
     public function down()
     {
-        Schema::drop('project_users');
+        Schema::drop('task_creators');
     }
 }

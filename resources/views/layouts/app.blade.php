@@ -60,7 +60,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a id="link-1" href="{{ url('sprints/create') }}">Create sprint</a></li>
-                            <li><a id="link-1" href="#">View sprint</a></li>
+                            <li><a id="link-1" href="{{ url('sprints/allSprints') }}">View sprint</a></li>
                         </ul>
                     </li>
 
