@@ -62,9 +62,7 @@
                             <label for="description">Project Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="project_description" rows="10">
-
-                        </textarea>
+                        <textarea class="form-control" name="project_description" rows="10"></textarea>
 
                             @if ($errors->has('project_description'))
                                 <span class="help-block">
