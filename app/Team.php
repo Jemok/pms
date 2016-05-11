@@ -34,9 +34,9 @@ class Team extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function  projects()
+    public function projects()
     {
-        return $this->hasMany(ProjectCreator::class);
+        return $this->hasMany(ProjectTeam::class);
     }
 
     /**

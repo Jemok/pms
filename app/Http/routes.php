@@ -30,7 +30,7 @@ Route::get('projects/allProjects','AllProjectsController@allProjects');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
-Route::get('teams/teamDetails', 'TeamDetailsController@teamDetails');
+Route::get('teams/teamDetails/{team_id}', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 Route::get('teams/userTeams', 'UserTeamsController@userTeams');
 Route::get('teams/editTeam', 'EditTeamController@editTeam');

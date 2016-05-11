@@ -11,9 +11,14 @@ use Illuminate\Support\Facades\Auth;
 class TeamDetailsController extends Controller
 {
 
-    public function teamDetails()
+    public function teamDetails($team_id)
     {
-        return view('teams.team_details');
+
+        $team = Team::findOrFail($team_id)->with('admin', 'projects')->first();
+
+        $projects = $team->projects()->with('project')->paginate(5);
+
+        return view('teams.team_details', compact('team', 'projects'));
     }
 
 }
