@@ -28,16 +28,7 @@ class Sprint extends Model
 
         return $this->belongsTo(Project::class);
     }
-
-    /**
-     * A user owns a project
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user(){
-
-        return $this->belongsTo(User::class);
-    }
-
+    
     /**
      * A sprint has many tasks
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
@@ -60,8 +51,20 @@ class Sprint extends Model
      * A Sprint has many users
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function sprint_user(){
+    public function users(){
 
         return $this->hasMany(Sprint_user::class);
+
     }
+
+   public function creator(){
+
+       return $this->hasOne(Sprint_creator::class);
+   }
+
 }
+
+
+
+
+

@@ -12,7 +12,7 @@ class Sprint_user extends Model
      * @var array
      */
     protected $fillable = [
-
+       'user_id'
     ];
 
     /**

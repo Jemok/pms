@@ -36,18 +36,9 @@ class User extends Authenticatable
      */
     public function sprints(){
 
-        return $this->hasMany(Sprint::class);
-    }
-
-    /**
-     * A user has many sprint_users
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function sprint_user(){
-
         return $this->hasMany(Sprint_user::class);
     }
-
+    
     /**
      * A user has many tasks
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
