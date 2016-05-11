@@ -90,16 +90,13 @@
                                     <div class="col-md-3">
                                         <h5><strong>Team name</strong></h5>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-4 col-md-offset-1">
                                         <h5><strong>Short Description</strong></h5>
                                     </div>
 
-                                     <div class="col-md-2">
+                                     <div class="col-md-3">
                                         <h5><strong>User Level</strong></h5>
                                      </div>
-                                    <div class="col-md-3">
-                                        <h5><strong>View Projects</strong></h5>
-                                    </div>
                                 </div>
 
                                 @if($teams->count())
@@ -108,17 +105,14 @@
                                             <div class="col-md-3">
                                                 <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
-                                            <div class="col-md-4">
+                                            <div class="col-md-4 col-md-offset-1">
                                                <p>{{$team->team->description}}</p>
                                             </div>
-                                            <div class="col-md-2">
+                                            <div class="col-md-3">
                                                 @if($team->team->admin->user_id == \Auth::user()->id)
                                                         <p><button class="btn btn-sm btn-info">admin</button></p>
                                                     @endif
 
-                                            </div>
-                                            <div class="col-md-2">
-                                                <a href="#"><button class="btn btn-default btn-sm">View projects</button></a>
                                             </div>
                                         </div>
                                     @endforeach

@@ -25,6 +25,7 @@ Route::get('profile/edit','ProfileController@show');
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
+Route::get('projects/allProjects','AllProjectsController@allProjects');
 
 
 /*team routes*/

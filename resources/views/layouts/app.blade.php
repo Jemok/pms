@@ -50,7 +50,7 @@
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a id="link-1" href="{{ url('projects/create') }}">Create project</a></li>
-                            <li><a id="link-1" href="#">View project</a></li>
+                            <li><a id="link-1" href="{{ url('projects/allProjects') }}">View project</a></li>
                         </ul>
                     </li>
 

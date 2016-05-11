@@ -13,14 +13,11 @@
                             <div class="col-md-3">
                                 <h5><strong>Team name</strong></h5>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-md-offset-1">
                                 <h5><strong>Short description</strong></h5>
                             </div>
                             <div class="col-md-2">
                                 <h5><strong>User level</strong></h5>
-                            </div>
-                            <div class="col-md-3">
-                                <h5><strong>View Projects</strong></h5>
                             </div>
                         </div>{{--end of heading--}}
 
@@ -29,14 +26,11 @@
                             <div class="col-md-3">
                                 <p><strong>Team 1</strong></p>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 col-md-offset-1">
                                 <p><strong>blah blah blah</strong></p>
                             </div>
                             <div class="col-md-2">
                                 <p><button type="button" class="btn btn-info btn-sm">level</button></p>
-                            </div>
-                            <div class="col-md-3">
-                                <p><strong><button type="button" class="btn btn-default btn-sm">View project</button></strong></p>
                             </div>
                         </div>{{--end of display--}}
                     </div>

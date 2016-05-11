@@ -121,51 +121,6 @@
                     </div>
                 </form>
             </div>
-            <div class="col-md-6">
-                <h4><strong>Registered Projects</strong></h4>
-                <div class="row" id="project_heading">
-
-                </div>
-
-                <!--output projects-->
-                <!--start for each-->
-                @if($projects->count())
-                @foreach($projects as $project)
-                    <div class="row">
-                        <div class="col-md-2">
-                            {{$project->project_name}}
-                        </div>
-                        <div class="col-md-4">
-                            {{$project->project_description}}
-                        </div>
-                        <div class="col-md-1">
-                                @if($project->project_status == 0)
-                                    Not Started
-                                @endif
-                                @if($project->project_status == 1)
-                                    Ongoing
-                                @endif
-                                @if($project->project_status == 2)
-                                    Completed
-                                @endif
-                                    @if($project->project_status == 3)
-                                        Shelved
-                                    @endif
-                        </div>
-                        <div class="col-md-2 col-md-offset-1">
-                            {{$project->started_at->diffForHumans()}}
-                        </div>
-                        <div class="col-md-2">
-                            {{$project->ended_at->diffForHumans()}}
-                        </div>
-                    </div>
-
-                @endforeach
-                    @else
-
-                    @endif
-
-            </div>
         </div>
     </div>
 @endsection
