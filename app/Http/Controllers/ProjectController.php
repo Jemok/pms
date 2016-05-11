@@ -24,16 +24,14 @@ class ProjectController extends Controller
     }
     public function store(CreateProjectRequest $createProjectRequest)
     {
-            $project = Project::create([
-                'project_name' => $createProjectRequest->get('project_name'),
-                'project_description' => $createProjectRequest->get('project_description'),
-                'project_status' => $createProjectRequest->get('project_status'),
-                'started_at' => $createProjectRequest->get('started_at'),
-                'ended_at' => $createProjectRequest->get('ended_at')
-            ]);
+            $project = Project::create($createProjectRequest->all());
+
             $project->creator()->create([
                 'user_id' => Auth::user()->id
             ]);
+
+
+
             $project->team()->create([
                 'team_id' => $createProjectRequest->get('team_id')
             ]);

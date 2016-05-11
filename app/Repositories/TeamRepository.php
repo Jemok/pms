@@ -36,7 +36,7 @@ class TeamRepository
      */
     public function userTeams(){
 
-        return \Auth::user()->teams()->with('team.admin')->take(5)->get();
+        return \Auth::user()->teams()->with('team.admin');
     }
 
 }

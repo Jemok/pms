@@ -11,9 +11,11 @@ use Illuminate\Support\Facades\Auth;
 class UserTeamsController extends Controller
 {
 
-    public function userTeams()
+    public function userTeams(TeamRepository $teamRepository)
     {
-        return view('teams.user_teams');
+        $teams = $teamRepository->userTeams()->paginate(5);
+
+        return view('teams.user_teams', compact('teams'));
     }
 
 }
