@@ -29,6 +29,9 @@ class ProjectController extends Controller
             $project->creator()->create([
                 'user_id' => Auth::user()->id
             ]);
+
+
+
             $project->team()->create([
                 'team_id' => $createProjectRequest->get('team_id')
             ]);
