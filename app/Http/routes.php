@@ -31,6 +31,7 @@ Route::post('projects/store', 'ProjectController@store');
 Route::post('teams/store', 'TeamController@store');
 Route::get('teams/teamDetails', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
+Route::get('teams/userTeams', 'UserTeamsController@userTeams');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
@@ -38,6 +39,7 @@ Route::post('sprints/store', 'SprintController@store');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
+Route::post('tasks/store','TaskController@store');
 
 /*team routes*/
 Route::post('teams/create','TeamController@create');

@@ -26,7 +26,7 @@
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name">
 
-                                    @if ($errors->has('team_name'))
+                                    @if($errors->has('team_name'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('team_name') }}</strong>
                                     </span>
@@ -74,7 +74,7 @@
             <div class="col-md-offset-1 col-md-5">
                 <div class="row">
                     <div class="col-md-12">
-                        <a href={{'teams/allTeams'}}><h5><strong>View all available teams...</strong></h5></a>
+                        <a href={{ url('teams/allTeams') }}><h5><strong>View all available teams...</strong></h5></a>
                     </div>
                 </div>
 
@@ -106,18 +106,19 @@
                                     @foreach($teams as $team)
                                         <div class="row">
                                             <div class="col-md-3">
-                                                <a href="{{'teams/index'}}"><p>{{$team->team->team_name}}</p></a>
+                                                <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
                                                <p>{{$team->team->description}}</p>
                                             </div>
                                             <div class="col-md-2">
-                                               @if($team->team->admin->user_id == \Auth::user()->id)
-                                                    <button class="btn btn-small btn-info">.</button>
-                                               @endif
+                                                @if($team->team->admin->user_id == \Auth::user()->id)
+                                                        <p><button class="btn btn-sm btn-info">admin</button></p>
+                                                    @endif
+
                                             </div>
                                             <div class="col-md-2">
-                                                <a href="{{}}"><button class="btn btn-default btn-sm">View projects</button></a>
+                                                <a href="#"><button class="btn btn-default btn-sm">View projects</button></a>
                                             </div>
                                         </div>
                                     @endforeach
@@ -128,8 +129,8 @@
                                     </div>
                                 @endif
                                 <div class="row">
-                                    <div class="col-md-offset-3 col-md-3">
-                                        <button class="btn btn-default btn-group">View more of your teams</button>
+                                    <div class="col-md-offset-1 col-md-10">
+                                        <a href="{{ url('teams/userTeams') }}" class="btn btn-default btn-block">View more of your teams</a>
                                     </div>
                                 </div>
                             </div>
