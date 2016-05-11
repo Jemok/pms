@@ -20,7 +20,7 @@
                             <label for="spring-list">Select from Sprint</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-control" name="spring_list">
+                            <select class="form-control" name="sprint_id">
                                 <option>POS</option>
                                 <option>mafisi</option>
                                 <option>malion</option>
