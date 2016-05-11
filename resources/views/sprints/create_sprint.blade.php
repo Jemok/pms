@@ -126,6 +126,9 @@
                     </div>
                 </form>
             </div>
+            <div class="col-md-5 col-md-offset-1">
+
+            </div>
         </div>
             <!--flash message if statement-->
             @if(Session::has("flash_message"))

@@ -33,10 +33,12 @@ Route::post('teams/store', 'TeamController@store');
 Route::get('teams/teamDetails', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 Route::get('teams/userTeams', 'UserTeamsController@userTeams');
+Route::get('teams/editTeam', 'EditTeamController@editTeam');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
+Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');

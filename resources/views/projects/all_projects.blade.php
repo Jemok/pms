@@ -3,8 +3,44 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <h4>All Existing Projects</h4>
+        <div class="col-md-6 col-md-offset-4">
+            <h4><strong>All Existing Projects</strong></h4>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <h5><strong>Project Name</strong></h5>
+        </div>
+        <div class="col-md-2">
+            <h5><strong>Project Description</strong></h5>
+        </div>
+        <div class="col-md-2">
+            <h5><strong>Project Status</strong></h5>
+        </div>
+        <div class="col-md-2">
+            <h5><strong>Started at</strong></h5>
+        </div>
+        <div class="col-md-2">
+            <h5><strong>End </strong></h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <p>Project 1</p>
+        </div>
+        <div class="col-md-2">
+            <p>blah blah blah</p>
+        </div>
+        <div class="col-md-2">
+            <p>1</p>
+        </div>
+        <div class="col-md-2">
+            <p>12 hours</p>
+        </div>
+        <div class="col-md-2">
+            <p>5 weeks to go</p>
         </div>
     </div>
 </div>
