@@ -62,13 +62,13 @@
                             <label for="description">Sprint Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="description" rows="10" >
+                        <textarea class="form-control" name="sprint_description" rows="10" >
 
                         </textarea>
 
-                            @if ($errors->has('description'))
+                            @if ($errors->has('sprint_description'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
+                                        <strong>{{ $errors->first('sprint_description') }}</strong>
                                     </span>
                             @endif
                         </div>
