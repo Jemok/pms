@@ -58,7 +58,7 @@
                     <p>{{$team->team_name}}</p>
                 </div>
                 <div class="col-md-4">
-                    <p>{{$team->description}}</p>
+                    <p>{{$team->short_description}}</p>
                 </div>
                 <div class="col-md-3">
                     <p>{{$team->created_at->diffForHumans()}}</p>

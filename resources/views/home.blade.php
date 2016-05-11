@@ -109,7 +109,7 @@
                                                 <a href="{{'teams/index'}}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
                                             <div class="col-md-4">
-                                               <p>{{$team->team->description}}</p>
+                                               <p>{{$team->team->short_description}}</p>
                                             </div>
                                             <div class="col-md-2">
                                                @if($team->team->admin->user_id == \Auth::user()->id)
