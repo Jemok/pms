@@ -8,17 +8,17 @@
             <div class="row">
                 <!-- search for a team-->
                 <div class="col-md-12">
-                    <form class="form-horizontal" method="post" action="{{ url('/') }}">
+                    <form class="form-horizontal" method="get" action="{{ url('teams/allTeams') }}">
                         {!! csrf_field() !!}
-                        <div class="form-group  {{ $errors->has('search') ? ' has-error' : '' }}">
+                        <div class="form-group  {{ $errors->has('q') ? ' has-error' : '' }}">
                             <div class="col-md-3">
                                 <label for="search">Search for a team</label>
                             </div>
                             <div class="col-md-7">
-                                <input type="text" class="form-control" id="search" name="search" placeholder="search for a team">
-                                @if ($errors->has('search'))
+                                <input type="text" class="form-control" id="search" name="q" placeholder="search for a team">
+                                @if ($errors->has('q'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('search') }}</strong>
+                                        <strong>{{ $errors->first('q') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -64,7 +64,7 @@
                     <p>{{$team->team_name}}</p>
                 </div>
                 <div class="col-md-4">
-                    <p>{{$team->description}}</p>
+                    <p>{{$team->short_description}}</p>
                 </div>
                 <div class="col-md-3">
                     <p>{{$team->created_at->diffForHumans()}}</p>
@@ -81,8 +81,6 @@
                     {!! $teams->links() !!}
                 </div>
             </div>
-
-
             @else
                 No teams found
             @endif
@@ -90,7 +88,4 @@
         </div>
     </div>
 </div>
-
-
-
 @endsection

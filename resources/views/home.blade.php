@@ -105,8 +105,8 @@
                                             <div class="col-md-3">
                                                 <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
-                                            <div class="col-md-4 col-md-offset-1">
-                                               <p>{{$team->team->description}}</p>
+                                            <div class="col-md-4">
+                                               <p>{{$team->team->short_description}}</p>
                                             </div>
                                             <div class="col-md-3">
                                                 @if($team->team->admin->user_id == \Auth::user()->id)

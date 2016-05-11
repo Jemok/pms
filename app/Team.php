@@ -11,11 +11,19 @@ class Team extends Model
      * @var array
      */
     protected $fillable = [
-
         'team_name',
+        'short_description',
         'description'
-
     ];
+
+    public static  function scopeSearch($query, $search){
+        return $query->where(function($query) use ($search) {
+
+            $query->where('team_name', 'LIKE', "%$search%")
+                ->orWhere('short_description', 'LIKE', "%$search%")
+                ->orWhere('description', 'LIKE', "%$search%");
+        });
+    }
 
     /**
      * A user owns a team
