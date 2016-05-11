@@ -17,7 +17,7 @@
                     {!! csrf_field() !!}
                     <div class="form-group">
                         <div class="col-md-3">
-                            <label for="spring-list">Select from Spring</label>
+                            <label for="spring-list">Select from Sprint</label>
                         </div>
                         <div class="col-md-9">
                             <select class="form-control" name="spring_list">

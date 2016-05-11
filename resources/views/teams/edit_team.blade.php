@@ -5,11 +5,13 @@
             <div class="col-md-6 col-md-offset-1">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5><strong>Edit this team</strong></h5>
+                        <h5 style="text-align: center;"><strong>Edit this team</strong></h5>
                     </div>
                     <div class="panel-body">
                             <form class="form-horizontal" method="post" action="{{url('teams/update/'.$team->id)}}">
                                 <div class="form-group">
+                                {!! csrf_field() !!}
+                                <div class="form-group {{ $errors->has('edit_team_name') ? ' has-error' : '' }}">
                                     <div class="col-md-4">
                                         <label for="edit_team_name">
                                             Team name
@@ -17,10 +19,15 @@
                                     </div>
                                     <div class="col-md-8">
                                         <input type="text" class="form-control" name="edit_team_name" value={{$team->team_name}}>
+                                        @if($errors->has('edit_team_name'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('edit_team_name') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('edit_team_short_description') ? ' has-error' : '' }}">
                                     <div class="col-md-4">
                                         <label for="edit_team_short_description">
                                             Short description
@@ -30,10 +37,15 @@
                                 <textarea class="form-control" name="edit_team_short_description" rows="5">
                                         {{$team->short_description}}
                                 </textarea>
+                                        @if($errors->has('edit_team_short_description'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('edit_team_short_description') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group {{ $errors->has('edit_team_full_description') ? ' has-error' : '' }}">
                                     <div class="col-md-4">
                                         <label for="edit_team_full_description">
                                             Full description
@@ -43,6 +55,11 @@
                                 <textarea class="form-control" name="edit_team_full_description" rows="10">
                                          {{$team->description}}
                                 </textarea>
+                                        @if($errors->has('edit_team_full_description'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('edit_team_full_description') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                                 </div>
 

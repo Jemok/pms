@@ -7,9 +7,10 @@
     background-color: #ffffff;
     padding-bottom: 13px;
 }
-#link-1:hover
+#link:active
 {
-
+    background-color: #ffffff;
 }
+
 
 

@@ -37,7 +37,7 @@ class ProjectController extends Controller
             $project->team()->create([
                 'team_id' => $createProjectRequest->get('team_id')
             ]);
-            Session::flash('flash_message', 'Projects was created successfully');
+            Session::flash('flash_message', 'Project was created successfully');
             return redirect()->back();
        }
 
