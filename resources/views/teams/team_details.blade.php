@@ -46,7 +46,7 @@
                 @endif
             </div>
             <div class="col-md-2">
-                <p>User</p>
+                <p>{{$team->admin->user->name}}</p>
             </div>
             <div class="col-md-2">
                 <p><a href="{{ url('teams/editTeam') }}" class="btn btn-default">edit this team</a></p>
