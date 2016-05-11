@@ -20,7 +20,7 @@
             <div class="col-md-2">
                 <p><strong>User level</strong></p>
             </div>
-            <div>
+            <div class="col-md-2">
                 <p><strong>Edit team</strong></p>
             </div>
         </div>
@@ -38,8 +38,8 @@
             <div class="col-md-2">
                 <p><button class="btn btn-sm btn-info">level</button></p>
             </div>
-            <div>
-                <p><button class="btn btn-default">edit</button> </p>
+            <div class="col-md-2">
+                <p><a href="{{ url('teams/editTeam') }}" class="btn btn-default">edit this team</a></p>
             </div>
         </div>
 

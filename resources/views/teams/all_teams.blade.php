@@ -82,7 +82,14 @@
                 </div>
             </div>
             @else
-                No teams found
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="alert alert-info alert-dismissible" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                            <p><strong>No teams found!!</strong></p>
+                        </div>
+                    </div>
+                </div>
             @endif
             </div>
         </div>
