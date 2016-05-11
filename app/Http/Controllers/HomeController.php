@@ -27,7 +27,7 @@ class HomeController extends Controller
      */
     public function index(TeamRepository $teamRepository)
     {
-        $teams = $teamRepository->userTeams();
+        $teams = $teamRepository->userTeams()->take(5)->get();
 
         return view('home',compact('teams'));
     }

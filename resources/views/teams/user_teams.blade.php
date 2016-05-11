@@ -22,17 +22,30 @@
                         </div>{{--end of heading--}}
 
                         {{--display data--}}
-                        <div class="row">
-                            <div class="col-md-3">
-                                <p><strong>Team 1</strong></p>
-                            </div>
-                            <div class="col-md-4 col-md-offset-1">
-                                <p><strong>blah blah blah</strong></p>
-                            </div>
-                            <div class="col-md-2">
-                                <p><button type="button" class="btn btn-info btn-sm">level</button></p>
-                            </div>
-                        </div>{{--end of display--}}
+                        @if($teams->count())
+                             @foreach($teams as $team)
+                                  <div class="row">
+                                       <div class="col-md-3">
+                                            <a href="{{ url('teams/teamDetails') }}"><p>{{$team->team->team_name}}</p></a>
+                                       </div>
+                                       <div class="col-md-4">
+                                                              <p>{{$team->team->short_description}}</p>
+                                       </div>
+                                  <div class="col-md-3">
+                                 @if($team->team->admin->user_id == \Auth::user()->id)
+                                       <p><button class="btn btn-sm btn-info">admin</button></p>
+                                 @endif
+                                 </div>
+                                 </div>
+                         @endforeach
+                         {!! $teams->links() !!}
+                         @else
+                         <div class="alert alert-info alert-dismissible" role="alert">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                               <p><strong>You currently have no teams..</strong></p>
+                         </div>
+                        @endif
+                        {{--end of display--}}
                     </div>
                 </div>
             </div>
