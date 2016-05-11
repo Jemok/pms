@@ -62,9 +62,7 @@
                             <label for="description">Sprint Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="sprint_description" rows="10" >
-
-                        </textarea>
+                        <textarea class="form-control" name="sprint_description" rows="10" ></textarea>
 
                             @if ($errors->has('sprint_description'))
                                 <span class="help-block">

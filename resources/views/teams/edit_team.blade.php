@@ -19,7 +19,6 @@
                             </div>
                         @endif
                             <form class="form-horizontal" method="post" action="{{url('teams/update/'.$team->id)}}">
-                                <div class="form-group">
                                 {!! csrf_field() !!}
                                 <div class="form-group {{ $errors->has('team_name') ? ' has-error' : '' }}">
                                     <div class="col-md-4">
@@ -44,9 +43,7 @@
                                         </label>
                                     </div>
                                     <div class="col-md-8">
-                                <textarea class="form-control" name="short_description" rows="5">
-                                        {{$team->short_description}}
-                                </textarea>
+                                <textarea class="form-control" name="short_description" rows="5">{{$team->short_description}}</textarea>
                                         @if($errors->has('short_description'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('short_description') }}</strong>
@@ -62,9 +59,7 @@
                                         </label>
                                     </div>
                                     <div class="col-md-8">
-                                <textarea class="form-control" name="description" rows="10">
-                                         {{$team->description}}
-                                </textarea>
+                                <textarea class="form-control" name="description" rows="10">{{$team->description}}</textarea>
                                         @if($errors->has('description'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('description') }}</strong>

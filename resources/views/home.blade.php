@@ -36,9 +36,7 @@
                             <div class="form-group {{ $errors->has('short_description') ? ' has-error' : '' }}">
                                 <label for="short_description" class="col-sm-2 control-label">Short Description</label>
                                 <div class="col-sm-10">
-                                   <textarea class="form-control" name="short_description" rows="5">
-
-                                   </textarea>
+                                   <textarea class="form-control" name="short_description" rows="5"></textarea>
                                     @if ($errors->has('short_description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('short_description') }}</strong>
@@ -49,9 +47,7 @@
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="description" class="col-sm-2 control-label"> Full Description</label>
                                 <div class="col-sm-10">
-                                   <textarea class="form-control" name="description" rows="10">
-
-                                   </textarea>
+                                   <textarea class="form-control" name="description" rows="10"></textarea>
                                     @if ($errors->has('description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('description') }}</strong>
