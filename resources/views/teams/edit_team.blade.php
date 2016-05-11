@@ -28,7 +28,7 @@
                                         </label>
                                     </div>
                                     <div class="col-md-8">
-                                        <input type="text" class="form-control" name="team_name" value={{$team->team_name}}>
+                                        <input type="text" class="form-control" name="team_name" value="{{$team->team_name}}">
                                         @if($errors->has('team_name'))
                                             <span class="help-block">
                                                 <strong>{{ $errors->first('team_name') }}</strong>
