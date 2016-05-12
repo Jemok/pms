@@ -28,7 +28,6 @@ class Task extends Model
     public function sprint(){
 
         return $this->belongsTo(Sprint::class);
-
     }
 
     /**
@@ -49,4 +48,11 @@ class Task extends Model
 
         return $this->hasMany(Backlog::class);
     }
+
+    public function creator()
+    {
+        return $this->hasOne(Task_creator::class);
+    }
+  
+
 }

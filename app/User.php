@@ -45,18 +45,8 @@ class User extends Authenticatable
      */
     public function tasks(){
 
-        return $this->hasMany(Task::class);
-    }
-
-    /**
-     * A user has many task_users
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function tasks_user(){
-
         return $this->hasMany(Task_user::class);
     }
-
     /**
      * A user has many team users
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

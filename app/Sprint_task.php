@@ -12,6 +12,7 @@ class Sprint_task extends Model
      */
     protected $fillable = [
 
+        'task_id'
     ];
 
     /**
