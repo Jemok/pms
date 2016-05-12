@@ -47,7 +47,7 @@
                             <label for="sprint_name">Sprint Name</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="sprint name" name="sprint_name" value="">
+                            <input type="text" class="form-control" placeholder="sprint name" name="sprint_name" value="{{ old('sprint_name')}}">
 
                             @if ($errors->has('sprint_name'))
                                 <span class="help-block">
@@ -62,7 +62,7 @@
                             <label for="description">Sprint Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="sprint_description" rows="10" ></textarea>
+                        <textarea class="form-control" name="sprint_description" rows="10" value="{{ old('sprint_description')}}"></textarea>
 
                             @if ($errors->has('sprint_description'))
                                 <span class="help-block">
@@ -76,7 +76,7 @@
                                 <label for="deliverable">Deliverable</label>
                             </div>
                             <div class="col-md-9 ">
-                                <input type="text" class="form-control" placeholder="deliverable" name="deliverable" value="" >
+                                <input type="text" class="form-control" placeholder="deliverable" name="deliverable" value="{{ old('deliverable')}}" >
 
                                 @if ($errors->has('deliverable'))
                                     <span class="help-block">
@@ -90,7 +90,7 @@
                             <label for="milestone">Milestone</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="milestone" name="milestone" value="" >
+                            <input type="text" class="form-control" placeholder="milestone" name="milestone" value="{{ old('milestone')}}" >
 
                             @if ($errors->has('milestone'))
                                 <span class="help-block">
@@ -104,7 +104,7 @@
                             <label for="started_at">Started at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
+                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="{{ old('started_at')}}">
                         </div>
                     </div>
 
@@ -113,7 +113,7 @@
                             <label for="ended_at">Ended at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="{{ old('ended_at')}}">
                         </div>
                     </div>
 

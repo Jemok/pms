@@ -24,7 +24,7 @@
                             <div class="form-group {{ $errors->has('team_name') ? ' has-error' : '' }}">
                                 <label for="team_name" class="col-sm-2 control-label">Team name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name">
+                                    <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name" value="{{ old('team_name')}}">
 
                                     @if($errors->has('team_name'))
                                         <span class="help-block">
@@ -36,7 +36,7 @@
                             <div class="form-group {{ $errors->has('short_description') ? ' has-error' : '' }}">
                                 <label for="short_description" class="col-sm-2 control-label">Short Description</label>
                                 <div class="col-sm-10">
-                                   <textarea class="form-control" name="short_description" rows="5"></textarea>
+                                   <textarea class="form-control" name="short_description" rows="5" value="{{ old('short_description')}}"></textarea>
                                     @if ($errors->has('short_description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('short_description') }}</strong>
@@ -47,7 +47,7 @@
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
                                 <label for="description" class="col-sm-2 control-label"> Full Description</label>
                                 <div class="col-sm-10">
-                                   <textarea class="form-control" name="description" rows="10"></textarea>
+                                   <textarea class="form-control" name="description" rows="10" value="{{ old('description')}}"></textarea>
                                     @if ($errors->has('description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('description') }}</strong>

@@ -47,7 +47,7 @@
                             <label for="project_name">Project Name</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="project name" name="project_name">
+                            <input type="text" class="form-control" placeholder="project name" name="project_name" value="{{ old('project_name')}}">
 
                             @if ($errors->has('project_name'))
                                 <span class="help-block">
@@ -62,7 +62,7 @@
                             <label for="description">Project Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="project_description" rows="10"></textarea>
+                        <textarea class="form-control" name="project_description" rows="10" value="{{ old('project_description')}}"></textarea>
 
                             @if ($errors->has('project_description'))
                                 <span class="help-block">
@@ -98,7 +98,7 @@
                             <label for="started_at">Started at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date"  name="started_at" class="form-control" placeholder="Started at">
+                            <input type="date"  name="started_at" class="form-control" placeholder="Started at" value="{{ old('started_at')}}">
                         </div>
 
                     </div>
@@ -108,7 +108,7 @@
                             <label for="ended_at">Ending at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="{{ old('ended_at')}}">
                         </div>
                     </div>
 
