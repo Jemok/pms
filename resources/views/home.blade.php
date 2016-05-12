@@ -107,7 +107,9 @@
                                             <div class="col-md-3">
                                                 @if($team->team->admin->user_id == \Auth::user()->id)
                                                         <p><button class="btn btn-sm btn-info">admin</button></p>
-                                                    @endif
+                                                @else
+                                                        <p><button class="btn btn-sm btn-info">member</button></p>
+                                                @endif
 
                                             </div>
                                         </div>

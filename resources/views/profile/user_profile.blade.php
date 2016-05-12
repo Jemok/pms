@@ -13,13 +13,13 @@
                         <label for="name">Name</label>
                     </div>
                     <div class="col-md-10">
-                        <p>his qwertyu sdfghj sdfghj ertyu dfgh dcg dfgh erty df </p>
+                        <p>{{$user->name}}</p>
                     </div>
                     <div class="col-md-2">
                         <label for="name">email</label>
                     </div>
                     <div class="col-md-10">
-                        <p>his@jkqwertyu </p>
+                        <p>{{$user->email}}</p>
                     </div>
                 </div>
             </div>

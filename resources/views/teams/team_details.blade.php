@@ -23,9 +23,12 @@
             <div class="col-md-2">
                 <p><strong>Team admin</strong></p>
             </div>
+
+            @if($team->admin->user_id == \Auth::user()->id)
             <div class="col-md-2">
                 <p><strong>Edit team</strong></p>
             </div>
+            @endif
         </div>
 
         <div class="row">
@@ -46,7 +49,7 @@
                 @endif
             </div>
             <div class="col-md-2">
-                <a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}</a>
+                <a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a>
             </div>
             @if($team->admin->user_id == \Auth::user()->id)
             <div class="col-md-2">
@@ -86,7 +89,7 @@
                     <p>{{$project->project->project_name}}</p>
                 </div>
                 <div class="col-md-2">
-                    <p>{{$project->project->description}}</p>
+                    <p>{{$project->project->project_description}}</p>
                 </div>
                 <div class="col-md-2">
                     @if($project->project->project_status == 0)

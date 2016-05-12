@@ -61,7 +61,7 @@
 
             <div class="row">
                 <div class="col-md-2">
-                    <p>{{$team->team_name}}</p>
+                    <p><a href="{{ url('teams/teamDetails/'. $team->id)}}">{{$team->team_name}}</a></p>
                 </div>
                 <div class="col-md-4">
                     <p>{{$team->short_description}}</p>
@@ -70,7 +70,7 @@
                     <p>{{$team->created_at->diffForHumans()}}</p>
                 </div>
                 <div class="col-md-3">
-                    <p>{{$team->admin->user->name}}</p>
+                    <p> <a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a></p>
                 </div>
             </div><!--end of teams data-->
                 @endforeach{{--end of for each--}}

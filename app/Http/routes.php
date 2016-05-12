@@ -21,7 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 /*profile page route*/
 Route::get('profile/edit','ProfileController@show');
-Route::get('profile/userProfile','UserProfileController@userProfile');
+Route::get('profile/userProfile/{user_id}','UserProfileController@userProfile');
 
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
