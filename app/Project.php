@@ -33,7 +33,7 @@ class Project extends Model
     
     public function sprints(){
         
-        return $this->hasMany(Sprint::class);
+        return $this->hasMany(ProjectSprint::class);
     }
     
     public function getStartedAtAttribute($started_at){

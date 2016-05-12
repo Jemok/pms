@@ -7,6 +7,8 @@ namespace App\Repositories;
  * Time: 5:02 PM
  */
 use App\Project;
+use Illuminate\Support\Facades\Auth;
+
 class ProjectRepository
 {
     protected $model;
@@ -18,6 +20,12 @@ class ProjectRepository
     public function index()
     {
         return Project::all();
+
+    }
+
+    public function projectsOfUser(){
+
+        return Auth::user()->projects()->with('project.team.team');
 
     }
 

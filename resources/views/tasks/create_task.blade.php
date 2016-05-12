@@ -20,12 +20,18 @@
                             <label for="spring-list">Select from Sprint</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-control" name="spring_list">
-                                <option>POS</option>
-                                <option>mafisi</option>
-                                <option>malion</option>
-                                <option>Pizza</option>
-                                <option>execution</option>
+                            <select class="form-control" name="sprint_id">
+                            @if($sprints->count())
+                                @foreach($sprints as $sprint)
+                                    <option value="{{$sprint->sprint->id}}">
+                                    {{$sprint->sprint->sprint_name}}/
+                                    {{$sprint->sprint->project->first()->project->first()->project_name}}/
+                                    {{$sprint->sprint->project->first()->project->team->team->team_name}}
+                                    </option>
+                                @endforeach
+                            @else
+                                <option> No Sprint found</option>
+                            @endif
                             </select>
                         </div>
 
@@ -45,16 +51,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('task_description') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="description">Task Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="description" rows="10" ></textarea>
+                        <textarea class="form-control" name="task_description" rows="10" ></textarea>
 
-                            @if ($errors->has('description'))
+                            @if ($errors->has('task_description'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
+                                        <strong>{{ $errors->first('task_description') }}</strong>
                                     </span>
                             @endif
                         </div>
@@ -80,13 +86,13 @@
                             <label for="task_status">Task Status</label>
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" value="" >Not Started
+                            <input type="radio" class="form-control" name="task_status">Not Started
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" value="" >Ongoing
+                            <input type="radio" class="form-control" name="task_status">Ongoing
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" >Completed
+                            <input type="radio" class="form-control" name="task_status">Completed
                         </div>
                         @if ($errors->has('task_status'))
                             <span class="help-block">

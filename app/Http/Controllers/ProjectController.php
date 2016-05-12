@@ -18,9 +18,9 @@ class ProjectController extends Controller
 
     public function create(TeamRepository $teamRepository, ProjectRepository $projectRepository)
     {
-            $teams=$teamRepository->index();
-            $projects=$projectRepository->index();
-            return view('projects.create_project', compact('teams','projects'));
+            $teams=$teamRepository->userTeams()->get();
+
+            return view('projects.create_project', compact('teams'));
     }
     public function store(CreateProjectRequest $createProjectRequest)
     {

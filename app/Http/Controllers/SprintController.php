@@ -5,6 +5,7 @@ use App\Http\Requests;
 
 use App\Project;
 use App\Repositories\SprintRepository;
+use App\Sprint;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateSprintRequest;
 use App\Repositories\ProjectRepository;
@@ -15,9 +16,8 @@ class SprintController extends Controller
 {
     public function create(ProjectRepository $projectRepository)
     {
-        $projects=$projectRepository->index();
-        
-        
+        $projects=$projectRepository->projectsOfUser()->get();
+
         return view('sprints.create_sprint',compact('projects'));
     }
 
@@ -25,7 +25,7 @@ class SprintController extends Controller
     {
         $project = Project::findOrFail($createSprintRequest->project_id);
         
-        $sprint = $project->sprints()->create($createSprintRequest->all());
+        $sprint =  Sprint::create($createSprintRequest->all());
         
         $sprint->creator()->create([
            'user_id'=> Auth::user()->id 
@@ -34,6 +34,13 @@ class SprintController extends Controller
         $sprint->users()->create([
             'user_id' => Auth::user()->id
         ]);
+
+        $project->sprints()->create([
+
+            'sprint_id' => $sprint->id
+
+        ]);
+
         Session::flash('flash_message', 'Sprint was created successfully');
 
         return $this->create(new ProjectRepository(new Project()));

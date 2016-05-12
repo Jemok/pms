@@ -33,7 +33,7 @@
                             <select class="form-control" name="team_id">
                                 @if($teams->count())
                                     @foreach($teams as $team)
-                                    <option value="{{$team->id}}">{{$team->team_name}}</option>
+                                    <option value="{{$team->team->id}}">{{$team->team->team_name}}</option>
                                     @endforeach
                                 @else
                                     <option>no teams found</option>
