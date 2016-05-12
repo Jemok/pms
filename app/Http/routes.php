@@ -36,6 +36,8 @@ Route::get('teams/teamDetails/{team_id}', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 Route::get('teams/userTeams', 'UserTeamsController@userTeams');
 Route::get('teams/editTeam/{team_id}', 'EditTeamController@editTeam');
+Route::get('teams/teamMember', 'TeamMembersController@teamMember');
+
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');

@@ -9,53 +9,54 @@
 
         <div class="row">
             <div class="col-md-2">
-                <p><strong>Team name</strong></p>
+                <h5><strong>Name</strong></h5>
+                <p>{{$team->team_name}}</p>
             </div>
             <div class="col-md-2">
-                <p><strong>Team short description</strong></p>
+                <h5><strong>Short description</strong></h5>
+                <p>{{$team->short_description}}</p>
             </div>
             <div class="col-md-2">
-                <p><strong>Team full description</strong></p>
+                <h5><strong>Full description</strong></h5>
+                <p>{{$team->description}}</p>
             </div>
             <div class="col-md-2">
-                <p><strong>User level</strong></p>
+                <h5><strong>User level</strong></h5>
+                @if($team->admin->user_id == \Auth::user()->id)
+                    <p><button class="btn btn-sm btn-info">Admin</button></p>
+                @else
+                    <p><button class="btn btn-sm btn-info">Member</button></p>
+                @endif
             </div>
             <div class="col-md-2">
-                <p><strong>Team admin</strong></p>
+                <h5><strong>Admin</strong></h5>
+                <p><a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a></p>
             </div>
 
             @if($team->admin->user_id == \Auth::user()->id)
             <div class="col-md-2">
-                <p><strong>Edit team</strong></p>
+                <h5><strong>Edit team</strong></h5>
+                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
             </div>
             @endif
         </div>
 
         <div class="row">
-            <div class="col-md-2">
-                <p>{{$team->team_name}}</p>
+            <div class="col-md-5 col-md-offset-1">
+                <div class="row">
+                    <h4><strong>Team members</strong></h4>
+                </div>
+                <div class="row">
+                    <ul class="list-inline list-unstyled">
+                            <li><strong>Name</strong></li>
+                            <li><strong>User level</strong></li>
+                    </ul>
+                    <ul class="list-inline list-unstyled">
+                        <li><a href="{{ url('teams/teamMember') }}">member</a></li>
+                        <li class="btn btn-info">Admin</li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-2">
-                <p>{{$team->short_description}}</p>
-            </div>
-            <div class="col-md-2">
-                <p>{{$team->description}}</p>
-            </div>
-            <div class="col-md-2">
-                @if($team->admin->user_id == \Auth::user()->id)
-                <p><button class="btn btn-sm btn-info">Admin</button></p>
-                @else
-                 <p><button class="btn btn-sm btn-info">Member</button></p>
-                @endif
-            </div>
-            <div class="col-md-2">
-                <a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a>
-            </div>
-            @if($team->admin->user_id == \Auth::user()->id)
-            <div class="col-md-2">
-                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
-            </div>
-            @endif
         </div>
 
         <div class="row">
@@ -66,7 +67,7 @@
 
         <div class="row">
             <div class="col-md-1">
-                <h5><strong>Name</strong></h5>
+
             </div>
             <div class="col-md-2">
                 <h5><strong>Description</strong></h5>
@@ -85,6 +86,7 @@
         @if($projects->count())
             @foreach($projects as $project)
             <div class="row">
+                <h5><strong>Name</strong></h5>
                 <div class="col-md-1">
                     <p>{{$project->project->project_name}}</p>
                 </div>
