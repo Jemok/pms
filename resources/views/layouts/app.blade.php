@@ -44,6 +44,7 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a id="link" class=" nav active" href="{{ url('/home') }}">Home</a></li>
+
                     <li class="dropdown">
                         <a href="#" id="link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             Project<span class="caret"></span>
