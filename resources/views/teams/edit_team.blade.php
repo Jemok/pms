@@ -77,6 +77,36 @@
                         </div>
                     </div>
                 </div>
+            <div class="col-md-3 col-md-offset-1">
+                <div class="row">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h5 style="text-align: center"><strong>Switch Admin</strong></h5>
+                        </div>
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="post" action="#">
+                                {!! csrf_field() !!}
+                                <div class="form-group {{ $errors->has('admin_id') ? ' has-error' : '' }}">
+                                    <div class="col-md-7">
+                                        <select class="form-control" name="admin_id">
+                                            <option value="" >member name</option>
+                                            <option>No projects found</option>
+                                        </select>
+                                        @if ($errors->has('admin_name'))
+                                            <span class="help-block">
+                                        <strong>{{ $errors->first('admin_name') }}</strong>
+                                    </span>
+                                        @endif
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button class="btn btn-info btn-sm" name="change">change admin</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
 
