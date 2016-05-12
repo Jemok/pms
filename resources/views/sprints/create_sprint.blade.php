@@ -33,7 +33,8 @@
                             <select class="form-control" name="project_id">
                                 @if($projects->count())
                                     @foreach($projects as $project)
-                                        <option value="{{$project->id}}" >{{$project->project_name}}</option>
+                                        <option value="{{$project->project->id}}" >{{$project->project->project_name}}/
+                                        {{$project->project->team->team->team_name}}</option>
                                     @endforeach
                                 @else
                                     <option>No projects found</option>

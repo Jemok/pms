@@ -16,7 +16,7 @@ class TaskController extends Controller
 
     public function create(SprintRepository $sprintRepository)
     {
-        $sprints=$sprintRepository->index();
+        $sprints=$sprintRepository->sprintsForUser()->get();
 
         return view('tasks.create_task',compact ('sprints'));
     }

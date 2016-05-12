@@ -2,42 +2,57 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-2">
                 <h4><strong>{{$team->team_name}} details.</strong></h4>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-7">
-                <div class="col-md-2">
-                    <h5><strong>Name</strong></h5>
-                    <p>{{$team->team_name}}</p>
-                </div>
-                <div class="col-md-2">
-                    <h5><strong>Short description</strong></h5>
-                    <p>{{$team->short_description}}</p>
-                </div>
-                <div class="col-md-2">
-                    <h5><strong>Full description</strong></h5>
-                    <p>{{$team->description}}</p>
-                </div>
-                <div class="col-md-2">
-                    <h5><strong>User level</strong></h5>
-                    @if($team->admin->user_id == \Auth::user()->id)
-                        <p><button class="btn btn-sm btn-info">Admin</button></p>
-                    @else
-                        <p><button class="btn btn-sm btn-info">Member</button></p>
-                        @endif
-                </div>
-                <div class="col-md-2">
-                    <h5><strong>Admin</strong></h5>
-                    <p><a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}</a></p>
-                </div>
-                <div class="col-md-2">
-                    <h5><strong>Edit team</strong></h5>
-                    <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
-                </div>
+            <div class="col-md-2">
+                <p><strong>Team name</strong></p>
             </div>
+            <div class="col-md-2">
+                <p><strong>Team short description</strong></p>
+            </div>
+            <div class="col-md-2">
+                <p><strong>Team full description</strong></p>
+            </div>
+            <div class="col-md-2">
+                <p><strong>User level</strong></p>
+            </div>
+            <div class="col-md-2">
+                <p><strong>Team admin</strong></p>
+            </div>
+            <div class="col-md-2">
+                <p><strong>Edit team</strong></p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <p>{{$team->team_name}}</p>
+            </div>
+            <div class="col-md-2">
+                <p>{{$team->short_description}}</p>
+            </div>
+            <div class="col-md-2">
+                <p>{{$team->description}}</p>
+            </div>
+            <div class="col-md-2">
+                @if($team->admin->user_id == \Auth::user()->id)
+                <p><button class="btn btn-sm btn-info">Admin</button></p>
+                @else
+                 <p><button class="btn btn-sm btn-info">Member</button></p>
+                @endif
+            </div>
+            <div class="col-md-2">
+                <a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}</a>
+            </div>
+            @if($team->admin->user_id == \Auth::user()->id)
+            <div class="col-md-2">
+                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
+            </div>
+            @endif
         </div>
 
         <div class="row">

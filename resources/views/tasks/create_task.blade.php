@@ -23,7 +23,11 @@
                             <select class="form-control" name="sprint_id">
                             @if($sprints->count())
                                 @foreach($sprints as $sprint)
-                                    <option value="{{$sprint->id}}" >{{$sprint->sprint_name}}</option>
+                                    <option value="{{$sprint->sprint->id}}">
+                                    {{$sprint->sprint->sprint_name}}/
+                                    {{$sprint->sprint->project->first()->project->first()->project_name}}/
+                                    {{$sprint->sprint->project->first()->project->team->team->team_name}}
+                                    </option>
                                 @endforeach
                             @else
                                 <option> No Sprint found</option>

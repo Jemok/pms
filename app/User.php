@@ -28,6 +28,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(ProjectCreator::class);
     }
+
+    public function projects(){
+
+        return $this->hasMany(Project_user::class);
+    }
         
 
     /**
