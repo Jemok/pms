@@ -8,49 +8,60 @@
         </div>
 
         <div class="row">
-            <div class="col-md-2">
-                <p><strong>Team name</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Team short description</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Team full description</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>User level</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Team admin</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Edit team</strong></p>
+            <div class="col-md-7">
+                <div class="col-md-2">
+                    <h5><strong>Team name</strong></h5>
+                    <p>{{$team->team_name}}</p>
+                </div>
+                <div class="col-md-2">
+                    <h5><strong>Team short description</strong></h5>
+                    <p>{{$team->short_description}}</p>
+                </div>
+                <div class="col-md-2">
+                    <h5><strong>Team full description</strong></h5>
+                    <p>{{$team->description}}</p>
+                </div>
+                <div class="col-md-2">
+                    <h5><strong>User level</strong></h5>
+                    @if($team->admin->user_id == \Auth::user()->id)
+                        <p><button class="btn btn-sm btn-info">Admin</button></p>
+                    @else
+                        <p><button class="btn btn-sm btn-info">Member</button></p>
+                        @endif
+                </div>
+                <div class="col-md-2">
+                    <h5><strong>Team admin</strong></h5>
+                    <p><a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}</a></p>
+                </div>
+                <div class="col-md-2">
+                    <h5><strong>Edit team</strong></h5>
+                    <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-2">
-                <p>{{$team->team_name}}</p>
+            <div class="col-md-7">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-md-2">
+
+                </div>
             </div>
-            <div class="col-md-2">
-                <p>{{$team->short_description}}</p>
-            </div>
-            <div class="col-md-2">
-                <p>{{$team->description}}</p>
-            </div>
-            <div class="col-md-2">
-                @if($team->admin->user_id == \Auth::user()->id)
-                <p><button class="btn btn-sm btn-info">Admin</button></p>
-                @else
-                 <p><button class="btn btn-sm btn-info">Member</button></p>
-                @endif
-            </div>
-            <div class="col-md-2">
-                <a href="{{ url('profile/userProfile') }}">{{$team->admin->user->name}}</a>
-            </div>
-            <div class="col-md-2">
-                <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
-            </div>
+
         </div>
 
         <div class="row">

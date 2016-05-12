@@ -25,7 +25,7 @@ class CreateTaskRequest extends Request
     {
         return [
             'task_name' => 'required|min:3',
-            'description' => 'required|min:5',
+            'task_description' => 'required|min:5',
             'deliverable'=> 'required|min:5',
             'task_status' => 'required',
             'started_at' => 'required',

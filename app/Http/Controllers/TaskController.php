@@ -10,6 +10,7 @@ use App\Repositories\SprintRepository;
 use App\Task;
 use App\Sprint;
 
+
 class TaskController extends Controller
 {
 
@@ -33,12 +34,12 @@ class TaskController extends Controller
         ]);
         
         $task->creator()->create([
-            'user_id' => Auth::user()->id
+            'user_id' => \Auth::user()->id
         ]);
         
 
         Session::flash('flash_message', 'Task was created successfully');
 
-        return view('tasks.create_task', compact('projects'));
+        return redirect()->back();
     }
 }

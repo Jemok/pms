@@ -17,10 +17,6 @@ class CreateTasksTable extends Migration
             $table->string('task_name');
             $table->text('task_description');
             $table->text('deliverable');
-            $table->integer('sprint_id')->unsigned();
-            $table->foreign('sprint_id')
-                ->references('id')
-                ->on('sprints');
             $table->text('task_status');
             $table->dateTime('started_at');
             $table->dateTime('ended_at');

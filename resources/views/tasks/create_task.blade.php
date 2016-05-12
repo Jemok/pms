@@ -20,7 +20,7 @@
                             <label for="spring-list">Select from Sprint</label>
                         </div>
                         <div class="col-md-9">
-                            <select class="form-control" name="spring_list">
+                            <select class="form-control" name="sprint_id">
                             @if($sprints->count())
                                 @foreach($sprints as $sprint)
                                     <option value="{{$sprint->id}}" >{{$sprint->sprint_name}}</option>
@@ -47,16 +47,16 @@
                         </div>
                     </div>
 
-                    <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('task_description') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="description">Task Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="description" rows="10" ></textarea>
+                        <textarea class="form-control" name="task_description" rows="10" ></textarea>
 
-                            @if ($errors->has('description'))
+                            @if ($errors->has('task_description'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
+                                        <strong>{{ $errors->first('task_description') }}</strong>
                                     </span>
                             @endif
                         </div>
