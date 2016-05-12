@@ -35,17 +35,9 @@ class Sprint extends Model
      */
     public function task(){
 
-        return $this->hasMany(Task::class);
-    }
-
-    /**
-     * A sprint has many sprint tasks
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function sprint_task(){
-
         return $this->hasMany(Sprint_task::class);
     }
+    
 
     /**
      * A Sprint has many users

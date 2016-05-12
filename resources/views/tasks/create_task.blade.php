@@ -28,6 +28,7 @@
                             @else
                                 <option> No Sprint found</option>
                             @endif
+                            </select>
                         </div>
 
                     </div>
@@ -81,13 +82,13 @@
                             <label for="task_status">Task Status</label>
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" value="" >Not Started
+                            <input type="radio" class="form-control" name="task_status">Not Started
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" value="" >Ongoing
+                            <input type="radio" class="form-control" name="task_status">Ongoing
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status" >Completed
+                            <input type="radio" class="form-control" name="task_status">Completed
                         </div>
                         @if ($errors->has('task_status'))
                             <span class="help-block">

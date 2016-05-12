@@ -49,7 +49,7 @@ class Task extends Model
         return $this->hasMany(Backlog::class);
     }
 
-    public function task_creator()
+    public function creator()
     {
         return $this->hasOne(Task_creator::class);
     }

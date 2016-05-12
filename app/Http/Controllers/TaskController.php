@@ -5,9 +5,10 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Session;
-use App\Repositories\ProjectRepository;
 use App\Http\Requests\CreateTaskRequest;
 use App\Repositories\SprintRepository;
+use App\Task;
+use App\Sprint;
 
 class TaskController extends Controller
 {
@@ -21,9 +22,16 @@ class TaskController extends Controller
 
     public function store(CreateTaskRequest $createTaskRequest)
     {
+        $sprint = Sprint::findOrFail($createTaskRequest->sprint_id);
+
 
         $task = Task::create($createTaskRequest->all());
-
+        
+        $sprint->task()->create([
+           
+            'task_id' => $task->id
+        ]);
+        
         $task->creator()->create([
             'user_id' => Auth::user()->id
         ]);
