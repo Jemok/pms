@@ -14,11 +14,11 @@
                     <p>{{$team->team_name}}</p>
                 </div>
                 <div class="col-md-2">
-                    <h5><strong>Team short description</strong></h5>
+                    <h5><strong>Short description</strong></h5>
                     <p>{{$team->short_description}}</p>
                 </div>
                 <div class="col-md-2">
-                    <h5><strong>Team full description</strong></h5>
+                    <h5><strong>Full description</strong></h5>
                     <p>{{$team->description}}</p>
                 </div>
                 <div class="col-md-2">
@@ -38,30 +38,31 @@
                     <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
                 </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-7">
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
-                </div>
-                <div class="col-md-2">
-
+            <div class="col-md-3 col-md-offset-1">
+                <div class="row">
+                    <h5><strong>Switch Admin</strong></h5>
+                    <form class="form-horizontal" method="post" action="#">
+                        {!! csrf_field() !!}
+                        <div class="form-group {{ $errors->has('admin_id') ? ' has-error' : '' }}">
+                            <div class="col-md-7">
+                                <select class="form-control" name="admin_id">
+                                    <option value="" >member name</option>
+                                    <option>No projects found</option>
+                                </select>
+                                @if ($errors->has('admin_name'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('admin_name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-info btn-sm" name="change">change admin</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-
         </div>
 
         <div class="row">
