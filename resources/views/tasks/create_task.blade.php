@@ -41,7 +41,7 @@
                             <label for="task_name">Task Name</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" placeholder="Task name" name="task_name" value="">
+                            <input type="text" class="form-control" placeholder="Task name" name="task_name" value="{{ old('task_name')}}">
 
                             @if ($errors->has('task_name'))
                                 <span class="help-block">
@@ -56,7 +56,7 @@
                             <label for="description">Task Description</label>
                         </div>
                         <div class="col-md-9">
-                        <textarea class="form-control" name="task_description" rows="10" ></textarea>
+                        <textarea class="form-control" name="task_description" rows="10" value="{{ old('task_description')}}"></textarea>
 
                             @if ($errors->has('task_description'))
                                 <span class="help-block">
@@ -71,7 +71,7 @@
                             <label for="deliverable">Deliverable</label>
                         </div>
                         <div class="col-md-9 ">
-                            <input type="text" class="form-control" placeholder="Deliverable" name="deliverable" value="" >
+                            <input type="text" class="form-control" placeholder="Deliverable" name="deliverable" value="{{ old('deliverable')}}" >
 
                             @if ($errors->has('deliverable'))
                                 <span class="help-block">
@@ -105,7 +105,7 @@
                             <label for="started_at">Started at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="<?php  echo date("d-m-y @ h:i:sa",time());?>">
+                            <input type="date" name="started_at" class="form-control" placeholder="Started at" value="{{ old('started_at')}}">
                         </div>
                     </div>
 
@@ -114,7 +114,7 @@
                             <label for="ended_at">Ended at</label>
                         </div>
                         <div class="col-md-9">
-                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="">
+                            <input type="date" name="ended_at" class="form-control" placeholder="Ended at" value="{{ old('ended_at')}}">
                         </div>
                     </div>
 
