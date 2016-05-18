@@ -39,16 +39,16 @@
             <!--more teams headers-->
             <div class="row">
                 <div class="col-md-2">
-                    <h5><strong>Team name</strong></h5>
+                    <h5><strong>Name</strong></h5>
                 </div>
                 <div class="col-md-4">
-                    <h5><strong>Team short Description</strong></h5>
+                    <h5><strong>Short Description</strong></h5>
                 </div>
                 <div class="col-md-3">
                     <h5><strong>Created at</strong></h5>
                 </div>
                 <div class="col-md-3">
-                    <h5><strong>Team Admin</strong></h5>
+                    <h5><strong>Admin</strong></h5>
                 </div>
             </div>
 
