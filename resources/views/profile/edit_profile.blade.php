@@ -9,6 +9,7 @@
                     <strong><p style="text-align: center;">My Profile</p></strong>
                 </div>
                     <div class="panel-body">
+<<<<<<< HEAD
                         @if(Session::has("flash_message"))
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
@@ -22,18 +23,30 @@
                         <form class="form-horizontal" method="post" action="{{url('profile/update')}}">
                             {!! csrf_field() !!}
                             <div class="form-group">
+=======
+                        <form class="form-horizontal" method="post" action="">
+                            {!! csrf_field() !!}
+                            <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+>>>>>>> c2f521d9572c57fe86cefa8ce2be96bcd1f351c6
                                 <div class="col-md-3">
                                     <label for="username">
                                         username
                                     </label>
                                 </div>
-
                                 <div class="col-md-9">
                                     <strong><input type="text" name="name" value="{{\Auth::user()->name}}" class="form-control"></strong>
+<<<<<<< HEAD
+=======
+                                    @if($errors->has('name'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
+>>>>>>> c2f521d9572c57fe86cefa8ce2be96bcd1f351c6
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                     <div class="col-md-3">
                                         <label for="email">
                                             E-mail
@@ -42,6 +55,11 @@
 
                                     <div class="col-md-9">
                                         <strong><input type="email" name="email" value="{{\Auth::user()->email}}" class="form-control"></strong>
+                                        @if($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                             </div>
                             <div class="form-group">
