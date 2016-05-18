@@ -25,7 +25,6 @@
                             <div class="form-group">
 =======
                         <form class="form-horizontal" method="post" action="">
-                            {!! csrf_field() !!}
                             <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
 >>>>>>> c2f521d9572c57fe86cefa8ce2be96bcd1f351c6
                                 <div class="col-md-3">
