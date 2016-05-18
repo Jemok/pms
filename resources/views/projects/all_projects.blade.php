@@ -10,13 +10,13 @@
 
     <div class="row">
         <div class="col-md-2">
-            <h5><strong>Project Name</strong></h5>
+            <h5><strong>Name</strong></h5>
         </div>
         <div class="col-md-2">
-            <h5><strong>Project Description</strong></h5>
+            <h5><strong>Description</strong></h5>
         </div>
         <div class="col-md-2">
-            <h5><strong>Project Status</strong></h5>
+            <h5><strong>Status</strong></h5>
         </div>
         <div class="col-md-2">
             <h5><strong>Started at</strong></h5>
