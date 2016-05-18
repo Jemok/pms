@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Repositories\EditProfileRepository;
+use Illuminate\Support\Facades\Session;
 
 class EditProfileController extends Controller
 {
@@ -16,6 +16,8 @@ class EditProfileController extends Controller
         $profile = \Auth::user();
         
         $profile->update($request->all());
+
+        Session::flash('flash_message', 'You have updated your profile successfully');
 
         return redirect()->back();
     }
