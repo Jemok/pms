@@ -24,7 +24,7 @@
                 <p><strong>Team admin</strong></p>
             </div>
 
-            @if($team->admin->user_id == \Auth::user()->id)
+            @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)
             <div class="col-md-2">
                 <p><strong>Edit team</strong></p>
             </div>
@@ -42,7 +42,7 @@
                 <p>{{$team->description}}</p>
             </div>
             <div class="col-md-2">
-                @if($team->admin->user_id == \Auth::user()->id)
+                @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)
                 <p><button class="btn btn-sm btn-info">Admin</button></p>
                 @else
                  <p><button class="btn btn-sm btn-info">Member</button></p>
@@ -51,7 +51,7 @@
             <div class="col-md-2">
                 <a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a>
             </div>
-            @if($team->admin->user_id == \Auth::user()->id)
+            @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)
             <div class="col-md-2">
                 <p><a href="{{ url('teams/editTeam/'.$team->id) }}" class="btn btn-default">edit this team</a></p>
             </div>

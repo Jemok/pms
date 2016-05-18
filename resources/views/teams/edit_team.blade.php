@@ -84,22 +84,29 @@
                             <h5 style="text-align: center"><strong>Switch Admin</strong></h5>
                         </div>
                         <div class="panel-body">
-                            <form class="form-horizontal" method="post" action="#">
+                            <form class="form-horizontal" method="post" action="{{ url('admin/change/'.$team->id) }}">
                                 {!! csrf_field() !!}
-                                <div class="form-group {{ $errors->has('admin_id') ? ' has-error' : '' }}">
+                                <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
                                     <div class="col-md-7">
-                                        <select class="form-control" name="admin_id">
-                                            <option value="" >member name</option>
-                                            <option>No projects found</option>
+                                        <select class="form-control" name="user_id">
+                                            @if($team_users->count())
+                                                @foreach($team_users as $user)
+                                                    @if($user->user_id == $team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id)
+                                                        <option value="{{$user->user->id}}" selected>{{$user->user->name}} (Admin)</option>
+                                                    @else
+                                                        <option value="{{$user->user->id}}">{{$user->user->name}}</option>
+                                                    @endif
+                                                @endforeach
+                                            @endif
                                         </select>
-                                        @if ($errors->has('admin_name'))
+                                        @if($errors->has('user_id'))
                                             <span class="help-block">
-                                        <strong>{{ $errors->first('admin_name') }}</strong>
+                                        <strong>{{ $errors->first('user_id') }}</strong>
                                     </span>
                                         @endif
                                     </div>
                                     <div class="col-md-3">
-                                        <button class="btn btn-info btn-sm" name="change">change admin</button>
+                                        <button class="btn btn-info btn-sm" type="submit" name="change">change admin</button>
                                     </div>
                                 </div>
                             </form>
