@@ -2,6 +2,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Project;
+use App\ProjectSprint;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Session;
@@ -18,7 +20,11 @@ class TaskController extends Controller
     {
         $sprints=$sprintRepository->sprintsForUser()->get();
 
-        return view('tasks.create_task',compact ('sprints'));
+        $project = new Project();
+
+        $sprint_project = new ProjectSprint();
+
+        return view('tasks.create_task',compact ('sprints', 'project', 'sprint_project'));
     }
 
     public function store(CreateTaskRequest $createTaskRequest)

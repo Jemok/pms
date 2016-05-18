@@ -13,9 +13,11 @@ class EditTeamController extends Controller
 
     public function editTeam($team_id)
     {
-        $team = Team::findOrFail($team_id)->with('admin.user', 'team_user')->first();
+        $team = Team::findOrFail($team_id)->with('admin.user', 'team_user.user')->first();
 
-        return view('teams.edit_team', compact('team'));
+        $team_users = $team->team_user;
+
+        return view('teams.edit_team', compact('team', 'team_users'));
     }
 
     public function update(CreateTeamRequest $createTeamRequest, $team_id){
@@ -29,8 +31,6 @@ class EditTeamController extends Controller
         $team = Team::findOrFail($team_id)->with('admin.user', 'team_user')->first();
 
         return view('teams.edit_team', compact('team'));
-
     }
-
 }
 ?>

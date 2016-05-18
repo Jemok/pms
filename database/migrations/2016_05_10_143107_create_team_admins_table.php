@@ -16,6 +16,7 @@ class CreateTeamAdminsTable extends Migration
             $table->increments('id');
             $table->integer('team_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
+            $table->integer('old_status')->unsigned();
 
             $table->foreign('team_id')
                   ->references('id')

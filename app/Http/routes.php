@@ -23,10 +23,14 @@ Route::get('/home', 'HomeController@index');
 Route::get('profile/edit','ProfileController@show');
 Route::get('profile/userProfile/{user_id}','UserProfileController@userProfile');
 
+
 /*Project routes*/
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
 Route::get('projects/allProjects','AllProjectsController@allProjects');
+
+Route::post('admin/change/{team_id}', 'UserProfileController@changeAdmin');
+
 Route::get('projects/projectDetails','ProjectDetailsController@projectDetails');
 
 /*team routes*/
@@ -47,6 +51,7 @@ Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
 Route::post('tasks/store','TaskController@store');
+
 
 /*team routes*/
 Route::post('teams/create','TeamController@create');

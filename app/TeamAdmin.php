@@ -12,9 +12,14 @@ class TeamAdmin extends Model
      */
     protected $table = 'team_admins';
 
+    /**
+     * Fields that might be mass assigned
+     * @var array
+     */
     protected $fillable = [
 
-        'user_id'
+        'user_id',
+        'old_status'
     ];
 
     /**
