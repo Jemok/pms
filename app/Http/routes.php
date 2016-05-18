@@ -28,7 +28,7 @@ Route::post('profile/update','EditProfileController@update');
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
 Route::get('projects/allProjects','AllProjectsController@allProjects');
-
+Route::get('projects/projectDetails','ProjectDetailsController@projectDetails');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
@@ -37,6 +37,8 @@ Route::get('teams/teamDetails/{team_id}', 'TeamDetailsController@teamDetails');
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 Route::get('teams/userTeams', 'UserTeamsController@userTeams');
 Route::get('teams/editTeam/{team_id}', 'EditTeamController@editTeam');
+Route::get('teams/teamMember', 'TeamMemberController@teamMember');
+
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
