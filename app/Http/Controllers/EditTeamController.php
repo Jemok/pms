@@ -26,13 +26,11 @@ class EditTeamController extends Controller
 
         $team->update($createTeamRequest->all());
 
-        $team = Team::where('id', '=', $team_id)->with('admin.user', 'team_user.user')->first();
+        $team_for_user = Team::where('id', '=', $team_id)->with('admin.user', 'team_user.user')->first();
 
-        $team_users = $team->team_user;
+        $team_users = $team_for_user->team_user;
 
         Session::flash('flash_message', 'Team was updated successfully');
-
-        $team = Team::findOrFail($team_id)->with('admin.user', 'team_user')->first();
 
         return view('teams.edit_team', compact('team', 'team_users'));
     }
