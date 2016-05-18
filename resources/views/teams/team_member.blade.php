@@ -14,5 +14,13 @@
             <h5><strong>e-mail</strong></h5>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-1">
+            <p>Name</p>
+        </div>
+        <div class="col-md-1">
+            <p>e-mail</p>
+        </div>
+    </div>
 </div>
 @endsection

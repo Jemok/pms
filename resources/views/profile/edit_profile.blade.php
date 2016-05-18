@@ -10,19 +10,24 @@
                 </div>
                     <div class="panel-body">
                         <form class="form-horizontal" method="post" action="">
-                            <div class="form-group">
+                            {!! csrf_field() !!}
+                            <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
                                 <div class="col-md-3">
                                     <label for="username">
                                         username
                                     </label>
                                 </div>
-
                                 <div class="col-md-9">
-                                    <strong><input type="text" name="username" value="{{\Auth::user()->name}}" class="form-control"></strong>
+                                    <strong><input type="text" name="name" value="{{\Auth::user()->name}}" class="form-control"></strong>
+                                    @if($errors->has('name'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('name') }}</strong>
+                                        </span>
+                                    @endif
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group {{ $errors->has('email') ? ' has-error' : '' }}">
                                     <div class="col-md-3">
                                         <label for="email">
                                             E-mail
@@ -31,6 +36,11 @@
 
                                     <div class="col-md-9">
                                         <strong><input type="email" name="email" value="{{\Auth::user()->email}}" class="form-control"></strong>
+                                        @if($errors->has('email'))
+                                            <span class="help-block">
+                                                <strong>{{ $errors->first('email') }}</strong>
+                                            </span>
+                                        @endif
                                     </div>
                             </div>
                             <div class="form-group">
