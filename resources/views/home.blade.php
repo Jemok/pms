@@ -105,7 +105,7 @@
                                                <p>{{$team->team->short_description}}</p>
                                             </div>
                                             <div class="col-md-3">
-                                                @if($team->team->admin->user_id == \Auth::user()->id)
+                                                @if($team->team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->team->id)->first()->user_id == \Auth::user()->id)
                                                         <p><button class="btn btn-sm btn-info">admin</button></p>
                                                 @else
                                                         <p><button class="btn btn-sm btn-info">member</button></p>
@@ -120,11 +120,13 @@
                                         <p><strong>You currently have no teams..</strong></p>
                                     </div>
                                 @endif
+                                @if($teams->count() == 5)
                                 <div class="row">
                                     <div class="col-md-offset-1 col-md-10">
                                         <a href="{{ url('teams/userTeams') }}" class="btn btn-default btn-block">View more of your teams</a>
                                     </div>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -17,7 +17,9 @@ class TeamController extends Controller
 
         $team->admin()->create([
 
-            'user_id' => \Auth::user()->id
+            'user_id'    => \Auth::user()->id,
+            'old_status' => 1
+
         ]);
 
         Session::flash('flash_message', 'Team was created successfully');

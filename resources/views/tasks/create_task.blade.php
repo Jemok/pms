@@ -25,7 +25,9 @@
                                 @foreach($sprints as $sprint)
                                     <option value="{{$sprint->sprint->id}}">
                                     {{$sprint->sprint->sprint_name}}/
-                                    {{$sprint->sprint->project->first()->project->first()->project_name}}/
+                                    <?php $sprint_id = $sprint->sprint->id ?>
+                                    <?php $project_id = $sprint_project->where('sprint_id', '=', $sprint_id)->first()->project_id ?>
+                                    {{$project->findOrFail($project_id)->project_name}}/
                                     {{$sprint->sprint->project->first()->project->team->team->team_name}}
                                     </option>
                                 @endforeach
