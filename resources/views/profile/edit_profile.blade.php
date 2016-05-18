@@ -34,17 +34,10 @@
                                     </div>
                             </div>
                             <div class="form-group">
-                                        <div class="col-md-3">
-                                            <label for="password">
-                                                Password
-                                            </label>
-                                        </div>
-
-                                        <div class="col-md-9">
-                                            <input type="text" name="password" value="password" class="form-control">
-                                        </div>
+                                <div class="col-md-offset-3 col-md-8">
+                                    <button type="button" class="btn btn-info btn-block" name="edit_password">Edit password</button>
+                                </div>
                             </div>
-
                             <div class="form-group">
                                 <div class="col-md-offset-5">
                                     <input type="submit" class="btn btn-default" name="edit" value="edit profile">

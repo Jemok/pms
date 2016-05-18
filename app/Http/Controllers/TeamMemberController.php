@@ -5,12 +5,12 @@ use App\Http\Requests;
 use App\Repositories\ProjectRepository;
 
 
-class TeamMembersController extends Controller
+class TeamMemberController extends Controller
 {
 
     public function teamMember()
     {
-        return view('teams.team_members');
+        return view('teams.team_member');
     }
 
 }
