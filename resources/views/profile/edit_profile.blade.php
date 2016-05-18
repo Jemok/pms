@@ -9,7 +9,8 @@
                     <strong><p style="text-align: center;">My Profile</p></strong>
                 </div>
                     <div class="panel-body">
-                        <form class="form-horizontal" method="post" action="">
+                        <form class="form-horizontal" method="post" action="{{url('profile/update')}}">
+                            {!! csrf_field() !!}
                             <div class="form-group">
                                 <div class="col-md-3">
                                     <label for="username">
@@ -18,7 +19,7 @@
                                 </div>
 
                                 <div class="col-md-9">
-                                    <strong><input type="text" name="username" value="{{\Auth::user()->name}}" class="form-control"></strong>
+                                    <strong><input type="text" name="name" value="{{\Auth::user()->name}}" class="form-control"></strong>
                                 </div>
                             </div>
 
@@ -34,20 +35,9 @@
                                     </div>
                             </div>
                             <div class="form-group">
-                                        <div class="col-md-3">
-                                            <label for="password">
-                                                Password
-                                            </label>
-                                        </div>
-
-                                        <div class="col-md-9">
-                                            <input type="text" name="password" value="password" class="form-control">
-                                        </div>
-                            </div>
-
-                            <div class="form-group">
                                 <div class="col-md-offset-5">
                                     <input type="submit" class="btn btn-default" name="edit" value="edit profile">
+
                                 </div>
                             </div>
                         </form>

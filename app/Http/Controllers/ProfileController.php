@@ -11,8 +11,8 @@ class ProfileController extends Controller
 {
     public function show(EditProfileRepository $editProfileRepository)
     {
-        $users=$editProfileRepository->index();
-        return view('profile.edit_profile',compact('users'));
+
+        return view('profile.edit_profile');
     }
 }
 ?>
