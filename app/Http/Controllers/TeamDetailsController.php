@@ -14,7 +14,7 @@ class TeamDetailsController extends Controller
     public function teamDetails($team_id)
     {
 
-        $team = Team::findOrFail($team_id)->with('admin', 'projects')->first();
+        $team = Team::where('id', '=', $team_id)->first();
 
         $projects = $team->projects()->with('project')->paginate(5);
 
