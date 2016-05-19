@@ -70,6 +70,43 @@
                             <p>5 day to go</p>
                         </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-3">
+                        <div class="row">
+                            <h4><strong>Add member to project</strong></h4>
+                        </div>
+                        <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h5 style="text-align: center"><strong>Member Assign</strong></h5>
+                                </div>
+                                <div class="panel-body">
+                                    <form class="form-horizontal" method="post" action="#">
+                                        {!! csrf_field() !!}
+                                        <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
+                                            <div class="col-md-12">
+                                                <select class="form-control" name="user_id">
+                                                    <option>name</option>
+                                                    <option>name</option>
+                                                </select>
+                                                @if($errors->has('user_id'))
+                                                    <span class="help-block">
+                                                <strong>{{ $errors->first('user_id') }}</strong>
+                                            </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-3">
+                                                <button class="btn btn-info btn-sm" type="submit" name="change">Assign member</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
 
     </div>
@@ -135,5 +172,9 @@
     @else
     No sprints found for this project
     @endif
+
+    <div class="row">
+
+    </div>
 </div>
 @endsection

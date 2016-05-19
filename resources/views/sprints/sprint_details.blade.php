@@ -118,7 +118,7 @@
             </div>
             <div class="col-md-3">
                 <div class="col-md-12">
-                    <p>Renn</p>
+                    <p><a href="{{'/'}}">Renn</a> </p>
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h5 style="text-align: center"><strong>Assign task</strong></h5>
