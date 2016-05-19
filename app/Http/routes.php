@@ -48,7 +48,7 @@ Route::get('teams/teamMember', 'TeamMemberController@teamMember');
 Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
 Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
-
+Route::get('sprints/show','SprintController@show');
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
 Route::post('tasks/store','TaskController@store');

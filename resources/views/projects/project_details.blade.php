@@ -17,7 +17,7 @@
             <h5><strong>Deliverable</strong></h5>
         </div>
         <div class="col-md-2">
-            <h5><strong>Milestone</strong></h5>
+            <h5><strong>Status</strong></h5>
         </div>
         <div class="col-md-2">
             <h5><strong>Start</strong></h5>
@@ -31,7 +31,7 @@
     </div>
     <div class="row">
         <div class="col-md-1">
-            <p>Name</p>
+            <p><a href="{{ url ('sprints/show') }}">Name</a></p>
         </div>
         <div class="col-md-2">
             <p>Description</p>
@@ -40,7 +40,7 @@
             <p>Deliverable</p>
         </div>
         <div class="col-md-2">
-            <p>Milestone</p>
+            <p>ongoing</p>
         </div>
         <div class="col-md-2">
             <p>Start</p>
