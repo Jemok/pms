@@ -13,7 +13,9 @@ class TeamDetailsController extends Controller
 
         $projects = $team->projects()->with('project')->paginate(5);
 
-        return view('teams.team_details', compact('team', 'projects'));
+        $members = $team->team_user()->with('user')->get();
+
+        return view('teams.team_details', compact('team', 'projects', 'members'));
     }
 }
 

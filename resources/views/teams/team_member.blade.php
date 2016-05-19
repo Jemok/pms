@@ -5,7 +5,7 @@
         <div class=" col-md-offset-3 col-md-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong><p style="text-align: center;">(name)Profile</p></strong>
+                    <strong><p style="text-align: center;">Profile</p></strong>
                 </div>
                 <div class="panel-body">
 
