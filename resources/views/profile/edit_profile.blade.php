@@ -56,7 +56,6 @@
                             <div class="form-group">
                                 <div class="col-md-offset-5">
                                     <input type="submit" class="btn btn-default" name="edit" value="edit profile">
-
                                 </div>
                             </div>
                         </form>

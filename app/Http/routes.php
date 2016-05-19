@@ -32,7 +32,7 @@ Route::get('projects/allProjects','AllProjectsController@allProjects');
 
 Route::post('admin/change/{team_id}', 'UserProfileController@changeAdmin');
 
-Route::get('projects/projectDetails','ProjectDetailsController@projectDetails');
+Route::get('projects/projectDetails/{project_id}','ProjectDetailsController@projectDetails');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');

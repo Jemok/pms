@@ -104,7 +104,7 @@
             @foreach($projects as $project)
                 <div class="row">
                     <div class="col-md-1">
-                        <p><a href="{{url ('projects/projectDetails') }}">{{$project->project->project_name}}</a></p>
+                        <p><a href="{{url ('projects/projectDetails/'.$project->project->id) }}">{{$project->project->project_name}}</a></p>
                     </div>
                     <div class="col-md-2">
                         <p>{{$project->project->project_description}}</p>

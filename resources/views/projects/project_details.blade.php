@@ -26,25 +26,32 @@
             <h5><strong>End</strong></h5>
         </div>
     </div>
+    @if($sprints->count())
+        @foreach($sprints as $sprint)
     <div class="row">
         <div class="col-md-1">
-            <p>Name</p>
+            <p>{{$sprint->sprint->sprint_name}}</p>
         </div>
         <div class="col-md-2">
-            <p>Description</p>
+            <p>{{$sprint->sprint->sprint_description}}</p>
         </div>
         <div class="col-md-2">
-            <p>Deliverable</p>
+            <p>{{$sprint->sprint->deliverable}}</p>
         </div>
         <div class="col-md-2">
-            <p>Milestone</p>
+            <p>{{$sprint->sprint->milestone}}</p>
         </div>
         <div class="col-md-2">
-            <p>Start</p>
+            <p>{{$sprint->sprint->started_at->diffForHumans()}}</p>
         </div>
         <div class="col-md-2">
-            <p>End</p>
+            <p>{{$sprint->sprint->ended_at->diffForHumans()}}</p>
         </div>
     </div>
+    {!! $sprints->links() !!}
+    @endforeach
+    @else
+    No sprints found for this project
+    @endif
 </div>
 @endsection
