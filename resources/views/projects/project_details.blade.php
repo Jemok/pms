@@ -25,6 +25,9 @@
         <div class="col-md-2">
             <h5><strong>End</strong></h5>
         </div>
+        <div class="col-md-1">
+            <h5><strong>Created by</strong></h5>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-1">
@@ -44,6 +47,9 @@
         </div>
         <div class="col-md-2">
             <p>End</p>
+        </div>
+        <div class="col-md-1">
+            <p>Renn</p>
         </div>
     </div>
 </div>
