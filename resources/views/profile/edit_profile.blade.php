@@ -23,6 +23,9 @@
                         <form class="form-horizontal" method="post" action="{{url('profile/update')}}">
                             {!! csrf_field() !!}
                             <div class="form-group">
+                        <form class="form-horizontal" method="post" action="">
+                            <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
+
                                 <div class="col-md-3">
                                     <label for="username">
                                         username
