@@ -44,10 +44,24 @@
 
                 <div class="row">
                         <div class="col-md-3">
-                            <p>dkkgekrgjrk</p>
+                            <p>{{$project->project_description}}</p>
                         </div>
                         <div class="col-md-2">
-                            <p>md,fgj</p>
+                            @if($project->project_status == 0)
+                                <p>Not Started</p>
+                             @endif
+                                                   ​
+                             @if($project->project_status == 1)
+                                 <p>Ongoing</p>
+                             @endif
+                                                   ​
+                             @if($project->project_status == 2)
+                                 <p>Completed</p>
+                             @endif
+                                                   ​
+                             @if($project->project_status == 3)
+                                 <p>Shelved</p>
+                             @endif
                         </div>
                         <div class="col-md-3">
                             <p>2 hrs ago</p>

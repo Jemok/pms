@@ -17,7 +17,7 @@ class ProjectDetailsController extends Controller
 
         $sprints = $project->sprints()->with('sprint')->paginate(10);
 
-        return view('projects.project_details', compact('sprints'));
+        return view('projects.project_details', compact('sprints', 'project'));
     }
 }
 ?>
