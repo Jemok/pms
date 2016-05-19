@@ -57,7 +57,7 @@
                         </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5 col-md-offset-3">
                         <div class="row">
                             <h4><strong>Add member to project</strong></h4>
                         </div>
