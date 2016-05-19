@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Sprint extends Model
 {
@@ -49,7 +50,18 @@ class Sprint extends Model
 
     }
 
-   public function creator(){
+    public function getStartedAtAttribute($started_at){
+
+        return $this->attributes['started_at'] = Carbon::parse($started_at)->addHours(3);
+    }
+
+    public function getEndedAtAttribute($ended_at){
+
+        return $this->attributes['ended_at'] = Carbon::parse($ended_at)->addHour(3);
+    }
+
+
+    public function creator(){
 
        return $this->hasOne(Sprint_creator::class);
    }

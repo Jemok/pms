@@ -9,7 +9,7 @@
                     <strong><p style="text-align: center;">My Profile</p></strong>
                 </div>
                     <div class="panel-body">
-<<<<<<< HEAD
+
                         @if(Session::has("flash_message"))
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
@@ -23,10 +23,9 @@
                         <form class="form-horizontal" method="post" action="{{url('profile/update')}}">
                             {!! csrf_field() !!}
                             <div class="form-group">
-=======
                         <form class="form-horizontal" method="post" action="">
                             <div class="form-group {{ $errors->has('name') ? ' has-error' : '' }}">
->>>>>>> c2f521d9572c57fe86cefa8ce2be96bcd1f351c6
+
                                 <div class="col-md-3">
                                     <label for="username">
                                         username
@@ -34,14 +33,12 @@
                                 </div>
                                 <div class="col-md-9">
                                     <strong><input type="text" name="name" value="{{\Auth::user()->name}}" class="form-control"></strong>
-<<<<<<< HEAD
-=======
+
                                     @if($errors->has('name'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
->>>>>>> c2f521d9572c57fe86cefa8ce2be96bcd1f351c6
                                 </div>
                             </div>
 
@@ -62,9 +59,14 @@
                                     </div>
                             </div>
                             <div class="form-group">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <button class="btn btn-info btn-block" name="password">Edit your password</button>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
                                 <div class="col-md-offset-5">
                                     <input type="submit" class="btn btn-default" name="edit" value="edit profile">
-
                                 </div>
                             </div>
                         </form>

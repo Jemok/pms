@@ -49,7 +49,8 @@
                 @endif
             </div>
             <div class="col-md-2">
-                <a href="{{ url('profile/userProfile/'.$team->admin->user->id) }}">{{$team->admin->user->name}}</a>
+                <?php $user_id = $team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id;?>
+                <a href="{{ url('profile/userProfile/'.$user_id) }}"><?php $user= new \App\User(); ?>{{$user->where('id', '=', $user_id)->first()->name}}</a>
             </div>
             @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)
             <div class="col-md-2">
@@ -64,14 +65,31 @@
                     <h4><strong>Team members</strong></h4>
                 </div>
                 <div class="row">
-                    <ul class="list-inline list-unstyled">
-                        <li><strong>Name</strong></li>
-                        <li><strong>User level</strong></li>
-                    </ul>
-                    <ul class="list-inline list-unstyled">
-                        <li><a href="{{ url('teams/teamMember') }}">member</a></li>
-                        <li class="btn btn-info">Admin</li>
-                    </ul>
+                    <table class="table">
+
+                        <thead>
+                        <td><strong>Name</strong></td>
+                        <td><strong>User level</strong></td>
+                        </thead>
+
+                        @if($members->count())
+                             @foreach($members as $member)
+                        <tr>
+
+                            <td><a href="{{ url('profile/userProfile/'.$member->user->id) }}">{{$member->user->name}}</a></td>
+                            <td>
+                             @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == $member->user->id)
+                                 <p><button class="btn btn-sm btn-info">Admin</button></p>
+                             @else
+                                 <p><button class="btn btn-sm btn-info">Member</button></p>
+                             @endif
+                            </td>
+                            @endforeach
+                        @else
+                            No teams found
+                        @endif
+                         </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -104,7 +122,7 @@
             @foreach($projects as $project)
                 <div class="row">
                     <div class="col-md-1">
-                        <p><a href="{{url ('projects/projectDetails') }}">{{$project->project->project_name}}</a></p>
+                        <p><a href="{{url ('projects/projectDetails/'.$project->project->id) }}">{{$project->project->project_name}}</a></p>
                     </div>
                     <div class="col-md-2">
                         <p>{{$project->project->project_description}}</p>
