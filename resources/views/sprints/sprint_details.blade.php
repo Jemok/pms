@@ -2,6 +2,68 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <div class="col-md-4">
+                <div class="row">
+                    <h4><strong>Sprints (name) members</strong></h4>
+                </div>
+                <div class="row">
+                    <div class="table">
+                        <table class="table">
+                            <thead>
+                            <th><strong>Name</strong></th>
+                            <th><strong>User level</strong></th>
+                            </thead>
+                            <tr>
+                                <td><a href="{{'/'}}">Name</a></td>
+                                <td><p><button class="btn btn-small btn-info">Admin</button></p></td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-7 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5><strong>Description</strong></h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5><strong>Deliverables</strong></h5>
+                    </div>
+                    <div class="col-md-3">
+                        <h5><strong>Milestone</strong></h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5><strong>Start</strong></h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5><strong>End</strong></h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <p>dkkgekrgjrk</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>mdfgj</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p>milestone</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>5 day </p>
+                    </div>
+                    <div class="col-md-2">
+                        <p>5 days to go</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
             <div class="col-md-5">
                 <h4>Tasks in Sprint(name)</h4>
             </div>
