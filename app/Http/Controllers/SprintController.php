@@ -45,5 +45,9 @@ class SprintController extends Controller
 
         return $this->create(new ProjectRepository(new Project()));
     }
+    public function show()
+    {
+        return view('sprints.sprint_details');
+    }
 }
 ?>

@@ -17,7 +17,7 @@
             <h5><strong>Deliverable</strong></h5>
         </div>
         <div class="col-md-2">
-            <h5><strong>Milestone</strong></h5>
+            <h5><strong>Status</strong></h5>
         </div>
         <div class="col-md-2">
             <h5><strong>Start</strong></h5>
@@ -25,12 +25,15 @@
         <div class="col-md-2">
             <h5><strong>End</strong></h5>
         </div>
+        <div class="col-md-1">
+            <h5><strong>Created by</strong></h5>
+        </div>
     </div>
     @if($sprints->count())
         @foreach($sprints as $sprint)
     <div class="row">
         <div class="col-md-1">
-            <p>{{$sprint->sprint->sprint_name}}</p>
+            <p><a href="{{ url('sprints/show') }}">{{$sprint->sprint->sprint_name}}</a></p>
         </div>
         <div class="col-md-2">
             <p>{{$sprint->sprint->sprint_description}}</p>
@@ -46,6 +49,9 @@
         </div>
         <div class="col-md-2">
             <p>{{$sprint->sprint->ended_at->diffForHumans()}}</p>
+        </div>
+        <div class="col-md-1">
+            <p><a href="{{ url('profile/userProfile/'.$sprint->sprint->creator->user_id)}}">{{$sprint->sprint->creator->user->name}}</p>
         </div>
     </div>
     {!! $sprints->links() !!}
