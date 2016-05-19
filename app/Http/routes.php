@@ -29,6 +29,7 @@ Route::post('profile/update','EditProfileController@update');
 Route::get('projects/create', 'ProjectController@create');
 Route::post('projects/store', 'ProjectController@store');
 Route::get('projects/allProjects','AllProjectsController@allProjects');
+Route::get('projects/edit','ProjectController@edit');
 
 Route::post('admin/change/{team_id}', 'UserProfileController@changeAdmin');
 
@@ -49,6 +50,8 @@ Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
 Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
 Route::get('sprints/show','SprintController@show');
+Route::get('sprints/edit','SprintController@edit');
+
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
 Route::post('tasks/store','TaskController@store');

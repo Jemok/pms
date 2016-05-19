@@ -59,7 +59,7 @@
                             <p>5 day to go</p>
                         </div>
                         <div class="col-md-1">
-                            <p><button class="btn btn-default">Edit project</button></p>
+                            <p><a href="{{ url('projects/edit') }}"><button class="btn btn-default">Edit project</button></a></p>
                         </div>
                     <div>
 

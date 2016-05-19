@@ -41,9 +41,13 @@ class ProjectController extends Controller
             return redirect()->back();
        }
 
-        public function index()
-        {
-            $projects = Project::all();
-            return view('projects.create_project', compact('projects'));
-        }
+    public function index()
+    {
+        $projects = Project::all();
+        return view('projects.create_project', compact('projects'));
+    }
+    public function edit()
+    {
+        return view('projects.edit_project');
+    }
 }

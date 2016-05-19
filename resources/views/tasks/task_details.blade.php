@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="row">
-                    <h4><strong>Sprints (name) members</strong></h4>
+                    <h4><strong>Task (name) members</strong></h4>
                 </div>
                 <div class="row">
                     <div class="table">
@@ -32,7 +32,7 @@
                         <h5><strong>Deliverables</strong></h5>
                     </div>
                     <div class="col-md-3">
-                        <h5><strong>Milestone</strong></h5>
+                        <h5><strong>Status</strong></h5>
                     </div>
                     <div class="col-md-2">
                         <h5><strong>Start</strong></h5>
@@ -195,7 +195,7 @@
             </div>
         </div>
 
-        </div>
+    </div>
     </div>
 
 @endsection
