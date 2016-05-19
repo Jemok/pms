@@ -99,7 +99,7 @@
 
     <div class="row">
         <div class="col-md-5">
-            <h4>Sprints in project</h4>
+            <h4><strong>Sprints in project</strong></h4>
         </div>
     </div>
 
