@@ -40,6 +40,9 @@
                     <div class="col-md-3">
                         <h5><strong>End</strong></h5>
                     </div>
+                    <div class="col-md-1">
+                        <h5><strong>Edit</strong></h5>
+                    </div>
             </div>
 
                 <div class="row">
@@ -55,6 +58,13 @@
                         <div class="col-md-3">
                             <p>5 day to go</p>
                         </div>
+                        <div class="col-md-1">
+                            <p><button class="btn btn-default">Edit project</button></p>
+                        </div>
+                    <div>
+
+
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-md-5 col-md-offset-3">
