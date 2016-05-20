@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Project;
 use App\ProjectSprint;
+use App\Task_user;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Session;
@@ -46,6 +47,31 @@ class TaskController extends Controller
 
         Session::flash('flash_message', 'Task was created successfully');
 
+        return redirect()->back();
+    }
+
+    public function assignMember(Request $request, $task_id){
+
+        $member_id = $request->get('user_id');
+        
+        $task = Task::findOrFail($task_id);
+        
+        if(Task_user::where('task_id', '=', $task_id)->exists()){
+            
+            Session::flash('flash_message_error', 'The task is assigned to someone else');
+            
+            return redirect()->back();
+        }
+        
+        $task->user()->create([
+           
+            'user_id' => $member_id,
+            'activity' => 1
+            
+        ]);
+        
+        Session::flash('flash_message', 'User was assigned to that task');
+        
         return redirect()->back();
     }
 }

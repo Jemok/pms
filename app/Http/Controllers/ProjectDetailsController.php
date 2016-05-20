@@ -5,8 +5,6 @@ use App\Http\Requests;
 use App\Project;
 use App\Project_user;
 use App\ProjectTeam;
-use App\Repositories\ProjectRepository;
-use App\User;
 use App\Team_user;
 
 

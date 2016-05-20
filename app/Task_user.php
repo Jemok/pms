@@ -13,7 +13,8 @@ class Task_user extends Model
      */
     protected $fillable = [
 
-        ''
+        'user_id',
+        'activity'
 
     ];
 

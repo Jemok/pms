@@ -98,18 +98,18 @@
                             <label for="task_status">Task Status</label>
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status">Not Started
+                            <input type="radio" class="form-control" value="0" name="task_status">Not Started
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status">Ongoing
+                            <input type="radio" class="form-control" value="1" name="task_status">Ongoing
                         </div>
                         <div class="col-md-2 col-sm-2">
-                            <input type="radio" class="form-control" name="task_status">Completed
+                            <input type="radio" class="form-control" value="2" name="task_status">Completed
                         </div>
                         @if ($errors->has('task_status'))
                             <span class="help-block">
                                         <strong>{{ $errors->first('task_status') }}</strong>
-                                    </span>
+                            </span>
                         @endif
                     </div>
                     <div class="form-group">

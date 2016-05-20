@@ -49,12 +49,14 @@ Route::get('teams/teamMember', 'TeamMemberController@teamMember');
 Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
 Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
-Route::get('sprints/show','SprintController@show');
+Route::get('sprints/show/{sprint_id}','SprintController@show');
 Route::get('sprints/edit','SprintController@edit');
+Route::post('sprints/addMember/{sprint_id}', 'SprintController@AddMember');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
-Route::post('tasks/store','TaskController@store');
+Route::post('tasks/store','TaskController@store');\
+Route::post('tasks/assignMember/{task_id}', 'TaskController@assignMember');
 
 /*team routes*/
 Route::post('teams/create','TeamController@create');

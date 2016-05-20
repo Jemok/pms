@@ -2,7 +2,6 @@
 @section('content')
 <div class="container">
     <div class="row">
-
         @if(Session::has("flash_message") || Session::has("flash_message_error") )
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -32,7 +31,7 @@
                         </tr>
                         @endforeach
                     @else
-
+                        No members for this project
                     @endif
                 </table>
             </div>
@@ -172,7 +171,7 @@
         @foreach($sprints as $sprint)
     <div class="row">
         <div class="col-md-1">
-            <p><a href="{{ url('sprints/show') }}">{{$sprint->sprint->sprint_name}}</a></p>
+            <p><a href="{{ url('sprints/show/'.$sprint->sprint->id) }}">{{$sprint->sprint->sprint_name}}</a></p>
         </div>
         <div class="col-md-2">
             <p>{{$sprint->sprint->sprint_description}}</p>
