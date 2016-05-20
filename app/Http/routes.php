@@ -33,6 +33,7 @@ Route::get('projects/allProjects','AllProjectsController@allProjects');
 Route::post('admin/change/{team_id}', 'UserProfileController@changeAdmin');
 
 Route::get('projects/projectDetails/{project_id}','ProjectDetailsController@projectDetails');
+Route::post('projects/addMember/{project_id}', 'ProjectController@addMember');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
@@ -43,7 +44,6 @@ Route::get('teams/userTeams', 'UserTeamsController@userTeams');
 Route::get('teams/editTeam/{team_id}', 'EditTeamController@editTeam');
 Route::get('teams/teamMember', 'TeamMemberController@teamMember');
 
-
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
@@ -52,7 +52,6 @@ Route::get('sprints/show','SprintController@show');
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
 Route::post('tasks/store','TaskController@store');
-
 
 /*team routes*/
 Route::post('teams/create','TeamController@create');

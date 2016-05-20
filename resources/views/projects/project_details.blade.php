@@ -2,30 +2,41 @@
 @section('content')
 <div class="container">
     <div class="row">
+
+        @if(Session::has("flash_message") || Session::has("flash_message_error") )
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="alert alert-dismissible {{Session::has('flash_message_error') ? 'alert-warning' : 'alert-success' }}" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <strong>{{session("flash_message")}}</strong>
+                        <strong>{{session("flash_message_error")}}</strong>
+
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="col-md-4">
             <div class="row">
-                <h4><strong>Project (name) members</strong></h4>
+                <h4><strong>Project, {{$project->project_name}},members</strong></h4>
             </div>
             <div class="row">
                 <table class="table">
 
                     <thead>
                     <td><strong>Name</strong></td>
-                    <td><strong>User level</strong></td>
                     </thead>
-                    <tr>
-                        <td><a href="{{'/'}}">name</a></td>
-                        <td>
+                    @if($project_users->count())
+                        @foreach($project_users as $user)
+                        <tr>
+                            <td><a href="{{ url('profile/userProfile/'.$user->id) }}">{{$user->user->name}}</a></td>
+                        </tr>
+                        @endforeach
+                    @else
 
-                            <p><button class="btn btn-sm btn-info">Admin</button></p>
-
-                            <p><button class="btn btn-sm btn-info">Member</button></p>
-                        </td>
-                    </tr>
+                    @endif
                 </table>
             </div>
         </div>
-
             <div class="col-md-7 col-md-offset-1">
                 <div class="row">
                     <div class="col-md-3">
@@ -81,13 +92,20 @@
                                     <h5 style="text-align: center"><strong>Member Assign</strong></h5>
                                 </div>
                                 <div class="panel-body">
-                                    <form class="form-horizontal" method="post" action="#">
+                                    <form class="form-horizontal" method="post" action="{{ url('projects/addMember/'.$project->id) }}">
                                         {!! csrf_field() !!}
                                         <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
                                             <div class="col-md-12">
+                                                 <?php $user = new \App\User(); ?>
                                                 <select class="form-control" name="user_id">
-                                                    <option>name</option>
-                                                    <option>name</option>
+                                                    @if($team_users->count())
+                                                        @foreach($team_users as $team_user)
+                                                            <option value="{{$user->where('id', '=', $team_user->user_id)->first()->id}}">{{ $user->where('id', '=', $team_user->user_id)->first()->name }}</option>
+                                                        @endforeach
+                                                    @else
+                                                        <option selected>No team members found</option>
+
+                                                    @endif
                                                 </select>
                                                 @if($errors->has('user_id'))
                                                     <span class="help-block">
@@ -116,8 +134,6 @@
             <h4>Sprints in project</h4>
         </div>
     </div>
-
-
 
     <div class="row">
         <div class="col-md-1">

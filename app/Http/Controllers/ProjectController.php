@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\Project_user;
 use App\Team;
 use Illuminate\Http\Request;
 use App\Http\Requests;
@@ -46,4 +47,27 @@ class ProjectController extends Controller
             $projects = Project::all();
             return view('projects.create_project', compact('projects'));
         }
+
+    public function addMember(Request $request, $project_id){
+        $member_id = $request->get('user_id');
+
+        if(Project_user::where('user_id', '=', $member_id)->where('project_id', '=', $project_id)->exists()){
+
+            Session::flash('flash_message_error', 'User is already in project');
+
+            return redirect()->back();
+        }
+        
+        $project = Project::findOrFail($project_id);
+
+        $project->user()->create([
+
+            'user_id' => $member_id
+
+        ]);
+        
+        Session::flash('flash_message', 'Member was added successfully');
+
+        return redirect()->back();
+    }
 }

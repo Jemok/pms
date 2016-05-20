@@ -47,7 +47,7 @@ class SprintController extends Controller
     }
     public function show()
     {
-
+        
 
         return view('sprints.sprint_details');
     }
