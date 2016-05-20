@@ -51,5 +51,9 @@ class SprintController extends Controller
 
         return view('sprints.sprint_details');
     }
+    public function edit()
+    {
+        return view('sprints.edit_sprint');
+    }
 }
 ?>

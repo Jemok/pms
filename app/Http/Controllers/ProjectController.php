@@ -41,12 +41,7 @@ class ProjectController extends Controller
             Session::flash('flash_message', 'Project was created successfully');
             return redirect()->back();
        }
-
-        public function index()
-        {
-            $projects = Project::all();
-            return view('projects.create_project', compact('projects'));
-        }
+    
 
     public function addMember(Request $request, $project_id){
         $member_id = $request->get('user_id');
@@ -69,5 +64,15 @@ class ProjectController extends Controller
         Session::flash('flash_message', 'Member was added successfully');
 
         return redirect()->back();
+        
+    }
+    public function index()
+    {
+        $projects = Project::all();
+        return view('projects.create_project', compact('projects'));
+    }
+    public function edit()
+    {
+        return view('projects.edit_project');
     }
 }
