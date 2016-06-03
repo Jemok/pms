@@ -69,4 +69,23 @@ class User extends Authenticatable
 
         return $this->hasMany(TeamAdmin::class);
     }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function($user){
+
+            $user->token = str_random(30);
+
+        });
+    }
+
+    public function confirmEmail()
+    {
+        $this->verified = 1;
+        $this->token = null;
+
+        $this->save();
+    }
 }

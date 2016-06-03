@@ -2,7 +2,6 @@
 @section('content')
     <div class="container">
         <?php
-
         $project_sprint = new \App\ProjectSprint();
 
         $project_id = $project_sprint->where('sprint_id', '=', $sprint->id)->first()->project_id;
@@ -12,7 +11,6 @@
         $team_id = $project_team->where('project_id', '=', $project_id)->first()->team_id;
 
         $team_admin = \App\TeamAdmin::where('team_id', '=', $team_id)->first()->user_id;
-
         ?>
         <div class="row">
             @if(Session::has("flash_message") || Session::has("flash_message_error") )

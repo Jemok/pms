@@ -7,9 +7,15 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use App\Mailers\AppMailer;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+
 
 class AuthController extends Controller
 {
+
+    protected $mailer;
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -23,6 +29,8 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+
+
     /**
      * Where to redirect users after login / registration.
      *
@@ -35,8 +43,10 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(AppMailer $appMailer)
     {
+        $this->mailer = $appMailer;
+
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
@@ -56,6 +66,45 @@ class AuthController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister(Request $request)
+    {
+        return $this->register($request);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        //Auth::guard($this->getGuard())->login($this->create($request->all()));
+
+        $this->create($request->all());
+
+        Session::flash('flash_message', 'A confirmation email has been sent to you, confirm it to enable login.');
+
+        return redirect('auth/login');
+
+
+        //return redirect($this->redirectPath());
+    }
+
+    /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
@@ -63,10 +112,23 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $this->mailer->sendConfirmEmailLink($user);
+
+        return $user;
+    }
+
+    public function confirmEmail($token)
+    {
+        User::whereToken($token)->firstOrFail()->confirmEmail();
+
+        Session::flash('flash_message', 'Account was successfully confirmed!');
+
+        return redirect('login');
     }
 }
