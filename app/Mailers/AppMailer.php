@@ -18,7 +18,7 @@ class AppMailer {
      * Email sender
      * @var
      */
-    protected $from;
+    protected $from = 'karokijames40@gmail.com';
 
     /**
      * Email receiver
@@ -54,7 +54,7 @@ class AppMailer {
         $this->to = $user->email;
         $this->view = 'emails.confirm';
         $this->subject = "PMS confirm email";
-        $this->data = compact($user);
+        $this->data = compact('user');
         $this->deliver();
 
     }

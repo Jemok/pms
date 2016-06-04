@@ -62,6 +62,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'user_name' => 'required|min:3|max:15|unique:users'
         ]);
     }
 
@@ -98,7 +99,7 @@ class AuthController extends Controller
 
         Session::flash('flash_message', 'A confirmation email has been sent to you, confirm it to enable login.');
 
-        return redirect('auth/login');
+        return redirect('login');
 
 
         //return redirect($this->redirectPath());
@@ -116,9 +117,10 @@ class AuthController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'user_name' => $data['user_name']
         ]);
 
-        $this->mailer->sendConfirmEmailLink($user);
+        //$this->mailer->sendConfirmEmailLink($user);
 
         return $user;
     }
