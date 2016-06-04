@@ -6,7 +6,6 @@ use App\Project;
 use App\ProjectSprint;
 use App\Task_user;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\CreateTaskRequest;
 use App\Repositories\SprintRepository;

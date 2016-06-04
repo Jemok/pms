@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'user_name',
     ];
 
     /**
@@ -68,5 +68,24 @@ class User extends Authenticatable
     public function admins(){
 
         return $this->hasMany(TeamAdmin::class);
+    }
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function($user){
+
+            $user->token = str_random(30);
+
+        });
+    }
+
+    public function confirmEmail()
+    {
+        $this->verified = 1;
+        $this->token = null;
+
+        $this->save();
     }
 }
