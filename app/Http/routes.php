@@ -38,24 +38,32 @@ Route::post('projects/addMember/{project_id}', 'ProjectController@addMember');
 
 /*team routes*/
 Route::post('teams/store', 'TeamController@store');
+
 Route::post('teams/update/{team_id}', 'EditTeamController@update');
 Route::get('teams/teamDetails/{team_id}', 'TeamDetailsController@teamDetails');
+
 Route::get('teams/allTeams', 'AllTeamsController@allTeams');
 Route::get('teams/userTeams', 'UserTeamsController@userTeams');
+
 Route::get('teams/editTeam/{team_id}', 'EditTeamController@editTeam');
+
 Route::get('teams/teamMember', 'TeamMemberController@teamMember');
 
 /*sprint routes*/
 Route::get('sprints/create', 'SprintController@create');
 Route::post('sprints/store', 'SprintController@store');
 Route::get('sprints/allSprints' , 'AllSprintsController@allSprints');
+
 Route::get('sprints/show/{sprint_id}','SprintController@show');
+
 Route::get('sprints/edit','SprintController@edit');
+
 Route::post('sprints/addMember/{sprint_id}', 'SprintController@AddMember');
 
 /*task routes*/
 Route::get('tasks/create','TaskController@create');
-Route::post('tasks/store','TaskController@store');\
+Route::post('tasks/store','TaskController@store');
+
 Route::post('tasks/assignMember/{task_id}', 'TaskController@assignMember');
 
 /*team routes*/

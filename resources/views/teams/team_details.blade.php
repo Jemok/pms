@@ -2,21 +2,12 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-1">
                 <h4><strong>{{$team->team_name}} details.</strong></h4>
             </div>
         </div>
         ​
         <div class="row">
-            <div class="col-md-2">
-                <p><strong>Team name</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Team short description</strong></p>
-            </div>
-            <div class="col-md-2">
-                <p><strong>Team full description</strong></p>
-            </div>
             <div class="col-md-2">
                 <p><strong>User level</strong></p>
             </div>
@@ -31,15 +22,15 @@
         </div>
         ​
         <div class="row">
-            <div class="col-md-2">
-                <p>{{$team->team_name}}</p>
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Name: </strong> {{$team->team_name}}</li>
+                    <li class="list-group-item"><strong>Description: </strong> {{$team->short_description}}</li>
+                    <li class="list-group-item"><strong>Description: </strong> {{$team->description}}</li>
+                </ul>
             </div>
-            <div class="col-md-2">
-                <p>{{$team->short_description}}</p>
-            </div>
-            <div class="col-md-2">
-                <p>{{$team->description}}</p>
-            </div>
+
+
             <div class="col-md-2">
 
                 @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)

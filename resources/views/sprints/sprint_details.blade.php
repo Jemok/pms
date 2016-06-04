@@ -172,13 +172,9 @@
                     <h5><strong>Assigned to</strong></h5>
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <div class="col-md-5">
-                    <h5><strong>Reassign</strong></h5>
-                </div>
-            </div>
         </div>
+
+
         @if($tasks->count())
             @foreach($tasks as $task)
         <div class="row">
@@ -223,9 +219,6 @@
 
                         @if($team_admin == \Auth::user()->id)
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 style="text-align: center"><strong>Assign task to user</strong></h5>
-                            </div>
                             <div class="panel-body">
                                 <form class="form-horizontal" method="post" action="{{ url('tasks/assignMember/'.$task->task->id) }}">
                                     {!! csrf_field() !!}
@@ -261,57 +254,59 @@
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-3">
-                <div class="col-md-12">
+        </div>
+                    <div class="row">
+                        <div class="col-md-2 col-md-offset-8">
+                            <div class="col-md-5">
+                                <h5><strong>Reassign</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-8">
                     <div class="col-md-12">
-                        @if($team_admin == \Auth::user()->id)
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h5 style="text-align: center"><strong>Assign task to user</strong></h5>
-                                </div>
-                                <div class="panel-body">
-                                    <form class="form-horizontal" method="post" action="{{ url('tasks/assignMember/'.$task->task->id) }}">
-                                        {!! csrf_field() !!}
-                                        <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
-                                            <div class="col-md-12">
-                                                @if($sprint_users->count())
-                                                    <select class="form-control" name="user_id">
-                                                        <option selected>Select a user</option>
-                                                        @foreach($sprint_users as $user)
-                                                            <option value="{{$user->user->id}}">{{$user->user->name}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                @else
-                                                    No users for sprint
-                                                @endif
-                                                @if($errors->has('user_id'))
-                                                    <span class="help-block">
+                        <div class="col-md-12">
+                            @if($team_admin == \Auth::user()->id)
+                                <div class="panel panel-default">
+                                    <div class="panel-body">
+                                        <form class="form-horizontal" method="post" action="{{ url('tasks/assignMember/'.$task->task->id) }}">
+                                            {!! csrf_field() !!}
+                                            <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
+                                                <div class="col-md-12">
+                                                    @if($sprint_users->count())
+                                                        <select class="form-control" name="user_id">
+                                                            <option selected>Select a user</option>
+                                                            @foreach($sprint_users as $user)
+                                                                <option value="{{$user->user->id}}">{{$user->user->name}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                    @else
+                                                        No users for sprint
+                                                    @endif
+                                                    @if($errors->has('user_id'))
+                                                        <span class="help-block">
                                                     <strong>{{ $errors->first('user_id') }}</strong>
                                                 </span>
-                                                @endif
+                                                    @endif
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-md-4">
-                                                <button class="btn btn-info btn-sm" type="submit" name="change">Assign Task</button>
+                                            <div class="form-group">
+                                                <div class="col-md-4">
+                                                    <button class="btn btn-info btn-sm" type="submit" name="change">Assign Task</button>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </form>
+                                        </form>
+                                    </div>
                                 </div>
-                            </div>
                             @endif
+                        </div>
                     </div>
                 </div>
-            </div>
                 @endforeach
-            @else
-                No tasks found
-            @endif
-
-        </div>
-
-        </div>
+                @else
+                    No tasks found
+                @endif
+            </div>
     </div>
 
 @endsection

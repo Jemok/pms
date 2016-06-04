@@ -21,9 +21,11 @@
                         @endif
                         <form class="form-horizontal" method="post" action="{{ url('teams/store') }}">
                             {!! csrf_field() !!}
+
                             <div class="form-group {{ $errors->has('team_name') ? ' has-error' : '' }}">
-                                <label for="team_name" class="col-sm-2 control-label">Team name</label>
-                                <div class="col-sm-10">
+                                <label for="team_name" class="col-md-2 control-label">Team name</label>
+
+                                <div class="col-md-10">
                                     <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name" value="{{ old('team_name')}}">
 
                                     @if($errors->has('team_name'))
@@ -33,21 +35,13 @@
                                     @endif
                                 </div>
                             </div>
-                            <div class="form-group {{ $errors->has('short_description') ? ' has-error' : '' }}">
-                                <label for="short_description" class="col-sm-2 control-label">Short Description</label>
-                                <div class="col-sm-10">
-                                   <textarea class="form-control" name="short_description" rows="5" value="{{ old('short_description')}}"></textarea>
-                                    @if ($errors->has('short_description'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('short_description') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
+
                             <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
-                                <label for="description" class="col-sm-2 control-label"> Full Description</label>
-                                <div class="col-sm-10">
-                                   <textarea class="form-control" name="description" rows="10" value="{{ old('description')}}"></textarea>
+                                <label for="description" class="col-md-2 control-label"> Full Description</label>
+
+                                <div class="col-md-10">
+                                   <textarea class="form-control" name="description" rows="6" value="{{ old('description')}}"></textarea>
+
                                     @if ($errors->has('description'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('description') }}</strong>
@@ -57,7 +51,7 @@
                             </div>
 
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
+                                <div class="col-md-offset-2 col-md-10">
                                     <button type="submit" class="btn btn-default" name="create_team"><span class="glyphicon glyphicon-plus"></span> team</button>
                                 </div>
                             </div>
