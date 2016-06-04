@@ -57,7 +57,7 @@
                 <div class="col-md-5 col-md-offset-1">
                     <div class="row">
                         <h5><strong>Edit</strong></h5>
-                    </div>
+e                    </div>
                     <div class="row">
                         <ul class="list-group list-unstyled">
                             <li><a href="{{ url('projects/edit') }}"><button class="btn btn-default">Edit project</button></a></li>
@@ -103,6 +103,7 @@
                             <div class="panel-body">
                                 <form class="form-horizontal" method="post" action="{{ url('projects/addMember/'.$project->id) }}">
                                     {!! csrf_field() !!}
+
                                     <div class="form-group {{ $errors->has('user_id') ? ' has-error' : '' }}">
                                         <div class="col-md-12">
                                             <?php $user = new \App\User(); ?>
