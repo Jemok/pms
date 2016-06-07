@@ -77,34 +77,33 @@
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <h5><strong>Team name</strong></h5>
                                     </div>
-                                    <div class="col-md-4 col-md-offset-1">
-                                        <h5><strong>Short Description</strong></h5>
-                                    </div>
-
-                                     <div class="col-md-3">
+                                     <div class="col-md-4">
                                         <h5><strong>User Level</strong></h5>
                                      </div>
+                                    <div class="col-md-3">
+                                        <h5><strong>Close team</strong></h5>
+                                    </div>
                                 </div>
 
                                 @if($teams->count())
                                     @foreach($teams as $team)
                                         <div class="row">
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 <a href="{{ url('teams/teamDetails/'.$team->team->id) }}"><p>{{$team->team->team_name}}</p></a>
                                             </div>
-                                            <div class="col-md-4 col-md-offset-1">
-                                               <p>{{$team->team->short_description}}</p>
-                                            </div>
-                                            <div class="col-md-3">
+                                            <div class="col-md-4">
                                                 @if($team->team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->team->id)->first()->user_id == \Auth::user()->id)
                                                         <p><button class="btn btn-sm btn-info">admin</button></p>
                                                 @else
                                                         <p><button class="btn btn-sm btn-info">member</button></p>
                                                 @endif
 
+                                            </div>
+                                            <div class="col-md-3">
+                                                <p><button class="btn btn-sm btn-info">close</button></p>
                                             </div>
                                         </div>
                                     @endforeach

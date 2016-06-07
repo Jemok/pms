@@ -3,10 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-4 col-md-5">
+        <div class="col-md-offset-3 col-md-5">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong><p style="text-align: center;">My Profile</p></strong>
+                    <h5 style="text-align: center;"><strong>My Profile</strong></h5>
                 </div>
                     <div class="panel-body">
 

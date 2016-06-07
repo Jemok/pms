@@ -42,6 +42,23 @@
                         </div>
 
                     </div>
+
+                    <div class="form-group">
+                        <div class="col-md-3">
+                            <label for="scrum_master">Scrum master</label>
+                        </div>
+                        <div class="col-md-9">
+                            <select class="form-control" name="scrum_master">
+
+                                <option value="#">ngizeh</option>
+
+                                <option>no team members found</option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
                     <div class="form-group {{ $errors->has('project_name') ? ' has-error' : '' }}">
                         <div class="col-md-3">
                             <label for="project_name">Project Name</label>
