@@ -95,17 +95,6 @@ class AuthController extends Controller
         //return $request->only($this->loginUsername(), 'password');
     }
 
-    /**
-     * Get the failed login message.
-     *
-     * @return string
-     */
-    protected function getFailedLoginMessage()
-    {
-        return Lang::has('auth.failed')
-            ? Lang::get('auth.failed')
-            : 'These credentials do not match our records or your account is deactivated';
-    }
 
 
     /**
