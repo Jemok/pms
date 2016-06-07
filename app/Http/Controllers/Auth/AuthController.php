@@ -78,6 +78,22 @@ class AuthController extends Controller
     }
 
     /**
+     * Get the needed authorization credentials from the request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return array
+     */
+    protected function getCredentials(Request $request)
+    {
+        return [
+            'email' =>  $request->email,
+            'password' => $request->password,
+            'verified' =>  1
+        ];
+        //return $request->only($this->loginUsername(), 'password');
+    }
+
+    /**
      * Handle a registration request for the application.
      *
      * @param  \Illuminate\Http\Request  $request
