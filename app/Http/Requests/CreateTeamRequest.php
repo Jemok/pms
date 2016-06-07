@@ -25,7 +25,6 @@ class CreateTeamRequest extends Request
     {
         return [
             'team_name' => 'required|min:3',
-            'short_description' => 'required|min:5|max:1000',
             'description' => 'required|min:5'
         
         ];
