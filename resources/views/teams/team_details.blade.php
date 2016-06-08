@@ -12,14 +12,22 @@
 
                     {{--details--}}
                         <div class="row">
-                            <ul class="list-group list-unstyled">
-                                <li><strong>Name:&nbsp;</strong> {{$team->team_name}}</li>
-                                <li><strong>Description:&nbsp;</strong>{{$team->description}}</li>
-                            </ul>
+                            <table class="table">
+                                <thead>
+                                <td><strong>Name</strong></td>
+                                <td><strong>Description</strong></td>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{{$team->team_name}}</td>
+                                    <td style="text-align:justify; ">{{$team->description}}</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5 col-md-offset-1">
                     <div class="row">
                         <h5><strong><u>{{$team->team_name}}&nbsp;credentials</u></strong></h5>
                     </div>
@@ -27,21 +35,21 @@
                         <div class="col-md-4">
                             <div class="row"><h5><strong>User level</strong></h5></div>
                             <div class="row">
-                                @if($members->count())
-                                @foreach($members as $member)
-                                <p><a href="{{ url('profile/userProfile/'.$member->user->id) }}">{{$member->user->name}}</a></p>
-                                @endforeach
-                                @endif
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row"><h5><strong>Team admin</strong></h5></div>
-                            <div class="row">
                                 @if($team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id == \Auth::user()->id)
                                 <p><button class="btn btn-sm btn-info">Admin</button></p>
                                 @else
                                 <p><button class="btn btn-sm btn-info">Member</button></p>
                                 @endif
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="row"><h5><strong>Team admin</strong></h5></div>
+                            <div class="row">
+
+                                    <?php $user_id = $team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->id)->first()->user_id;?>
+                                    <a href="{{ url('profile/userProfile/'.$user_id) }}"><?php $user= new \App\User(); ?>{{$user->where('id', '=', $user_id)->first()->name}}</a>
+
                             </div>
                         </div>
                         <div class="col-md-4">

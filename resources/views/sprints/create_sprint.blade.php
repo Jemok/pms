@@ -120,7 +120,7 @@
 
                     <div class="form-group">
                         <div class="col-md-3 col-md-offset-5">
-                            <input type="submit" class="btn btn-lg btn-default" name="save" value="Save">
+                            <input type="submit" class="btn btn-default" name="save" value="Create sprint">
                         </div>
                     </div>
                 </form>

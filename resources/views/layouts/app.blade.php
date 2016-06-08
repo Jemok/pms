@@ -15,10 +15,12 @@
     <style>
         body {
             font-family: 'Lato';
+            color: #000000;
         }
         .fa-btn {
             margin-right: 6px;
         }
+
     </style>
 </head>
 <body id="app-layout">
@@ -44,6 +46,15 @@
             @if(!Auth::guest())
                 <ul class="nav navbar-nav">
                     <li><a id="link" class=" nav active " href="{{ url('/home') }}">Home</a></li>
+
+                    <li class="dropdown" class="nav active">
+                        <a href="#" id="link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            Team<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="link-1" href="#">Add team members</a></li>
+                        </ul>
+                    </li>
 
                     <li class="dropdown" class="nav active">
                         <a href="#" id="link" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -77,6 +88,8 @@
                 </ul>
 
                 @endif
+
+
                         <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -84,6 +97,7 @@
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
+                        <li><a href="#"><span class="badge" style="color:#ffffff;border: solid;background-color:#ef6c00 ;" >1</span></a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                 {{ Auth::user()->name }} <span class="caret"></span>

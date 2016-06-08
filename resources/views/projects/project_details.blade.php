@@ -47,8 +47,8 @@
                                     Shelved
                                     @endif
                                 </li>
-                                <li><strong>Start:&nbsp;</strong>time here</li>
-                                <li><strong>End:&nbsp;</strong>time here</li>
+                                <li><strong>Start:&nbsp;</strong>{{$project->started_at->diffForHumans()}}</li>
+                                <li><strong>End:&nbsp;</strong>{{$project->started_at->diffForHumans()}}</li>
                             </ul>
                     </div>
                 </div>
@@ -125,6 +125,7 @@
                                                 <select class="form-control" name="user_id">
                                                     @if($team_users->count())
                                                     @foreach($team_users as $team_user)
+                                                    <option>Add users to a project...</option>
                                                     <option value="{{$user->where('id', '=', $team_user->user_id)->first()->id}}">{{ $user->where('id', '=', $team_user->user_id)->first()->name }}</option>
                                                     @endforeach
                                                     @else

@@ -1,111 +1,88 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+<div class="container">
+
+    @if(Session::has("flash_message"))
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="alert alert-success alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <strong>{{session("flash_message")}}</strong>
+            </div>
+        </div>
+    </div>
+    @endif
+
+
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-3">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Dashboard</div>
+                    <div class="panel-heading">
+                        <h5><strong>Welcome to PMS</strong></h5>
+                    </div>
 
                     <div class="panel-body">
-                        You are logged in Please create a team!
-                        @if(Session::has("flash_message"))
-                        <div class="row">
-                            <div class="col-md-10 col-md-offset-1">
-                                <div class="alert alert-success alert-dismissible" role="alert">
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <strong>{{session("flash_message")}}</strong>
-                                </div>
-                            </div>
-                        </div>
-                        @endif
-                        <form class="form-horizontal" method="post" action="{{ url('teams/store') }}">
-                            {!! csrf_field() !!}
+                        <p>To proceed,Please create a team!</p>
 
-                            <div class="form-group {{ $errors->has('team_name') ? ' has-error' : '' }}">
-                                <label for="team_name" class="col-md-2 control-label">Team name</label>
+                        <p style="text-align: center;">
+                            <!-- Button trigger modal -->
+                            <a href=""> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create_team">
+                                Create team
+                            </button></a>
+                        </p>
+                       
+                        <p style="font-size: 30px; text-align: center;"><strong>OR</strong></p>
+                        <p>Send a request to join any existing team you want to be a part of.</p>
+                        <p style="text-align: center;">
+                            <!-- Button trigger modal -->
+                            <a href="#"> <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create_team">
+                                Send Request
+                            </button></a>
+                        </p>
 
-                                <div class="col-md-10">
-                                    <input type="text" class="form-control" id="team-name" name="team_name" placeholder="Team name" value="{{ old('team_name')}}">
 
-                                    @if($errors->has('team_name'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('team_name') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group {{ $errors->has('description') ? ' has-error' : '' }}">
-                                <label for="description" class="col-md-2 control-label"> Full Description</label>
-
-                                <div class="col-md-10">
-                                   <textarea class="form-control" name="description" rows="6" value="{{ old('description')}}"></textarea>
-
-                                    @if ($errors->has('description'))
-                                        <span class="help-block">
-                                        <strong>{{ $errors->first('description') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="col-md-offset-2 col-md-10">
-                                    <button type="submit" class="btn btn-default" name="create_team"><span class="glyphicon glyphicon-plus"></span> team</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
 
             <!--search-->
-            <div class="col-md-offset-1 col-md-5">
-                <div class="row">
-                    <div class="col-md-12">
-                        <a href={{ url('teams/allTeams') }}><h5><strong>View all available teams...</strong></h5></a>
-                    </div>
-                </div>
+            <div class="col-md-offset-1 col-md-4">
+
+                <a href={{ url('teams/allTeams') }}><h5><strong>View all available teams...</strong></h5></a>
 
                 <!--display teams created-->
-                <div class="row">
-                     <div class="col-md-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h5 style="text-align: center"><strong>Teams that you are a member of</strong></h5>
                             </div>
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <h5><strong>Team name</strong></h5>
-                                    </div>
-                                     <div class="col-md-4">
-                                        <h5><strong>User Level</strong></h5>
-                                     </div>
-                                    <div class="col-md-3">
-                                        <h5><strong>Close team</strong></h5>
-                                    </div>
-                                </div>
+                                <table class="table">
+                                    <thead>
+                                        <td><strong>Team name</strong></td>
+                                        <td><strong>User Level</strong></td>
+                                        <td><strong>Close team</strong></td>
+                                    </tead>
+
 
                                 @if($teams->count())
                                     @foreach($teams as $team)
-                                        <div class="row">
-                                            <div class="col-md-4">
+                                        <tr>
+                                            <td>
                                                 <a href="{{ url('teams/teamDetails/'.$team->team->id) }}"><p>{{$team->team->team_name}}</p></a>
-                                            </div>
-                                            <div class="col-md-4">
+                                            </td>
+                                            <td>
                                                 @if($team->team->admin->where('old_status', '=', 1)->where('team_id', '=', $team->team->id)->first()->user_id == \Auth::user()->id)
                                                         <p><button class="btn btn-sm btn-info">admin</button></p>
                                                 @else
                                                         <p><button class="btn btn-sm btn-info">member</button></p>
                                                 @endif
 
-                                            </div>
-                                            <div class="col-md-3">
+                                            </td>
+                                            <td>
                                                 <p><button class="btn btn-sm btn-info">close</button></p>
-                                            </div>
-                                        </div>
+                                            <td>
+                                        </tr>
                                     @endforeach
                                 @else
                                     <div class="alert alert-info alert-dismissible" role="alert">
@@ -120,12 +97,33 @@
                                     </div>
                                 </div>
                                 @endif
-                            </div>
+                                </table>
                         </div>
+                  </div>
+            </div>
+            <div class=" col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5><strong>Requests Received&nbsp;</strong><span class="badge">12</span></h5>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table">
+                            <thead>
+                            <td><strong>Email</strong></td>
+
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>user@pms.com</td>
+                                <td><button class="btn btn-info" name="accept">Accept&nbsp;<span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button></td>
+                                <td><button class="btn btn-info" name="reject">Reject&nbsp;<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+</div>
 
 @endsection
